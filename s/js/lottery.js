@@ -171,7 +171,7 @@ var Lottery = {
             clearInterval(that.time);
 
             setTimeout((function () {
-                if (confirm('恭喜您抽中' + prize.name + '，重试？')) {
+                if (confirm('恭喜您抽中【' + prize.name + '】，重试？')) {
                     location.reload(true);
                 }
 
