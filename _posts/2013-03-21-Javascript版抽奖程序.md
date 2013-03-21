@@ -2,7 +2,7 @@
 layout: default
 title: JavaScript版抽奖程序
 ---
-<link rel="stylesheet" href="s/css/style.css"/>
+<link rel="stylesheet" href="/s/css/style.css"/>
 <h2>{{ page.title }}</h2>
 <div id="lottery" class="lottery">
     <table class="lottery-box" id="lottery-box">
@@ -39,5 +39,5 @@ title: JavaScript版抽奖程序
     </table>
     <input type="button" id="btn-lottery" class="btn-lottery"/>
 </div>
-<script src="s/js/lottery.js"></script>
+<script src="/s/js/lottery.js"></script>
 <p>{{ page.date | date_to_string }}</p>
