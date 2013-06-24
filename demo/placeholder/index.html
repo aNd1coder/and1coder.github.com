@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>文本框占位控件 - <!--# include virtual="/docs/inc/title.html" --></title>
+    <!--# include virtual="/docs/inc/css.html" -->
+    <!--# include virtual="/docs/inc/js.html" -->
+    <style>
+        .placeholder{
+            height:25px;
+            line-height:25px;
+            width:200px;
+            padding:0 5px;
+            border:1px solid #CCC;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+            -webkit-transition:box-shadow 0.20s ease-in-out;
+            -moz-transition:box-shadow 0.20s ease-in-out;
+            transition:box-shadow 0.20s ease-in-out;
+        }
+
+        .placeholder:focus{
+            outline:none;
+            border:1px solid #87C6F9;
+            -webkit-box-shadow:0 0 8px rgba(103, 166, 217, 1);
+            -moz-box-shadow:0 0 8px rgba(103, 166, 217, 1);
+            box-shadow:0 0 8px rgba(103, 166, 217, 1);
+        }
+
+    </style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>文本框占位控件示例</h2>
+        <!--S {widget}-->
+        <div class="mod" id="widgetid">
+            <div class="hd">
+                <h3>文本框占位控件实例</h3>
+            </div>
+            <div class="bd">
+                <input id="placeholder1" class="placeholder" name="placeholder1" type="text" placeholder="请输入关键词..."/>
+            </div>
+            <div class="ft">
+            </div>
+        </div>
+        <pre class="brush:html">
+            <input id="placeholder" name="placeholder" type="text" placeholder="请输入关键词..."/>
+        </pre>
+        <pre class="brush:js">
+            <script src="/build/js/ui-placeholder-min.js"></script>
+
+            $("#placeholder").placeholder()
+        </pre>
+        <div class="options mod">
+            <h4>参数说明</h4>
+        	<pre class="brush:js">
+        	    $.fn.placeholder.defaults = {
+                    initColor:"#d3d3d3", //初始颜色
+                    blurColor:"#d3d3d3", //失焦颜色
+                    focusColor:"#010101" //获焦颜色
+                }
+            </pre>
+        </div>
+        <!--E {widget}-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="/src/js/ui-placeholder.js"></script>
+<script>
+    $(function () {
+        $("#placeholder1").placeholder();
+    })
+</script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

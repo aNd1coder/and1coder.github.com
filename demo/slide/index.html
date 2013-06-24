@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>幻灯片组件 - <!--# include virtual="/docs/inc/title.html" --></title>
+<!--# include virtual="/docs/inc/css.html" -->
+<link rel="stylesheet" href="/src/css/ui-slide.css"/>
+<!--# include virtual="/docs/inc/js.html" -->
+<style>
+    .mod{
+        position:relative;
+        margin:30px auto 10px auto;
+    }
+    .ui-slide {
+        height:350px;
+        background:url(http://static.mttang.com/images/loading/5.gif) no-repeat center;
+    }
+    .ui-slide-trigger span{
+         color:#FFF;
+         font-size:14px;
+     }
+
+    .ui-slide-trigger a{
+        width:16px;
+        height:16px;
+        background-color:#333;
+        margin:9px 5px 0 0;
+    }
+
+    .ui-slide-trigger .current{
+        background-color:#999;
+    }
+</style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>幻灯片组件示例</h2>
+        <!--S {widget}-->
+        <div class="mod ui-slide" id="slide">
+            <div class="hd">
+                <h3>简单幻灯片组件演示</h3>
+            </div>
+            <div class="bd">
+                <div class="ui-slide-container">
+                    <ul>
+						<li>
+							<a href="javascript:" class="item" title="MUI插件html代码片段">
+								<img src="/docs/demo/assets/img/html-snippet.png" alt="" width="950" height="350"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:" class="item" title="MUI插件css代码片段">
+								<img src="/docs/demo/assets/img/css-snippet.png" alt="" width="950" height="350"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:" class="item" title="MUI插件javasript代码片段">
+								<img src="/docs/demo/assets/img/js-snippet.png" alt="" width="950" height="350"/>
+							</a>
+						</li>
+					</ul>
+                </div>
+            </div>
+            <div class="ft">
+                <div class="ui-slide-trigger">
+                    <a href="javascript:;" class="item" rel="1"></a>
+                    <a href="javascript:;" class="item" rel="2"></a>
+                    <a href="javascript:;" class="item" rel="3"></a>
+                </div>
+            </div>
+        </div>
+        <pre class="brush:html">
+            <div class="mod ui-slide" id="slideid">
+                <div class="hd">
+                    <h3>简单slide演示</h3>
+                </div>
+                <div class="bd">
+                    <div class="ui-slide-container">
+                        <ul>
+							<li>
+								<a href="javascript:" class="item" title="MUI插件html代码片段">
+									<img src="/docs/demo/assets/img/html-snippet.png" alt="" width="950" height="350"/>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="item" title="MUI插件css代码片段">
+									<img src="/docs/demo/assets/img/css-snippet.png" alt="" width="950" height="350"/>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:" class="item" title="MUI插件javasript代码片段">
+									<img src="/docs/demo/assets/img/js-snippet.png" alt="" width="950" height="350"/>
+								</a>
+							</li>
+						</ul>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="ui-slide-trigger">
+						<span></span>
+                        <a href="javascript:;" rel="1"></a>
+                        <a href="javascript:;" rel="2"></a>
+                        <a href="javascript:;" rel="3"></a>
+                    </div>
+                </div>
+            </div>
+        </pre>
+        <pre class="brush:css">
+            <!--<link rel="stylesheet" href="/build/css/ui-slide-min.css"/>-->
+        </pre>
+        <pre class="brush:js">
+            <!--<script src="/build/js/ui-slide-min.js"></script>-->
+            <script>
+                $(function () {
+                    //$("#slideid").slide();
+                })
+            </script>
+        </pre>
+        <!--E {widget}-->
+        <!--S options-->
+        <div class="options mod">
+            <h4>参数说明</h4>
+            <pre class="brush:js">
+            "triggers":".ui-slide-trigger", //触发点容器
+            "container":".ui-slide-container", //内容容器
+            "current":"current", //当前触发点以及对应内容节点样式
+            "event":"mouseenter", //触发点触发事件类型
+            "direction":"horizontal", //滚动方向,默认水平,可选:( horizontal|vertical )
+            "selectedIndex":0, //默认被选中的索引
+            "auto":true, //是否自动切换
+            "interval":2000, //时间间隔
+            "showtitle":true //是否显示标题,默认显示
+            </pre>
+        </div>
+        <!--E options-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="/src/js/ui-slide.js"></script>
+<script>
+    $(function () {
+        $("#slide").slide({direction:"vertical"});
+    })
+</script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

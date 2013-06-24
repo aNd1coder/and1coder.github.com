@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>返回顶部组件 - <!--# include virtual="/docs/inc/title.html" --></title>
+<!--# include virtual="/docs/inc/css.html" -->
+<link rel="stylesheet" href="/src/css/ui-slide.css"/>
+<!--# include virtual="/docs/inc/js.html" -->
+<style>
+    .mod{
+        position:relative;
+        margin:30px auto 10px auto;
+    }
+    .ui-slide {
+        height:350px;
+        background:url(http://static.mttang.com/images/loading/5.gif) no-repeat center;
+    }
+    .ui-slide-trigger span{
+         color:#FFF;
+         font-size:14px;
+     }
+
+    .ui-slide-trigger a{
+        width:16px;
+        height:16px;
+        background-color:#333;
+        margin:9px 5px 0 0;
+    }
+
+    .ui-slide-trigger .current{
+        background-color:#999;
+    }
+</style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>返回顶部组件示例</h2>
+        <!--S {widget}-->
+		<p style="height:20px;width:1000px;color:#f60;">请滚动一下滑轮</p>
+        <pre class="brush:js">
+            <!--<script src="/build/js/ui-returntop-min.js"></script>-->
+            <script>
+                $(function () {
+					/*var rt = new ReturnTop({
+						img : 'http://static.mttang.com/p/7366/v1/img/return.gif',
+						top : 220,
+						right : 190,
+						height : 98,
+						width : 28
+					});
+					*/
+					//rt.init();
+                })
+            </script>
+        </pre>
+        <!--E {widget}-->
+        <!--S options-->
+        <div class="options mod">
+            <h4>参数说明</h4>
+            <pre class="brush:js">
+			img : './img/return.gif',//图片的路径
+			top : 220,//距离顶
+			right : 190,//距离右边
+			height : 98,//高度
+			width : 28//宽度
+            </pre>
+        </div>
+		<div style="height:800px;width:1000px;"></div>
+        <!--E options-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="/src/js/ui-returntop.js"></script>
+<script>
+    $(function () {
+		var rt = new ReturnTop();
+		rt.init({
+			right : 500
+		});
+    })
+</script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

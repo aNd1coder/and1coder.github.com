@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
+	Copyright (c) 2012, Mttang Inc. All rights reserved.
+	author: aNd1coder 
+	update: $Id: ui.gridview.css 18662 2012-04-24 06:21:20Z guiyonghong $
+*/
+.ui-gridview {
+	width: 100%;
+	text-align: center;
+}
+
+.ui-gridview th {
+	height: 35px;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #2163DE;
+	color: #FFF;
+}
+
+.ui-gridview input {
+	vertical-align: text-bottom;
+}
+
+.ui-gridview td {
+	height: 30px;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+
+.gv-checkbox {
+	text-align: center;
+	width: 70px;
+}
+
+.even {
+	background-color: #DDE9F6;
+}
+
+.odd {
+}
+
+.active {
+	background-color: #DDE9F6
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>${widget} - <!--# include virtual="/inc/title.html" --></title>
+    <!--# include virtual="/inc/css.html" -->
+    <!--${widget} css引用-->
+    <!--# include virtual="/inc/js.html" -->
+    <style>
+            /*示例样式*/
+    </style>
+</head>
+<body>
+<!--# include virtual="/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/inc/header.html" -->
+    <div id="container">
+        <h2>${widget}示例</h2>
+        <!--S ${widget}-->
+        <div class="mod" id="widgetid">
+            <div class="hd">
+                <h3>${widget}实例名称</h3>
+            </div>
+            <div class="bd">
+            </div>
+            <div class="ft">
+            </div>
+        </div>
+        <pre class="brush:html">
+            //${widget} html相关代码
+        </pre>
+        <pre class="brush:css">
+            //${widget} css相关引用和代码
+        </pre>
+        <pre class="brush:js">
+            //${widget} js相关引用和代码
+        </pre>
+        <!--E ${widget}-->
+    </div>
+    <!--# include virtual="/inc/footer.html" -->
+</div>
+<!--${widget} js引用-->
+<script>
+    $(function() {
+        //${widget}调用代码
+    })
+</script>
+<!--# include virtual="/inc/ftplaceholder.html" -->
+</body>
+</html>

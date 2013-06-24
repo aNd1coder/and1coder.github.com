@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>calendar - <!--# include virtual="/docs/inc/title.html" --></title>
+    <!--# include virtual="/docs/inc/css.html" -->
+    <!--# include virtual="/docs/inc/js.html" -->
+    <style>
+        .ui-calendar {margin:50px 0;border-radius: 10px 10px 10px 10px;box-shadow: 2px 2px 20px 0; background-color:#FFF; position:relative;}
+        .ui-calendar caption,.ui-calendar th,.ui-calendar-cell-current a {background: url(/docs/demo/assets/img/sprite-calendar.png) repeat-x;}
+        .ui-calendar caption { height:26px; padding-top: 6px; text-align:left; font-family:Simsun; background-position: 0 -30px; border: 1px solid #861e1b;}
+        .ui-calendar caption a{ display:inline-block; margin:0 3px; padding: 0 2px; background-repeat: no-repeat; color: #FFF;}
+        .ui-calendar-selected-date,.ui-calendar-select {background-color:rgba(34,34,34,0.3);border-radius: 10px 10px 10px 10px;}
+        .ui-calendar-selected-date {  display:inline-block; padding:2px 10px; color:#FFF; position:relative; z-index:2;}
+        .ui-calendar-select {position: absolute; width: 104px; left: 51px; background-color:rgba(0,0,0,0.8); z-index:1;top:7px;display:none; padding:25px 0 10px 0;}
+        .ui-calendar-select li a{ height:25px; line-height:25px;text-align:center; display:block;color:#FFF; margin:0;}
+        .ui-calendar-select li a:hover{background-color:#222;}
+        .ui-calendar a {text-decoration:none;color:#4d4d4d;}
+        .ui-calendar th {color:#707687; height: 26px; background-position: 0 0;}
+        .ui-calendar th,.ui-calendar td {text-align:center;}
+        .ui-calendar th,.ui-calendar td {width:30px; height:30px; line-height:30px;}
+        .ui-calendar td a {display:block;}
+        .ui-calendar-cell-disabled {color:#c0c0c0;}
+        .ui-calendar-cell-current a{border-radius: 8px 8px 8px 8px; font-weight: bold;margin: 0 auto;background-position:20px -104px;background-repeat: no-repeat;width:28px; height:28px; color:#EA5454;}
+    </style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>calendar示例</h2>
+        <!--S calendar-->
+        <div class="mod" id="widgetid">
+            <div class="hd">
+                <h3>简易日历控件</h3>
+            </div>
+            <div class="bd" id="j_calendar_wrapper">
+                <table id="j_calendar1" class="ui-calendar" summary="活动日历">
+                    <caption>
+                        <a href="javascript:" class="ui-calendar-prev-year" id="j_prev_year1" title="上一年"><<</a>
+                        <a href="javascript:" class="ui-calendar-prev-month" id="j_prev_month1" title="上一月"><</a>
+                        <span id="j_selected_date1" class="ui-calendar-selected-date"></span>
+                        <a href="javascript:" class="ui-calendar-next-month" id="j_next_month1" title="下一年">></a>
+                        <a href="javascript:" class="ui-calendar-next-year" id="j_next_year1" title="下一月">>></a>
+                        <div id="ui-calendar-select" class="ui-calendar-select">
+                            <ul>
+                                <li><a href="javascript:">2012</a></li>
+                                <li><a href="javascript:">2011</a></li>
+                                <li><a href="javascript:">2010</a></li>
+                                <li><a href="javascript:">2009</a></li>
+                                <li><a href="javascript:">2008</a></li>
+                            </ul>
+                        </div>
+                    </caption>
+                    <colgroup>
+                        <col id="sun1" />
+                        <col id="mon1" />
+                        <col id="tues1" />
+                        <col id="wed1" />
+                        <col id="thur1" />
+                        <col id="fri1" />
+                        <col id="sat1" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <pre class="brush:html">
+            <table id="j_calendar" class="ui-calendar" summary="活动日历">
+                <caption>
+                    <a href="javascript:" class="ui-calendar-prev-year" id="j_prev_year" title="上一年"><<</a>
+                    <a href="javascript:" class="ui-calendar-prev-month" id="j_prev_month" title="上一月"><</a>
+                    <span id="j_selected_date" class="ui-calendar-selected-date"></span>
+                    <a href="javascript:" class="ui-calendar-next-month" id="j_next_month" title="下一年">></a>
+                    <a href="javascript:" class="ui-calendar-next-year" id="j_next_year" title="下一月">>></a>
+                    <div id="ui-calendar-select1" class="ui-calendar-select">
+                        <ul>
+                            <li><a href="javascript:">2012</a></li>
+                            <li><a href="javascript:">2011</a></li>
+                            <li><a href="javascript:">2010</a></li>
+                            <li><a href="javascript:">2009</a></li>
+                            <li><a href="javascript:">2008</a></li>
+                        </ul>
+                    </div>
+                </caption>
+                <colgroup>
+                    <col id="sun" />
+                    <col id="mon" />
+                    <col id="tues" />
+                    <col id="wed" />
+                    <col id="thur" />
+                    <col id="fri" />
+                    <col id="sat" />
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>日</th>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </pre>
+        <pre class="brush:css">
+            <!--<link rel="stylesheet" href="/build/css/ui-calendar-min.css" />-->
+        </pre>
+        <pre class="brush:js">
+            <!--<script src="/build/js/ui-calendar-min.js"></script>
+            new Calendar({
+                container:"j_calendar",  //表格id
+                labelSelectedDate:"j_selected_date",//显示当前日期的标签
+                btnPrevMonth:"j_prev_month",//触发上一月元素
+                btnNextMonth:"j_next_month",//触发下一月元素
+                btnPrevYear:"j_prev_year",//触发上一年元素
+                btnNextYear:"j_next_year" //触发下一年元素
+            });-->
+        </pre>
+        <!--E calendar-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="/src/js/ui-calendar.js"></script>
+<script>
+    $(function () {
+        new Calendar({
+            container:"j_calendar1",
+            labelSelectedDate:"j_selected_date1",
+            btnPrevMonth:"j_prev_month1",
+            btnNextMonth:"j_next_month1",
+            btnPrevYear:"j_prev_year1",
+            btnNextYear:"j_next_year1"
+        });
+    })
+</script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

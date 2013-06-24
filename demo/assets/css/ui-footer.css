@@ -1,0 +1,13 @@
+#footer{
+	position:fixed;
+	_position:absolute;
+	right:10px;
+	bottom:10px;
+	font-size:12px;
+	color:#666;
+	font-family:SimSun;
+}
+
+#footer span{
+	font-family:"Arial";
+}

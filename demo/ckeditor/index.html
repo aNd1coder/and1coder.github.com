@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>ckeditor - <!--# include virtual="/docs/inc/title.html" --></title>
+    <!--# include virtual="/docs/inc/css.html" -->
+    <!--# include virtual="/docs/inc/js.html" -->
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>ckeditor示例</h2>
+        <!--S ckeditor-->
+        <div class="mod" id="widgetid">
+            <div class="hd">
+                <h3>ckeditor基础示例</h3>
+            </div>
+            <div class="bd">
+                <textarea class="ckeditor" name="editor1"></textarea>
+            </div>
+            <div class="ft">
+            </div>
+        </div>
+        <pre class="brush:html">
+            <textarea class="ckeditor" name="editor"></textarea>
+        </pre>
+        <pre class="brush:js">
+            <script src="http://static.mttang.com/lib/ckeditor/ckeditor.js"></script>
+        </pre>
+        <!--E ckeditor-->
+        <!--S options-->
+        <div class="options mod">
+            <h4>参数说明</h4>
+        	<pre class="brush:js">基础示例是通过设置textarea的class来调用编辑器,也可以改成js的方式调用: CKEDITOR.replace('textarea_id');</pre>
+        </div>
+        <!--E options-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="http://static.mttang.com/lib/ckeditor/ckeditor.js"></script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

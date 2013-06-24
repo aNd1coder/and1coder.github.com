@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>masktip - <!--# include virtual="/docs/inc/title.html" --></title>
+    <!--# include virtual="/docs/inc/css.html" -->
+    <link rel="stylesheet" href="/src/css/ui-masktip.css"/>
+    <!--# include virtual="/docs/inc/js.html" -->
+    <style>
+        .mod a, .mod img{
+            display:block;
+        }
+
+        .ui-masktip{
+            color:#FFF;
+            line-height:50px;
+            bottom:0;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>masktip示例</h2>
+        <!--S masktip-->
+        <div class="mod" id="widgetid">
+            <div class="hd">
+            </div>
+            <div class="bd">
+                <a href="###" rel="MUI插件html代码片段"><img src="/docs/demo/assets/img/html-snippet.png" width="950" alt="MUI插件html代码片段"></a>
+            </div>
+            <div class="ft">
+            </div>
+        </div>
+        <pre class="brush:html">
+            //masktip html相关代码
+        </pre>
+        <pre class="brush:css">
+            <!--<link rel="stylesheet" href="/build/css/ui-masktip-min.css"/>-->
+        </pre>
+        <pre class="brush:js">
+            <!--<script src="/build/js/ui-masktip-min.js"></script>-->
+
+            $(".ui-masktip a").masktip({size:30});
+        </pre>
+        <div class="options mod">
+            <h4>参数说明</h4>
+			<pre class="brush:js">
+                $.fn.masktip.defaults = {
+                    maskClass:".ui-masktip", //提示层类名
+                    fadeIn:500, //淡入时间间隔
+                    fadeOut:500, //淡出时间间隔
+                    size:30, // 提示层偏移量(高度或宽度)
+                    direction:"bottom"//出现方向
+                }
+            </pre>
+        </div>
+        <!--E masktip-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="/src/js/ui-masktip.js"></script>
+<script>
+    $(function () {
+        //masktip调用代码
+        $("#widgetid a").masktip({size:50});
+    })
+</script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

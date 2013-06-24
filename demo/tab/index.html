@@ -1,0 +1,188 @@
+﻿<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>选项卡 - <!--# include virtual="/docs/inc/title.html" --></title>
+    <!--# include virtual="/docs/inc/css.html" -->
+    <link rel="stylesheet" href="/src/css/ui-tab.css"/>
+    <!--# include virtual="/docs/inc/js.html" -->
+    <style>
+        .mod{
+            position:relative;
+            margin:30px 0 10px 0;
+        }
+
+        .mod .ft a{
+            position:absolute;
+            right:0;
+            top:0;
+        }
+
+        .mod .hd .item{
+            width:50px;
+            height:20px;
+            text-align:center;
+            line-height:20px;
+            border:1px solid transparent;
+            margin-left:20px;
+        }
+
+        .mod .hd li{
+            float:left;
+        }
+
+        .mod .ui-tab-container, .mod .hd .current{
+            background-color:#FFF;
+            border:1px solid #CCC;
+        }
+
+        .mod .ui-tab-container{
+            top:-2px;
+            -moz-border-radius:5px;
+            -webkit-border-radius:5px;
+            border-radius:5px;
+        }
+
+        .mod .hd .current{
+            border-bottom:none;
+            -webkit-border-top-left-radius:5px;
+            -webkit-border-top-right-radius:5px;
+            -moz-border-radius-topleft:5px;
+            -moz-border-radius-topright:5px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }
+    </style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>选项卡示例</h2>
+        <!--S media-->
+        <div class="mod ui-tab" id="tab1">
+            <div class="hd">
+                <h3>简易选项卡</h3>
+
+                <div class="ui-tab-trigger">
+                    <ul>
+                        <li><a href="#" class="item" title="item1">item1</a></li>
+                        <li><a href="#" class="item" title="item2">item2</a></li>
+                        <li><a href="#" class="item" title="item3">item3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd">
+                <div class="ui-tab-container">
+                    <div class="item">
+                        container1
+                    </div>
+                    <div class="item">
+                        container2
+                    </div>
+                    <div class="item">
+                        container3
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <a href="#" title="查看更多">more &raquo</a>
+            </div>
+        </div>
+		<pre class="brush: html;">
+			<div class="ui-tab" id="tabid">
+                <div class="ui-tab-trigger">
+                    <ul>
+                        <li><a href="#" class="item" title="item1">item1</a></li>
+                        <li><a href="#" class="item" title="item2">item2</a></li>
+                    </ul>
+                </div>
+                <div class="ui-tab-container">
+                    <div class="item">container1</div>
+                    <div class="item">container2</div>
+                </div>
+            </div>
+        </pre>
+		<pre class="brush: css;">
+            <link rel="stylesheet" href="/build/css/ui-tab-min.css"/>
+        </pre>
+        <pre class="brush: js;">
+            <script src="/build/js/ui-tab-min.js"></script>
+
+            <script>
+                $("#tabid").tab();
+            </script>
+        </pre>
+        <!--E media-->
+        <!--S news-->
+        <div class="mod ui-tab" id="tab2">
+            <div class="hd">
+                <h3>自动切换的选项卡</h3>
+                <div class="ui-tab-trigger">
+                    <ul>
+                        <li><a href="#" class="item" title="item1">item1</a></li>
+                        <li><a href="#" class="item" title="item2">item2</a></li>
+                        <li><a href="#" class="item" title="item3">item3</a></li>
+                        <li><a href="#" class="item" title="item4">item4</a></li>
+                        <li><a href="#" class="item" title="item5">item5</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd">
+                <div class="ui-tab-container">
+                    <div class="item">
+                        container1
+                    </div>
+                    <div class="item">
+                        container2
+                    </div>
+                    <div class="item">
+                        container3
+                    </div>
+                    <div class="item">
+                        container4
+                    </div>
+                    <div class="item">
+                        container5
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <a href="#" title="查看更多">more &raquo</a>
+            </div>
+        </div>
+        <pre class="brush: js;">
+            $("#tabid2").tab({auto:true,selectedIndex:2});
+        </pre>
+        <!--S news-->
+        <!--S options-->
+        <div class="options mod">
+            <h4>参数说明</h4>
+			<pre class="brush:js">
+                $.fn.tab.defaults = {
+                    trigger:".ui-tab-trigger", //触发点容器
+                    container:".ui-tab-container", //内容容器
+                    current:"current", //当前触发点以及内容节点样式
+                    triggerType:"mouseover", //触发事件类型
+                    selectedIndex:0, //默认被选中的索引
+                    auto:false, //是否自动切换
+                    interval:2000, //时间间隔
+                    lazyload:true //是否延迟加载
+                }
+            </pre>
+        </div>
+        <!--E options-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="/src/js/ui-tab.js"></script>
+<script>
+    $(function () {
+        $("#tab1").tab();
+        $("#tab2").tab({auto:true, selectedIndex:2});
+    })
+</script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

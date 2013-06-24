@@ -1,0 +1,48 @@
+#header h1 img{
+	-webkit-border-radius:5px;
+	-moz-text-border-radius:5px;
+	border-radius:5px;
+}
+
+#header h1 a, #header h1 img{
+	color:#2163DE;
+	-webkit-text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);
+	-moz-text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);
+	text-shadow:0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#widgets li{
+	list-style-type:square;
+}
+
+#widgets h3{
+	font-family:"Microsoft Yahei";
+	font-size:18px;
+	margin:0 0 10px 0;
+}
+
+#widgets ul{
+	padding:0;
+	margin:0 0 0 20px;
+}
+
+#widgets a{
+	display:inline-block;
+	padding-right:12px;
+	margin-right:10px;
+	color:#666;
+	background:url(http://static.mttang.com/MUI/docs/demo/assets/img/external.png) no-repeat right center;
+	text-decoration:none;
+}
+
+#widgets li{
+	-webkit-transition:text-shadow 0.20s ease-in-out;
+	-moz-transition:text-shadow 0.20s ease-in-out;
+	transition:text-shadow 0.20s ease-in-out;
+}
+
+#widgets li:hover{
+	-webkit-text-shadow:0 0 5px rgba(103, 166, 217, 1);
+	-moz-text-shadow:0 0 5px rgba(103, 166, 217, 1);
+	text-shadow:0 0 5px rgba(103, 166, 217, 1);
+}

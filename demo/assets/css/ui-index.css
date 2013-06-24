@@ -1,0 +1,183 @@
+@charset "utf-8";
+/*
+	Copyright (c) 2012, Mttang Inc. All rights reserved.
+	author: aNd1coder
+	update: $Id: ui-index.css 19502 2012-06-19 05:56:06Z guiyonghong $
+*/
+html, body {
+	background: #37393D url(../img/bg.png);
+}
+
+#container {
+	width: 950px;
+	margin: 80px auto;
+	font-family: "Microsoft YaHei";
+}
+
+.units {
+	margin-left: -10px;
+}
+
+.unit {
+	background-color: #3BA055;
+}
+
+.unit a.ui-block {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+
+.unit .ui-masktip {
+	height: 0;
+	line-height: 150px;
+	text-align: center;
+	font-size: 20px;
+	color: #FFF;
+	font-weight: 600;
+}
+
+.ui-unit-api {
+	background: #EA5454 url(../img/docs.png) no-repeat center;
+}
+
+.ui-unit-mui {
+	background: #2D2D2D url(../img/MUI-logo.png) no-repeat center 25px;
+	font-size: 16px;
+	position: relative;
+	cursor: pointer;
+}
+
+.ui-unit-mui:hover {
+	background-color: #272822;
+}
+
+.ui-unit-mui p {
+	margin-top: 92px;
+	color: #4066B5;
+	text-align: center;
+	font-weight: 600;
+}
+
+.ui-unit-mui b {
+	color: #4066B5;
+	display: block;
+}
+
+.ui-unit-mui em {
+	color: #3BA055;
+	font-style: normal;
+}
+
+.ui-unit-mui strong {
+	color: #EA5454;
+}
+
+.ui-unit-mui i {
+	background: url(../img/icon-cat.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	-moz-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.ui-unit-mui i.hover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.ui-unit-demo {
+	background: #4066B5 url(../img/demo.png) no-repeat center;
+}
+
+.ui-unit-chart {
+	background: #4066B5 url(../img/chart.png) no-repeat -572px -110px;
+}
+
+.ui-unit-group {
+	background: #3BA055 url(../img/group.png) no-repeat center;
+}
+
+.ui-unit-blog {
+	background: #EA5454 url(../img/wordpress.png) no-repeat center;
+}
+
+.ui-unit-forum {
+	background: #4066B5 url(../img/forum.png) no-repeat center;
+}
+
+.ui-unit-rss {
+	background: #9A77F3 url(../img/rss.png) no-repeat center;
+}
+
+.ui-unit-widgets {
+	background-color: #333;
+}
+
+#widgets h3, #widgets li, #widgets a {
+	float: left;
+	display: block;
+}
+
+#widgets li a {
+	height: 30px;
+	line-height: 30px;
+	width: 122px;
+	border-right: 3px solid #4066B5;
+	margin: 0 0 10px 10px;
+	padding: 0 0 0 25px;
+	background-color: #272822;
+	color: #FFF;
+	background-position: 10px center;
+}
+
+#widgets li a:hover, #widgets li a.hover {
+	background-color: #4066B5;
+}
+
+#widgets h3, #ui-unit-tasks h3 {
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	background-color: #4066B5;
+	color: #FFF;
+	font-size: 22px;
+}
+
+#ui-unit-tasks h3 {
+	width: 310px;
+	background-color: #EA5454;
+}
+
+#ui-unit-tasks a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.ui-unit-tasks {
+	background-color: #272822;
+	overflow: hidden;
+}
+
+#ui-unit-tasks h3 a {
+	display: block;
+}
+
+.ui-unit-tasks a {
+	padding-left: 10px;
+	margin-top: 5px;
+	text-decoration: none;
+}
+
+.ui-unit-tasks a:hover {
+	text-decoration: underline;
+}

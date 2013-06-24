@@ -1,0 +1,42 @@
+/*
+	Copyright (c) 2012, Mttang Inc. All rights reserved.
+	author	 : aNd1coder
+	overviww : 栅格化系统
+	update	 : $Id: ui-grid.css 16483 2012-02-29 07:35:04Z guiyonghong $
+*/
+.unit{
+	float:left;
+	margin:0 0 10px 10px;
+	_display:inline;
+}
+
+.unit-1-1{
+	width:150px;
+	height:150px;
+}
+
+.unit-1-2{
+	width:150px;
+	height:310px;
+}
+
+.unit-2-1{
+	width:310px;
+	height:150px;
+}
+
+.unit-3-1{
+	width:470px;
+	height:150px;
+}
+
+.unit-4-1{
+	width:630px;
+	height:150px;
+}
+
+.unit-5-1{
+	width:950px;
+	height:150px;
+}
+

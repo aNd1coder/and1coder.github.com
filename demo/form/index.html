@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>选项卡 - <!--# include virtual="/docs/inc/title.html" --></title>
+<!--# include virtual="/docs/inc/css.html" -->
+<!--# include virtual="/docs/inc/js.html" -->
+<style>
+	div,h3,fieldset,p,label,input{margin:0;padding:0;font-family:simsun;}
+	#mttform {width:540px;height:300px;border:1px solid #ccc;margin:25px auto 0;}
+	#mttform fieldset{border:none;}
+	#mttform label{border:none;padding:0 10px 0 0;width:160px;height:20px;text-align:right;display:inline-block;cursor:pointer;}
+	#mttform  p{height:30px;}
+	#mttform  input{height:20px;line-height:20px;width:200px;color:##D3D3D3;}
+	#mttform  #address{width:305px;}
+	#mttform  input.reset,#mttform input.submit{width:100px;height:25px;line-height:25px;margin:0 0 0 30px;}
+	#mttform .button{width:300px;height:30px;margin:30px auto 0;}
+	#mttform .tip{text-indent:20px;color:red;}
+	#mttform .text{width:460px;margin: 20px auto 0;line-height:20px;}
+	.placeholder{height:25px;line-height:25px;width:200px;padding:0 5px;border:1px solid #CCC;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-transition:box-shadow 0.20s ease-in-out;-moz-transition:box-shadow 0.20s ease-in-out;transition:box-shadow 0.20s ease-in-out;color:#D3D3D3;}
+	.placeholder:focus{outline:none;border:1px solid #87C6F9;-webkit-box-shadow:0 0 8px rgba(103, 166, 217, 1);-moz-box-shadow:0 0 8px rgba(103, 166, 217, 1);box-shadow:0 0 8px rgba(103, 166, 217, 1);color:#333;}
+</style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+	<div id="container">
+        <h2>表单示例</h2>
+        <!--S media-->
+		<div class="form" id='mttform'>
+			<form action="">
+				<fieldset>
+					<p><label for="username">* 真实姓名 : </label><input type="" id="username" name="username" class="placeholder" placeholder="请输入真实姓名" /></p>
+					<p><label for="idcard">* 身份证号码 : </label><input type="" id="idcard" name="idcard" class="placeholder" placeholder="请输入身份证号码"/></p>
+					<p><label for="telephone">* 手机号码 : </label><input type="" id="telephone" name="telephone" class="placeholder" placeholder="请输入手机号码"/></p>
+					<p><label for="address">* 详细地址 : </label><input type="" id="address" name="address" class="placeholder" placeholder="请输入详细地址"/></p>
+					<p><label for="post">  邮政编码 : </label><input type="" id="post" name="post" class="placeholder" placeholder="请输入邮政编码"/></p>
+					<p class='button'><input type="reset" class="reset" value="重置"><input type="submit" class="submit" value="确认"></p>
+				</fieldset>
+			</form>
+		</div>
+		<pre name="code" class="brush: html">
+			<div class="form" id='mttform'>
+				<form action="">
+					<fieldset>
+						<p><label for="username">* 真实姓名 : </label><input type="" id="username" name="username" class="placeholder" placeholder="请输入真实姓名" /></p>
+						<p><label for="idcard">* 身份证号码 : </label><input type="" id="idcard" name="idcard" class="placeholder" placeholder="请输入身份证号码"/></p>
+						<p><label for="telephone">* 手机号码 : </label><input type="" id="telephone" name="telephone" class="placeholder" placeholder="请输入手机号码"/></p>
+						<p><label for="address">* 详细地址 : </label><input type="" id="address" name="address" class="placeholder" placeholder="请输入详细地址"/></p>
+						<p><label for="post">  邮政编码 : </label><input type="" id="post" name="post" class="placeholder" placeholder="请输入邮政编码"/></p>
+						<p class='button'><input type="reset" class="reset" value="重置"><input type="submit" class="submit" value="确认"></p>
+					</fieldset>
+				</form>
+			</div>
+        </pre>
+		<pre name="code" class="brush: css">
+			div,h3,fieldset,p,label,input{margin:0;padding:0;font-family:simsun;}
+			#mttform {width:540px;height:300px;border:1px solid #ccc;margin:25px auto 0;}
+			#mttform fieldset{border:none;}
+			#mttform label{border:none;padding:0 10px 0 0;width:160px;height:20px;text-align:right;display:inline-block;}
+			#mttform  p{height:30px;}
+			#mttform  input{height:20px;line-height:20px;width:200px;}
+			#mttform  #address{width:305px;}
+			#mttform  input.reset,#mttform input.submit{width:100px;height:25px;line-height:25px;margin:0 0 0 30px;}
+			#mttform .button{width:300px;height:30px;margin:30px auto 0;}
+			#mttform .tip{text-indent:20px;color:red;}
+			#mttform .text{width:460px;margin: 20px auto 0;line-height:20px;}
+			.placeholder{
+				height:25px;
+				line-height:25px;
+				width:200px;
+				padding:0 5px;
+				border:1px solid #CCC;
+				-webkit-border-radius:5px;
+				-moz-border-radius:5px;
+				border-radius:5px;
+				-webkit-transition:box-shadow 0.20s ease-in-out;
+				-moz-transition:box-shadow 0.20s ease-in-out;
+				transition:box-shadow 0.20s ease-in-out;
+			}
+			.placeholder:focus{
+				outline:none;
+				border:1px solid #87C6F9;
+				-webkit-box-shadow:0 0 8px rgba(103, 166, 217, 1);
+				-moz-box-shadow:0 0 8px rgba(103, 166, 217, 1);
+				box-shadow:0 0 8px rgba(103, 166, 217, 1);
+			}
+        </pre>
+    </div>
+	<!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<script src="/src/js/flexitab.js"></script>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

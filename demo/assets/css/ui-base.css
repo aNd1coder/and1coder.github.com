@@ -1,0 +1,195 @@
+﻿@charset "utf-8";
+/*
+	Copyright (c) 2011, Mttang Inc. All rights reserved.
+	author: aNd1coder 
+	update: $Id: ui-base.css 16008 2012-02-13 03:42:14Z guiyonghong $
+	overview:
+		reset
+		funtion
+		layout
+		sytax highlight
+		widgets
+*/
+
+/*reset */
+body{
+	line-height:1.4;
+	background:white;
+	background-color:#EEEEEE;
+}
+
+body, input, textarea, select{
+	font-size:12px;
+	color:#333;
+	font-family:arial
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+	margin:0;
+	padding:0
+}
+
+ul, ol{
+	padding-left:0;
+	list-style-type:none
+}
+
+a img{
+	border:0;
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+/*funtion*/
+.dn{
+	display:none
+}
+
+.db{
+	display:block
+}
+
+.dib{
+	display:inline-block
+}
+
+.di{
+	display:inline
+}
+
+.m0{
+	margin:0
+}
+
+.p0{
+	padding:0
+}
+
+.n{
+	font-weight:normal;
+	font-style:normal
+}
+
+.b{
+	font-weight:bold
+}
+
+.i{
+	font-style:italic
+}
+
+.tc{
+	text-align:center
+}
+
+.tr{
+	text-align:right
+}
+
+.tl{
+	text-align:left
+}
+
+.tdl{
+	text-decoration:underline
+}
+
+.tdn, .tdn:hover, a.tdl:hover{
+	text-decoration:none
+}
+
+.bk{
+	word-wrap:break-word
+}
+
+.vm{
+	vertical-align:middle
+}
+
+.vtb{
+	vertical-align:text-bottom
+}
+
+.vt{
+	vertical-align:top
+}
+
+.vn{
+	vertical-align:-2px
+}
+
+.l{
+	float:left
+}
+
+.r{
+	float:right
+}
+
+.cl{
+	clear:both
+}
+
+.rel{
+	position:relative
+}
+
+.abs{
+	position:absolute
+}
+
+.poi{
+	cursor:pointer
+}
+
+.def{
+	cursor:default
+}
+
+.ovh{
+	overflow:hidden
+}
+
+.ovs{
+	overflow:scroll
+}
+
+.vh{
+	visibility:hidden
+}
+
+.vv{
+	visibility:visible
+}
+
+.z{
+	*zoom:1
+}
+
+.auto{
+	margin-left:auto;
+	margin-right:auto
+}
+
+.fix{
+	*zoom:1
+}
+
+.fix:after{
+	display:block;
+	content:"clear";
+	height:0;
+	clear:both;
+	overflow:hidden;
+	visibility:hidden
+}
+
+.cell{
+	display:table-cell;
+	*display:inline-block;
+	width:2000px;
+	*width:auto
+}

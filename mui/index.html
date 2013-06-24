@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <base href="" target="_blank" />
+    <title>梦天堂前端组件库(MUI)</title>
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-base.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-header.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-navigator.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-grid.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/mod-task.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-index.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-index.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-widgets.css" />
+    <link rel="stylesheet" href="/src/css/ui-masktip.css" />
+    <link rel="stylesheet" href="/docs/demo/assets/css/ui-footer.css" />
+</head>
+<body>
+<!--# include virtual="/docs/inc/navigator.html" -->
+<div id="container">
+    <!--S grid-->
+    <ul class="units fix">
+        <li class="unit unit-1-1 ui-unit-api">
+            <a class="ui-block" href="/docs/api/" rel="API文档" title="点击进入"></a>
+        </li>
+        <li class="unit unit-2-1 ui-unit-mui">
+            <p>
+                <b>梦天堂前端组件库(MUI)</b>
+                Keep it <em>simple</em> and <strong>efficient</strong>!
+            </p>
+            <i title="梦天堂前端组件库(MUI),成熟之后会托管到github.com上"></i>
+        </li>
+        <li class="unit unit-2-1 ui-unit-chart">
+            <a class="ui-block" href="/src/img/chart.png" rel="MUI框架图(点击查看大图)" title="点击查看大图"></a>
+        </li>
+        <li class="unit unit-1-1 ui-unit-demo">
+            <a class="ui-block" href="/docs/demo/" rel="组件演示" title="点击进入"></a>
+        </li>
+        <li class="unit unit-2-1 ui-unit-group">
+            <a class="ui-block" href="javascript:" rel="内部Q群: 150677530"></a>
+        </li>
+        <li class="unit unit-1-1 ui-unit-blog">
+            <a class="ui-block" href="http://192.168.131.115/wordpress/" rel="知识管理平台" title="点击进入"></a>
+        </li>
+        <li class="unit unit-1-1 ui-unit-forum">
+            <a class="ui-block" href="http://192.168.131.115/forum/" rel="内部交流论坛" title="点击进入"></a>
+        </li>
+        <li class="unit unit-2-1 ui-unit-rss">
+            <a class="ui-block" href="/docs/mui/" rel="MUI-JS基础类库" title="点击进入"></a>
+        </li>
+    </ul>
+    <!--E grid-->
+
+    <!--S widgets-->
+    <ul  class="units fix">
+        <li class="unit unit-5-1 ui-unit-widgets">
+            <!--# include virtual="/docs/inc/widgets.html" -->
+        </li>
+    </ul>
+    <!--E widgets-->
+
+    <!--S tasks-->
+    <ul id="ui-unit-tasks" class="units fix">
+        <li class="unit unit-2-1">
+            <h3><a href="/docs/tasks.html" title="Tasks">Tasks</a></h3>
+        </li>
+        <li class="unit unit-4-1 ui-unit-tasks">
+            <!--# include virtual="/docs/inc/tasks.html" -->
+        </li>
+    </ul>
+    <!--E tasks-->
+
+    <!--S #footer-->
+    <div id="footer">梦天堂前端开发团队 <span>&copy;</span>2011-2012</div>
+    <!--E #footer-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/src/js/ui-masktip.js"></script>
+    <script>
+        $(function () {
+            $(".unit a").masktip({size:150});
+
+            var $cat = $(".ui-unit-mui i");
+            $(".ui-unit-mui").hover(function () {
+                $cat.addClass("hover");
+            }, function () {
+                $cat.removeClass("hover");
+            })
+        })
+    </script>
+</div>
+</body>
+</html>

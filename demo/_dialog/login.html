@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>用户登录 - 梦天堂网络</title>
+    <meta name="description" content="梦天堂网络"/>
+    <meta name="keywords" content="梦天堂网络"/>
+    <link rel="stylesheet" href="http://static.mttang.com/global/css/base.css"/>
+    <style>
+        fieldset{ border:none; width:100%; }
+
+        li{ text-align:center; padding:10px 0; display:block; }
+
+        label{ display:inline-block; width:100px; text-align:right; padding-right:5px; }
+
+        input{
+            height:25px;
+            line-height:25px;
+            width:200px;
+            padding:2px 5px;
+            border:1px solid #CCC;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+            -webkit-transition:box-shadow 0.20s ease-in-out;
+            -moz-transition:box-shadow 0.20s ease-in-out;
+            transition:box-shadow 0.20s ease-in-out;
+            color:#CCC;
+        }
+
+        input:focus{
+            outline:none;
+            border:1px solid #87C6F9;
+            -webkit-box-shadow:0 0 5px rgba(103, 166, 217, 1);
+            -moz-box-shadow:0 0 5px rgba(103, 166, 217, 1);
+            box-shadow:0 0 5px rgba(103, 166, 217, 1);
+            color:#000;
+        }
+
+        input[type=submit]{
+            width:80px;
+            height:35px;
+            line-height:35px;
+            background-color:#4066B5;
+            color:#FFF;
+            border:none;
+            cursor:pointer;
+        }
+
+        input[type=submit]:hover{
+            background-color:#F60;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+    <form action="http://192.168.131.114:88/mac/" target="_blank">
+        <ul>
+            <li>
+                <input type="text" name="username" id="username" required="required" placeholder="用户名或邮箱"/>
+            </li>
+            <li>
+                <input type="password" name="password" id="password" required="required" placeholder="密码"/>
+            </li>
+            <li>
+                <input type="submit" value=" 登 录"/>
+            </li>
+        </ul>
+    </form>
+</fieldset>
+</body>
+</html>

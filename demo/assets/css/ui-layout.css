@@ -1,0 +1,141 @@
+﻿@charset "utf-8";
+/*
+	Copyright (c) 2011, Mttang Inc. All rights reserved.
+	author: aNd1coder 
+	update: $Id: ui-layout.css 18820 2012-05-04 09:05:43Z guiyonghong $
+*/
+
+/*layout*/
+html, body { height: 100%; }
+
+#wrapper {
+	margin: 50px auto 0;
+	width: 950px;
+	font-family: SimSun;
+}
+
+#wrapper a {
+	text-decoration: none
+}
+
+#header h1 {
+	margin: 10px 0 30px 0;
+}
+
+#header h1 a:hover {
+	-webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+#container h2 {
+	color: #EA5454;
+	font-family: "Microsoft Yahei";
+}
+
+#container h3, #container h4 {
+	margin: 5px 0;
+	color: #666;
+	font-size: 12px
+}
+
+#container h4 {
+	color: #87C974;
+}
+
+#container .options {
+	background-color: #E7E5DC;
+	padding: 10px;
+}
+
+#footer {
+	text-align: right;
+	color: #999;
+	margin-top: 50px;
+}
+
+#footer span {
+	font-family: Arial;
+}
+
+.dp-highlighter, .options, #widgets {
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.options:hover {
+	background-color: #161F0A;
+}
+
+.options .dp-highlighter .bar { display: none }
+
+#widgets {
+	position: fixed;
+	_position: absolute;
+	right: 10px;
+	top: 100px;
+	width: 150px;
+	border-radius: 0;
+	border-top: 10px solid #5490CC;
+	background-color: #363636;
+	padding: 10px 0;
+}
+
+#widgets h3 {
+	text-align: center;
+	color: #457DCA;
+	border: none;
+	background-color: #363636;
+}
+
+#widgets a:hover {
+	color: #FFF;
+}
+
+/*code*/
+.code {
+	border-radius: 3px;
+	padding: 0 3px;
+	border: 1px solid #CCC;
+}
+
+.code1 {
+	background-color: #F0F0F0;
+	border-color: #CCC;
+}
+
+.code2 {
+	background-color: #EFE;
+	border-color: #6B6;
+}
+
+.code3 {
+	background-color: #EFE;
+	border-color: #558ED5;
+}
+
+.code4 {
+	background-color: #EFE;
+	border-color: #9BBB59;
+}
+
+.code5 {
+	background-color: #EFE;
+	border-color: #F79646;
+}
+
+.code6 {
+	background-color: #EFE;
+	border-color: #EA5454;
+}
+
+.code7 {
+	border-color: #FFD599;
+	background-color: #FFEFD9;
+}
+
+.code8 {
+	border-color: #DDDAAA;
+	background: #FAF9E2;
+}

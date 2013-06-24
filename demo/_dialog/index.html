@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>MUI-dialog插件</title>
+    <link rel="stylesheet" href="http://static.mttang.com/global/css/base.css"/>
+    <link rel="stylesheet" href="ui-dialog.css"/>
+    <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+</head>
+<body>
+<iframe scrolling="no" frameborder="0" src="http://mui.mttang.com/" id="js-dialog-iframe"></iframe>
+<select name="fixIE6" id="fixIE6">
+    <option value="欢迎访问梦天堂应用中心">欢迎访问梦天堂应用中心</option>
+</select>
+
+<p style="margin:1000px 0;">aaaaaa</p>
+<script src="ui-dialog.js"></script>
+<script>
+    $(function () {
+        $("#js-dialog-iframe").dialog({
+            id:"js-dialog-loginPanel",
+            title:"梦天堂应用中心",
+            width:800,
+            height:600
+        });
+    });
+
+</script>
+</body>
+</html>

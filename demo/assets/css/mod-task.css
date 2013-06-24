@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*
+	Copyright (c) 2012, Mttang Inc. All rights reserved.
+	author  : aNd1coder
+	overview:
+	update  : $Id$
+*/
+.ui-unit-tasks a {
+	display: block;
+	height: 22px;
+	line-height: 22px;
+}
+
+.ui-unit-tasks span, .ui-unit-tasks i {
+	background-color: #EA5454;
+	display: inline-block;
+	margin-left: 10px;
+	padding: 0 5px;
+	line-height: 1.5em;
+}
+
+.ui-unit-tasks .todo {
+	background-color: #666;
+	color: #FFF;
+}
+
+.ui-unit-tasks .trash {
+	background-color: #EEE;
+	text-decoration: line-through;
+	color: #666;
+}
+
+.ui-unit-tasks .done {
+	background-color: #3BA055;
+	color: #3BA055;
+	color: #FFF;
+}

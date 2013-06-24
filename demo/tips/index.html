@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>tips - <!--# include virtual="/docs/inc/title.html" --></title>
+    <!--# include virtual="/docs/inc/css.html" -->
+    <link rel="stylesheet" href="/src/css/ui-tips.css"/>
+    <!--# include virtual="/docs/inc/js.html" -->
+    <style>
+        #container .bd {
+            padding: 250px 0;
+        }
+
+        .tip1 { top: 210px; }
+
+        .tip2 { top: 300px; }
+
+        .tip3 { top: 400px; }
+
+        .tip4 { top: 500px; }
+
+        .tip1 .ui-tips-angle {
+            top: -5px;
+            top: -7px\9;
+            left: 10px;
+            border-width: 1px 0 0 1px;
+        }
+
+        .tip2 .ui-tips-angle {
+            top: 6px;
+            right: -6px;
+            right: -7px\9;
+            right: -4px\0;
+            border-width: 1px 1px 0 0;
+        }
+
+        .tip3 .ui-tips-angle {
+            top: 32px;
+            border-width: 0 1px  1px 0;
+        }
+
+        .tip4 .ui-tips-angle {
+            top: 6px;
+            left: -6px;
+            left: -7px\9;
+            border-width: 0 0 1px 1px;
+        }
+    </style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>tips示例</h2>
+        <!--S tips-->
+        <div class="mod">
+            <div class="bd">
+                <div class="ui-tips tip1">
+                    <p class="ui-tips-cnt">
+                        MUI插件库还在完善中,大家一起参与进来吧...(上)
+                    </p>
+                    <i class="ui-tips-angle"></i>
+                </div>
+                <div class="ui-tips tip2">
+                    <p class="ui-tips-cnt">
+                        MUI插件库还在完善中,大家一起参与进来吧...(右)
+                    </p>
+                    <i class="ui-tips-angle"></i>
+                </div>
+                <div class="ui-tips tip3">
+                    <p class="ui-tips-cnt">
+                        MUI插件库还在完善中,大家一起参与进来吧...(下)
+                    </p>
+                    <i class="ui-tips-angle"></i>
+                </div>
+                <div class="ui-tips tip4">
+                    <p class="ui-tips-cnt">
+                        MUI插件库还在完善中,大家一起参与进来吧...(左)
+                    </p>
+                    <i class="ui-tips-angle"></i>
+                </div>
+            </div>
+            <div class="ft">
+            </div>
+        </div>
+        <pre class="brush:html">
+            <div class="ui-tips">
+                <p class="ui-tips-cnt">
+                    MUI插件库还在完善中,大家一起参与进来吧...
+                </p>
+                <i class="ui-tips-angle"></i>
+            </div>
+        </pre>
+        <pre class="brush:css">
+            <!--<link rel="stylesheet" href="/build/css/ui-tips-min.css" />-->
+            /*CSS按照上右下左顺序*/
+            .tip1 .ui-tips-angle {
+                top: -5px;
+                left: 10px;
+                border-width: 1px 0 0 1px;
+            }
+
+            .tip2 .ui-tips-angle {
+                top: 6px;
+                right: -6px;
+                border-width: 1px 1px 0 0;
+            }
+
+            .tip3 .ui-tips-angle {
+                top: 32px;
+                border-width: 0 1px  1px 0;
+            }
+
+            .tip4 .ui-tips-angle {
+                top: 6px;
+                left: -6px;
+                border-width: 0 0 1px 1px;
+            }
+        </pre>
+        <!--E tips-->
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+</body>
+</html>

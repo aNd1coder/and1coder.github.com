@@ -1,0 +1,23 @@
+#header b{
+	color:#4066B5;
+}
+
+#header em{
+	color:#3BA055;
+	font-style:normal;
+}
+
+#header strong{
+	color:#EA5454;
+}
+
+#header h1,#header h2{
+	margin:0;
+}
+
+#header h2{
+	font-size:12px;
+	color:#292929;
+	margin-bottom:30px;
+	font-family:"Microsoft YaHei"
+}

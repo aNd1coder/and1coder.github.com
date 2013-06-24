@@ -1,0 +1,93 @@
+.ui-dialog-wrapper{
+	background-color:rgba(123, 133, 143, 0.4);
+	padding:10px;
+	border-radius:5px 5px 5px 5px;
+	box-shadow:1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.ui-dialog-layout{
+	position:relative;
+	background-color:#FFFFFF;
+	width:100%;
+	height:100%;
+}
+
+.ui-dialog-bdcenter{
+	vertical-align:top;
+}
+
+.ui-dialog-header{
+	background-color:#CCC;
+	padding:5px 10px;
+}
+
+.ui-dialog-title{
+	font-weight:600;
+	color:#4066B5;
+}
+
+.ui-dialog-action{
+	overflow:hidden;
+	position:absolute;
+	right:5px;
+	top:3px;
+}
+
+.ui-button{
+	background:url(ui-dialog.png) no-repeat;
+	display:inline-block;
+	width:20px;
+	height:20px;
+	float:left;
+	margin-left:4px;
+}
+
+.ui-button-min{
+	background-position:-1px -56px;
+}
+
+.ui-button-max{
+	background-position:-30px -56px;
+}
+
+.ui-button-close{
+	background-position:-59px -56px;
+}
+
+.ui-button-min:hover{
+	background-position:-1px -28px;
+}
+
+.ui-button-max:hover{
+	background-position:-30px -28px;
+}
+
+.ui-button-close:hover{
+	background-position:-59px -28px;
+}
+
+.ui-dialog-max .ui-button-max:hover{
+	background-position:-90px -28px;
+}
+
+.ui-dialog-container{ overflow-x:hidden; overflow-y:scroll; }
+
+#js-dialog-iframe{
+	width:100%;
+	height:100%;
+}
+
+.ui-overlay{
+	width:100%;
+	height:100%;
+	background-color:rgba(0, 0, 0, 0.6);
+	z-index:999;
+	top:0;
+	left:0;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#99000000 ', EndColorStr = '#99000000');
+	position:absolute;
+}
+
+:root .ui-overlay{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#00000000', EndColorStr = '#00000000');
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>Todo Tasks - <!--# include virtual="/docs/inc/title.html" --></title>
+    <!--# include virtual="/docs/inc/css.html" -->
+    <!--# include virtual="/docs/inc/js.html" -->
+    <link rel="stylesheet" href="/docs/demo/assets/css/mod-task.css"/>
+    <style>
+         .ui-unit-tasks {
+            margin-top: 20px;
+        }
+
+        .ui-unit-tasks a {
+            color: #222;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .ui-unit-tasks span, .ui-unit-tasks i {
+            color: #FFF;
+            border-radius: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="wrapper">
+    <!--# include virtual="/docs/inc/header.html" -->
+    <div id="container">
+        <h2>Todo Tasks</h2>
+
+        <div class="mod ui-unit-tasks">
+            <!--# include virtual="/docs/inc/tasks.html" -->
+        </div>
+    </div>
+    <!--# include virtual="/docs/inc/footer.html" -->
+</div>
+<!--# include virtual="/docs/inc/ftplaceholder.html" -->
+<script>
+    $(function () {
+        $("#widgets").hide();
+    })
+</script>
+</body>
+</html>
