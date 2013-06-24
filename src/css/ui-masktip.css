@@ -1,0 +1,22 @@
+/*
+	Copyright (c) 2012, Mttang Inc. All rights reserved.
+	@author	: aNd1coder
+	@overview:
+		filter 渐变滤镜详细用法,[url:http://msdn.microsoft.com/en-us/library/ms532997(VS.85).aspx]
+		StartColorStr 和 EndColorStr:
+		   #4c000000 是 30% 透明度的 #000000 的意思
+		   组成: # + 透明度 + 颜色
+		   算法: Math.floor(0.6 * 255).toString(16);
+	@update	: $Id: ui-masktip.css 16640 2012-03-01 09:08:10Z guiyonghong $
+			- 2012-03-01 调整样式文件注释,去除文档头部的@charset申明
+*/
+.ui-masktip {
+	position:absolute;
+	height:0;
+	background: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#99000000 ', EndColorStr = '#99000000');
+}
+
+:root .ui-masktip {
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#00000000', EndColorStr = '#00000000');
+}

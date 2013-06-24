@@ -2,10 +2,10 @@
 <html dir="ltr" lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
-<title>选项卡 - <!--# include virtual="/docs/inc/title.html" --></title>
+<title>选项卡 - 梦天堂前端开发平台</title>
 <!--# include virtual="/docs/inc/css.html" -->
 <link rel="stylesheet" href="/src/css/ui-tab.css" />
-<!--# include virtual="/docs/inc/js.html" -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <style>
 	.mt-scroll-obj{width:206px;height:145px;overflow:hidden;position:relative;}
 	.mt-scroll-container li{height:145px;width:103px;float:left;}
@@ -21,7 +21,25 @@
 </style>
 </head>
 <body>
-<!--# include virtual="/docs/inc/hdplaceholder.html" -->
+<div id="navigator">
+    <div class="w960 fix">
+        <div id="logo"><span class="m">M</span><span class="u">U</span><span class="i">I</span><span class="intro">梦天堂前端开发平台</span>
+        </div>
+        <ul>
+            <li><a id="menu-1" class="group1" href="/docs/" title="MUI首页">首页</a></li>
+            <li><a id="menu-2" class="group1" href="/docs/mui/" title="MUI基础类库主页">类库</a></li>
+            <li><a id="menu-3" class="group1" href="/docs/demo/" title="MUI组件库演示">组件</a></li>
+            <li><a id="menu-4" class="group1" href="/docs/api/" title="MUI类库以及组件库Api文档">文档</a></li>
+            <li><a id="menu-5" class="group1" href="/docs/labs/" title="各种在实验状态的想法示例和测试">实验室</a></li>
+            <li><a id="menu-6" class="group1" href="/docs/tools.html" title="前端工具集合">工具</a></li>
+            <li><a id="menu-7" class="group1" href="/docs/tasks.html" title="计划任务列表">任务</a></li>
+            <li><a id="menu-8" class="group2" href="http://m.mttang.com/" title="梦天堂网络移动平台" target="_blank">移动</a></li>
+            <li><a id="menu-9" class="group2" href="http://192.168.131.115/wordpress/" title="梦天堂网站部博客" target="_blank">博客</a></li>
+            <li><a id="menu-10" class="group2" href="http://192.168.131.115/forum/" title="梦天堂网站部论坛" target="_blank">论坛</a></li>
+        </ul>
+    </div>
+</div>
+
 <div id="wrapper">
     <!--# include virtual="/docs/inc/header.html" -->
 	<div id="container">

@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+	Copyright (c) 11-12-9, Mttang Inc. All rights reserved.
+	author: aNd1coder 
+	update: $Id: ui-slide.scss 15956 2012-02-03 08:25:03Z guiyonghong $
+*/
+.ui-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.ui-slide-trigger {
+    position: absolute
+}
+
+.ui-slide-trigger a {
+    float: right;
+    display: block;
+}
+
+.ui-slide-container {
+    background: url(http://static.mttang.com/images/loading/5.gif) no-repeat center;
+}
+
+.ui-slide-container .item {
+    display: none;
+}
+
+.ui-slide-container .current {
+    display: block;
+}

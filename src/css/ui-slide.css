@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*
+	Copyright (c) 11-12-9, Mttang Inc. All rights reserved.
+	author: aNd1coder 
+	update: $Id: ui-slide.css 16524 2012-02-29 09:45:20Z guiyonghong $
+	- 2012-02-29 设置.ui-slide-container下的img为display:block,防止产生空隙
+*/
+
+.ui-slide{
+	position:relative;
+	overflow:hidden;
+	z-index:1;
+	margin:0 auto;
+}
+
+.ui-slide ul{
+	position:absolute;
+}
+
+.ui-slide li{
+	float:left;
+	overflow:hidden;
+	position:relative;
+}
+
+.ui-slide-trigger{
+	position:absolute;
+	bottom:0;
+	right:0;
+	height:35px;
+	line-height:35px;
+	width:100%;
+	background:rgba(0, 0, 0, 0.6);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#99000000 ', EndColorStr = '#99000000');
+}
+
+:root .ui-slide-trigger{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#00000000', EndColorStr = '#00000000')
+}
+
+.ui-slide-trigger span{
+	margin-left:10px;
+}
+
+.ui-slide-trigger a{
+	float:right;
+	display:block;
+	text-align:center;
+}
+
+.ui-slide-container img{
+	display:block;
+}

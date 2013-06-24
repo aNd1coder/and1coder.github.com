@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*
+	Copyright (c) 2011, Mttang Inc. All rights reserved.
+	author: zhangwang 
+	update: $Id: ui-scroll.css 14338 2011-12-06 08:13:13Z zhangwang $
+*/
+/* 图片上下左右滚动组件 */
+.ui-scroll-mask{font-size:12px; font-family:Simsun; color:#000; clear:both; position:relative;overflow:hidden;}
+.ui-scroll-container{clear:both; position:absolute; left:0; top:0;width:100%;}
+.ui-scroll-mask li{display:inline-block; float:left;}

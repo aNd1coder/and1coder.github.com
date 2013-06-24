@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*
+	Copyright (c) 2012, Mttang Inc. All rights reserved.
+	author  : aNd1coder
+	overview:
+	update  : $Id: ui-tips.css 18154 2012-04-13 09:23:52Z guiyonghong $
+*/
+.ui-tips {
+	position: absolute;
+	background: #FFF8E8;
+	border: 1px solid #FFBA00;
+	padding: 10px;
+}
+
+.ui-tips i {
+	position: absolute;
+	display: block;
+	font-size: 0;
+	background: #FFF8EF;
+	border: 1px solid #FFBA00;
+	width: 8px;
+	height: 8px;
+}
+
+.ui-tips-angle {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865475, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865475, SizingMethod='auto expand')";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11 = 0.7071067811865475, M12 = -0.7071067811865477, M21 = 0.7071067811865477, M22 = 0.7071067811865475, SizingMethod = 'auto expand');
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+:root .ui-tips-angle { filter: none\9; }

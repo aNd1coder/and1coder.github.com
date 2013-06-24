@@ -1,0 +1,9 @@
+.ui-fixed-top{ position:fixed; top:0; bottom:auto; }
+.ui-fixed-right{ position:fixed; left:auto; right:0; }
+.ui-fixed-bottom{ position:fixed; top:auto; bottom:0 }
+.ui-fixed-left{ position:fixed; left:0; right:auto; }
+* html, * html body /* 修正IE6振动bug */ { background-image:url(about:blank); background-attachment:fixed; }
+* html .ui-fixed-top /* IE6 头部固定 */ { position:absolute; bottom:auto; top:expression(eval(document.documentElement.scrollTop)); }
+* html .ui-fixed-right /* IE6 右侧固定 */ { position:absolute; right:auto; left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0)); }
+* html .ui-fixed-bottom /* IE6 底部固定  */ { position:absolute; bottom:auto; top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); }
+* html .ui-fixed-left /* IE6 左侧固定 */ { position:absolute; right:auto; left:expression(eval(document.documentElement.scrollLeft)); }

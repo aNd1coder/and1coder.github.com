@@ -1,0 +1,8 @@
+﻿/*
+	Copyright (c) 2012, Mttang Inc. All rights reserved.
+	author: gecko 
+	update: $Id: ui-convscrollpic.css 16439 2012-02-29 05:39:26Z zhangwang $
+*/
+.mask {overflow:hidden;position:relative;}
+.mask ul {position:absolute;top:0;left:0;}
+.mask li {line-height:25px;height:25px;list-style-type:none;}
