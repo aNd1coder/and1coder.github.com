@@ -1,3 +1,3 @@
-baseurl: /
+baseurl: http://and1coder.github.io/
 permalink: blog/:title/
 markdown: rdiscount
