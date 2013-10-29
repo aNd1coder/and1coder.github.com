@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 [Autoprefixer](https://github.com/ai/autoprefixer "Autoprefixer")解析CSS文件并且添加浏览器前缀到CSS规则里，使用[Can I Use](http://www.caniuse.com/ "Can I Use")的数据来决定哪些前缀是需要的。
