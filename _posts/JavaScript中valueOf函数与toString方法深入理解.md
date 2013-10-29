@@ -100,9 +100,6 @@ title: JavaScript中valueOf函数与toString方法深入理解
 
 参考：
 [http://adamlu.googlecode.com/svn/trunk/js_quiz.html](http://adamlu.googlecode.com/svn/trunk/js_quiz.html)
-
 [http://www.jb51.net/article/32327.htm](http://www.jb51.net/article/32327.htm)
-
 [http://www.cnblogs.com/rubylouvre/archive/2010/10/01/1839748.html](http://www.cnblogs.com/rubylouvre/archive/2010/10/01/1839748.html)
-
 [http://www.cnblogs.com/rubylouvre/archive/2010/10/02/1841143.html](http://www.cnblogs.com/rubylouvre/archive/2010/10/02/1841143.html)
