@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Autoprefixer:一个以最好的方式处理浏览器前缀的后处理程序
 ---
 [Autoprefixer](https://github.com/ai/autoprefixer "Autoprefixer")解析CSS文件并且添加浏览器前缀到CSS规则里，使用[Can I Use](http://www.caniuse.com/ "Can I Use")的数据来决定哪些前缀是需要的。

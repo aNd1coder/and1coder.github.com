@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: javasript之toString怪异的情况
 ---
 趁找工作这段时间，复习和归纳下一些知识点吧，工作忙的时候没有静下心来好好看书，导致很多问题不求甚解，自然职业道上会遇到各种瓶颈。

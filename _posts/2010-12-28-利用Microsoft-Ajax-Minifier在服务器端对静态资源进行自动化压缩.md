@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 利用Microsoft Ajax Minifier在服务器端对静态资源进行自动化压缩
 ---
 <h2>{{ page.title }}</h2>

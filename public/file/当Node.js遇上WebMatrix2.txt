@@ -1,0 +1,238 @@
+﻿After months of hard work by the WebMatrix team, it’s exciting to introduce the release candidate of WebMatrix 2. 
+经过WebMatrix团队数月的努力，现在激动的介绍WebMatrix 2候选版本。
+
+WebMatrix 2 includes tons of new features, but today I want to give an overview of the work we’ve done to enable building applications with Node.js.
+WebMatrix 2 包含大量的新特性，但今天我想概述在WebMatrix 2下用Node.js创建应用我们所做的工作。
+
+If you want to skip all of this and just get a download link (it’s free!), here you go.
+如果你想跳过此文而仅仅只是想要得到下载连接（免费），请点这里。
+
+How far we have come
+我们走了多远
+
+Less than a year ago, I was working at Carnegie Mellon University, trying to use Node.js with ASP.NET for real time components of our online learning environment. 
+不到一年前，我在卡耐基梅隆大学工作，尝试用Node.js和ASP.NET实现我们在线学习环境的实时组件。
+
+Running Linux inside of our customers’ data centers was a non-starter, and running a production system in cygwin was even less ideal. 
+我们在运行Linux的客户的数据中心是行不通的，在cygwin里运行一个生产系统显得不够理想。
+
+Developing node on Windows wasn’t exactly easy either – if you managed to get node running, getting NPM to work was near impossible. 
+在Windows上开发node更加不易 - 如果你想让node运行，让NPM工作是几乎不可能的。
+
+Using node in an environment favorable to Windows was more than an up hill battle. 
+在Windows环境下使用node比登山还难。
+
+In the last 12 months since I’ve joined Microsoft, we’ve seen various partnerships between Joyent and Microsoft, resulting in new releases of node and npm to support Windows, and a commitment to Node on Windows Azure. 
+在我加入微软之后过去的12个月里，我们已经看到Joyent和微软之间的各种合作关系，是的新版的node和npm在Windows上得到支持，以及在Windos Azure上支持Node的承诺。
+
+We’ve worked together to build a better experience for developers, IT administrators, and ultimately, the users who use our systems. 
+我们共同为开发者，IT管理员以及使用我们系统的最终用户建立更好的用户体验。
+
+One of the results of that work is a vastly improved experience for building applications with Node.js on Windows Azure. 
+这些工作得到的其中一个成果是在Windows Azure上用Node.js构建应用体验得到了极大的改善。
+
+Glenn Block on the SDK team has done a fabulous write up on the ways Microsoft is making Azure a great place for Node.js developers. 
+在SDK团队的Glenn Block极力称赞微软做了令人难以置信的举措使得Azure成为开发者开发Node.js应用一个很棒的环境。
+
+As our favorite VP Scott Guthrie says on his blog, meet the new Windows Azure.
+作为我们最喜欢的副总裁Scott Guthrie在他的博客上表示,(这些)满足新Windows Azure。
+
+Enter WebMatrix 2
+进入WebMatrix 2
+
+Today, getting started with node.js is a relatively simple task. 
+如今开始使用node.js是一个相对简单的任务。
+
+You install node, npm (which is now bundled with the node installers), and get started with your favorite text editor. 
+安装node，npm（现在已经打包在了node安装程序里），用你最喜欢的文本编辑器就可以开始。
+
+There are infinite possibilities, and limitless configurations for managing projects, compiling CoffeeScript & LESS, configuring your production settings, and deploying your apps. 
+但是在管理项目，编译CoffeeScript和LESS，配置产品设置，发布应用程序过程中充满各种各样可能性和配置（繁琐）。
+
+WebMatrix 2 sets out to provide another way to build node.js apps: everything you need to build great apps is one place.
+WebMatrix 2 提供我们另外一种构建node.js应用的方式：你只需要在一个环境下构建优秀的应用程序。
+
+WebMatrix 2 is first and foremost designed for building web applications. 
+WebMatrix 2 首要是为构建Web应用程序而设计的。
+
+From the start screen, you can create applications using pre-built templates, or install common open source applications from the Web Gallery. 
+在起始屏，可以使用预制的模板，或者从Web Gallery中安装常见的开源应用程序来创建你租户的应用程序。
+
+The current set of templates support creating applications with Node.js, PHP, and (of course) ASP.NET Web Pages. 
+目前模板支持用Node.js, PHP, 当然还包括ASP.NET Web Pages创建应用程序。
+
+Out of the box, WebMatrix 2 includes three templates for Node.js:
+除此之外，WebMatrix 2 还包含三种创建Node.js应用程序的模板：
+
+Empty Node.js Site
+空Node.js网站
+
+Express Site
+Express网站
+
+Express Starter Site
+Express Starter网站
+
+The empty site provides a very basic example of using an http server – the same sample that’s available on nodejs.org. 
+空Node.js网站提供使用http server一些非常基础的示例，跟nodejs.org官网提供的一致。
+
+The Express Site is a basic application generated using the scaffolding tool in the Node.js framework express. 
+Express网站是用Node.js的Express框架脚手架工具生成的基础应用程序。
+
+The Node Starter Site is where things start to get interesting. 
+Node Starter网站是以一个有趣的东西开始。
+
+This boilerplate is hosted on GitHub, and shows how to implement sites that include parent/child layouts with jade, LESS css, logins with Twitter and Facebook, mobile layouts, and captcha. 
+样板文件被托管在GitHub上，演示如何实现包含jade父/子布局,LESS预编译css,用Twitter和Facebook登录,移动布局以及验证码的站点。
+
+When you create a new application using any of these templates, WebMatrix 2 is going to ensure node, npm, and IISNode are installed on your system. 
+当你用任意这些模板创建新的应用程序时，WebMatrix 2将会确保node，npm以及IISNode已经安装在你的系统里。
+
+If not, it will automatically install any missing dependencies. 
+如果他们没有被安装，WebMatrix 2将会自动安装任何缺少的依赖关系。
+
+This feature is also particularly useful if you are building PHP/MySQL applications on Windows. 
+如果你正在Windows下创建PHP/MYSQL应用程序，这一特性也特别有用。
+
+The end result of the Node Starter Site is a fully functional application that includes Express, Jade, LESS, chat with socket.io, logins with EveryAuth, and mobile support with jQuery Mobile:
+Node Starter站点模板将会生成一个包含Express，Jade，LESS，使用socket.io实现聊天，使用EveryAuth实现登录，以及用jQuery Mobile支持移动设备的全功能的应用程序：
+
+IntelliSense for Node.js
+Node.js智能感知
+
+One of the goals of WebMatrix 2 is reduce the barrier of entry for developers getting started with Node.js.
+WebMatrix 2其中一个目标就是降低开发人员在开始使用Node.js时的门槛。
+
+One of the ways to do that is to provide IntelliSense for the core modules on which all applications are built. 
+方法之一就是提供所有应用程序构建的核心模块智能感知。
+
+The documentation we use is actually built from the docs on the node.js docs site. 
+我们使用的文档实际上构建自node.js官网的文档。
+
+In addition to providing IntelliSense for core Node.js modules, WebMatrix 2 also provides code completion for your own JavaScript code, and third party modules installed through NPM. 
+在提供Node.js核心模块智能感知之外,WebMatrix 2还为你自己的Javascript代码以及通过NPM安装的第三方模块提供代码自动完成功能。
+
+There are infinite ways to build your application, and the NPM gallery recently surpassed 10,000 entries. 
+有无数种方式来构建自己的应用程序，NPM的画廊最近超过了10000条。
+
+As developers start building more complex applications, it can be difficult (or even intimidating) to get started. 
+当开发者开始构建更加复杂的应用程序，将变得很难(甚至吓人)开始。
+
+WebMatrix 2 is making it easier to deal with open source packages: 
+WebMatrix 2 通过开源程序包将这一切变得更容易：
+
+Support for Jade & EJS
+支持Jade和EJS
+
+To build a truly useful tool for building Node.js web applications, we decided to provide first class editors for Jade and EJS. 
+为创建Node.js应用程序提供更实用的工具，我们决定为Jade和EJS提供一流的编辑。
+
+WebMatrix 2 provides syntax highlighting, HTML validation, code outlining, and auto-completion for Jade and EJS. 
+WebMatrix 2 为Jade和EJS提供语法高亮，HTML验证，代码大纲，自动完成。
+
+If you’re into the whole angle bracket thing, the experience in EJS even better, since it’s based off of our advanced HTML editor: 
+如果你键入包含尖括号的代码(EJS代码块),EJS体验表现得会更好,因为它基于我们的高级HTML编辑器之上:
+
+The best {LESS} editor on the planet
+星球上最好的LESS编辑器
+
+So I’ll admit it – I’m a bit of a CSS pre-processor geek. 
+因此我承认 —— 我有一点CSS预处理器极客。
+
+I don’t write CSS because I love it, but because I need to get stuff done, and I want to write as little of it as possible. 
+我不写CSS因为我爱它，但是因为我需要把事情做好，我得尽可能的编写更少的CSS代码。
+
+Tools like LESS and Sass provide missing features for programmers in CSS like variables, mixins, nesting, and built in common functions. 
+像LESS以及Sass之类的工具提供CSS程序员缺失的特性，像变量，混入，嵌套以及常用的内置方法。
+
+The LESS editor in WebMatrix not only provides syntax highlighting, but also provides LESS specific validation, IntelliSense for variables and mixins, and LESS specific formatting. 
+WebMatrix的LESS编辑器不仅提供语法高亮，而且还提供LESS规范验证，变量和混入智能感知，以及LESS规范的格式化。
+
+Most node developers are going to process their LESS on the server using the npm module, but if you want to compile LESS locally, you can use the Orange Bits compiler to compile your CSS at design time. 
+许多node开发人员在服务器端使用npm模块来处理他们LESS，但是如果你想在本地编译LESS，你可以在设计时使用Orange Bits compiler来编译你的CSS。
+
+CoffeeScript Editor
+CoffeeScript编辑器
+
+In the same way LESS and Sass make it easier to write CSS, CoffeeScript simplifies the way you write JavaScript. 
+跟LESS和Sass让书写CSS变得更容易一样，CoffeeScript简化了书写Javascript的方式。
+
+WebMatrix 2 provides syntax highlighting, code outlining, and completion that simplifies the editing experience. 
+WebMatrix 2 提供语法高亮，代码大纲，自动完成来简化编辑体验。
+
+If you want to use CoffeeScript without compiling it on the server, you can use the Orange Bits compiler to compile your CoffeeScript into JavaScript at design time. 
+如果你想使用CoffeeScript但不用服务器上编译它，你可以在设计时使用Orange Bits compiler来编译你的CoffeeScript
+
+
+Mobile Emulators
+移动模拟器
+
+Designing applications for mobile can’t be an afterthought. WebMatrix 2 is trying to make this easier in a couple of ways. 
+设计移动应用程序不能滞后，WebMatrix 2试图让这两种方法更容易。
+
+First – the visual templates (in this case the Node Starter Template) is designed taking advantage of responsive layouts in the main StyleSheet:
+首先 - 视觉模板在主样式表中(以Node Starter Template为例)充分利用响应式布局的优势：
+styles.less
+This is great if you don’t need to change the content of your site, but is lacking for more complex scenarios. 
+这看起来非常牛逼如果你不需要改变你的网站内容,但缺乏令人更加复杂的场景。
+
+To get around that, the node starter template uses a piece of connect middleware to detect if the user is coming from a mobile device, and sends them to a mobile layout based on jQuery Mobile (more on this in another post). 
+为了绕开它，node开始模块使用了一块连接中间件来检测用户是否来自移动设备，然后发送给他们基于jQuery Mobile的移动布局(另外一篇文章会详细介绍).
+
+For individual views, there is a convention based system that allows you to create {viewName}_mobile.jade views which are only loaded on mobile devices.
+基于单个视图约定允许您创建{viewName}_mobile.jade视图仅在移动设备上加载。
+
+It gets even better. 
+更强大的是。
+
+What if you need to see what your site will look like in various browsers and mobile devices? 
+如果你需要在各种浏览器以及移动设备上查看你的网站表现?
+
+WebMatrix 2 provides an extensibility model that allows you to add mobile and desktop browsers to the run menu: 
+WebMatrix 2 提供一种扩展模型允许你在运行菜单添加移动以及桌面浏览器。
+
+Today, we offer a Windows Phone emulator, and iPhone / iPad simulators. 
+目前，我们提供Windows Phone模拟器, 以及 iPhone/iPad仿真器。
+
+In the future we’re looking for people to build support for other emulators *coughs* android *coughs*, and even build bridges to online browser testing applications:
+我们都在寻找人员支持其他模拟器*咳嗽*android*咳嗽*，甚至构建网桥方便在线测试应用程序。
+
+Extensions & Open Source
+扩展以及开源
+
+A code editing tool is only as valuable as the developers that commit to the platform. 
+一款代码编辑工具仅对致力于该平台的开发者至关重要。
+
+We want to achieve success with everyone, and grow together. 
+我们想要与大家一起取得成功和成长。
+
+As part of that goal, we’ve opened up an extensibility model that allows developers to build custom extensions and share them with other developers. 
+作为目标的一部分，我们开放了一个可扩展模型，允许开发者构建自定义扩展以及和其他开发者分享。
+
+The extension gallery is available online (more on this to come) at http://extensions.webmatrix.com. 
+扩展库可以通过http://extensions.webmatrix.com访问。
+
+We’re planning to move a bunch of these extensions into GitHub, and the NodePowerTools extension is the first one to go open source:
+我们计划转移大部分扩展到GitHub上，NodePowerTools扩展是第一个计划开源：
+Node Power Tools
+OrangeBits Compiler
+
+In the coming months you’ll start to see more extensions from Microsoft, and more open source. 
+接下来几个月你将可以从Microsoft官网看到更多的扩展以及开源。
+
+Everyone worked together
+大家一起参与
+
+I want to make sure I thank everyone who helped make this release happen, including the WebMatrix team, Glenn Block, Claudio Caldato, our Node Advisory board, Isaac Schlueter, and everyone at Joyent. 
+我想确保感谢所有帮助这个版本诞生的人，包括WebMatrix团队，Glenn Block, Claudio Caldato, our Node Advisory board, Isaac Schlueter,以及在Joyent的所有人。
+
+For more information, please visit:
+更多的信息，请访问：
+
+WebMatrix on Microsoft.com
+WebMatrix on Twitter
+WebMatrix on GitHub
+WebMatrix on UserVoice
+WebMatrix and Node on Microsoft.com
+Windows Azure just got a lot friendlier to node.js developers
+Vishal Joshi’s blog post
