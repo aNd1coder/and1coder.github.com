@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>masktip - 梦天堂前端开发平台</title>
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-base.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-layout.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-navigator.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-widgets.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/shCoreEclipse.css" />
+    <link rel="stylesheet" href="/works/mui/src/css/ui-masktip.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style>
+        .mod a, .mod img{
+            display:block;
+        }
+
+        .ui-masktip{
+            color:#FFF;
+            line-height:50px;
+            bottom:0;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div id="navigator">
+    <div class="w960 fix">
+        <div id="logo"><span class="m">M</span><span class="u">U</span><span class="i">I</span><span class="intro">梦天堂前端开发平台</span>
+        </div>
+        <ul>
+            <li><a id="menu-1" class="group1" href="/works" title="MUI首页">首页</a></li>
+            <li><a id="menu-2" class="group1" href="/works/mui" title="MUI基础类库主页">类库</a></li>
+            <li><a id="menu-3" class="group1" href="/works/mui/demo/" title="MUI组件库演示">组件</a></li>
+            <li><a id="menu-4" class="group1" href="/works/mui/api" title="MUI类库以及组件库Api文档">文档</a></li>
+            <li><a id="menu-5" class="group1" href="/works/mui/labs" title="各种在实验状态的想法示例和测试">实验室</a></li>
+            <li><a id="menu-6" class="group1" href="/works/mui/tools.html" title="前端工具集合">工具</a></li>
+            <li><a id="menu-7" class="group1" href="/works/mui/tasks.html" title="计划任务列表">任务</a></li>
+            <li><a id="menu-8" class="group2" href="http://m.mttang.com/" title="梦天堂网络移动平台" target="_blank">移动</a></li>
+            <li><a id="menu-9" class="group2" href="http://192.168.131.115/wordpress/" title="梦天堂网站部博客" target="_blank">博客</a></li>
+            <li><a id="menu-10" class="group2" href="http://192.168.131.115/forum/" title="梦天堂网站部论坛" target="_blank">论坛</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="wrapper">
+    <div id="header">
+        <div id="widgets">
+            <h3>Widgets</h3>
+            <ul>
+                <li><a title="tips示例" href="/works/mui/demo/tips/">Tips</a></li>
+                <li><a title="calendar示例" href="/works/mui/demo/calendar/">Calendar</a></li>
+                <li><a title="slide示例" href="/works/mui/demo/slide/">Slide</a></li>
+                <li><a title="tab示例" href="/works/mui/demo/tab/">Tab</a></li>
+                <li><a title="masktip示例" href="/works/mui/demo/masktip/">Masktip</a></li>
+                <li><a title="placeholder示例" href="/works/mui/demo/placeholder/">Placeholder</a></li>
+                <li><a title="waterfall示例" href="/works/mui/demo/waterfall/">Waterfall</a></li>
+                <li><a title="gridview示例" href="/works/mui/demo/gridview/">Gridview</a></li>
+                <li><a title="validate示例" href="/works/mui/demo/validate/">Validate</a></li>
+                <li><a title="fixedlay示例" href="/works/mui/demo/fixedlay/">Fixedlay</a></li>
+                <li><a title="imgready示例" href="/works/mui/demo/imgready/">Imgready</a></li>
+                <li><a title="ckeditor示例" href="/works/mui/demo/ckeditor/">ckeditor</a></li>
+                <li><a title="scroll示例" href="/works/mui/demo/scroll/">Scroll</a></li>
+                <li><a title="弹出层" href="/works/mui/demo/dialog/">Dialog</a></li>
+                <li><a title="表单代码" href="/works/mui/demo/form/">Form</a></li>
+                <li><a title="滚动条" href="/works/mui/demo/jscroll/">JScroll</a></li>
+                <li><a title="留言滚动" href="/works/mui/demo/convscrollpic/">Conv-scrollpic</a></li>
+                <li><a title="返回顶部" href="/works/mui/demo/returntop/">Returntop</a></li>
+                <li><a title="示例" href="javascript:">--</a></li>
+                <li><a title="示例" href="javascript:">--</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="container">
+        <h2>masktip示例</h2>
+        <!--S masktip-->
+        <div class="mod" id="widgetid">
+            <div class="hd">
+            </div>
+            <div class="bd">
+                <a href="###" rel="MUI插件html代码片段"><img src="/works/mui/demo/assets/img/html-snippet.png" width="950" alt="MUI插件html代码片段"></a>
+            </div>
+            <div class="ft">
+            </div>
+        </div>
+        <pre class="brush:html">
+            //masktip html相关代码
+        </pre>
+        <pre class="brush:css">
+            <!--<link rel="stylesheet" href="/build/css/ui-masktip-min.css"/>-->
+        </pre>
+        <pre class="brush:js">
+            <!--<script src="/build/js/ui-masktip-min.js"></script>-->
+
+            $(".ui-masktip a").masktip({size:30});
+        </pre>
+        <div class="options mod">
+            <h4>参数说明</h4>
+			<pre class="brush:js">
+                $.fn.masktip.defaults = {
+                    maskClass:".ui-masktip", //提示层类名
+                    fadeIn:500, //淡入时间间隔
+                    fadeOut:500, //淡出时间间隔
+                    size:30, // 提示层偏移量(高度或宽度)
+                    direction:"bottom"//出现方向
+                }
+            </pre>
+        </div>
+        <!--E masktip-->
+    </div>
+    <div id="footer">
+        <p>梦天堂前端开发团队 <span>&copy;</span>2011-2012</p>
+    </div>
+    <script src="/works/mui/demo/assets/js/shCore.js"></script>
+    <script src="/works/mui/demo/assets/js/shBrushXml.js"></script>
+    <script src="/works/mui/demo/assets/js/shBrushJScript.js"></script>
+    <script src="/works/mui/demo/assets/js/shBrushCss.js"></script>
+    <script>SyntaxHighlighter.all();</script>
+</div>
+<script src="/works/mui/src/js/ui-masktip.js"></script>
+<script>
+    $(function () {
+        //masktip调用代码
+        $("#widgetid a").masktip({size:50});
+    })
+</script>
+<!--# include virtual="/works/mui/inc/ftplaceholder.html" -->
+</body>
+</html>

@@ -3,23 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>{{page.title}}</title>
-    <link rel="stylesheet" href="/public/css/style.css"/>
+    <link href="https://github.global.ssl.fastly.net/assets/github-7f0d8b6428960eb6590c22021e3a46458f3d3aad.css" rel="stylesheet"/>
+    <link href="https://github.global.ssl.fastly.net/assets/github2-ab9a34a21f2309f4d6df91ace9e425b2aacc069a.css" rel="stylesheet"/>
+    <link href="/public/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-{{content}}
+<div class="wrapper">
+    <div class="header">
+        <div class="container clearfix">
+
+            <a class="header-logo-invertocat" href="https://github.com/">
+                <span class="mega-octicon octicon-mark-github"></span>
+            </a>
+
+
+            <a href="/notifications" class="notification-indicator tooltipped downwards" data-gotokey="n"
+               original-title="You have no unread notifications">
+                <span class="mail-status all-read"></span>
+            </a>
+
+            <div class="command-bar js-command-bar  ">
+                <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form"
+                      method="get">
+
+                    <input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field"
+                           placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+                           data-username="aNd1coder">
+
+
+  <span class="octicon help tooltipped downwards" original-title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+                    <input type="hidden" name="ref" value="cmdform">
+
+                </form>
+                <ul class="top-nav">
+                    <li class="explore"><a href="/explore">Explore</a></li>
+                    <li><a href="https://gist.github.com">Gist</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="https://help.github.com">Help</a></li>
+                </ul>
+            </div>
+
+
+            <ul id="user-links">
+                <li>
+                    <a href="/aNd1coder" class="name">
+                        <img height="20"
+                             src="https://0.gravatar.com/avatar/e0c987d94d37f5d19f5b6c4fedff65e0?d=https%3A%2F%2Fidenticons.github.com%2F452d53ad8bacae3b21116c716b0871d3.png&amp;r=x&amp;s=140"
+                             width="20"> aNd1coder
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/new" id="new_repo" class="tooltipped downwards" aria-label="Create a new repo"
+                       original-title="Create a new repo">
+                        <span class="octicon octicon-repo-create"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/settings/profile" id="account_settings" class="tooltipped downwards"
+                       aria-label="Account settings " original-title="Account settings ">
+                        <span class="octicon octicon-tools"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" aria-label="Sign out"
+                       original-title="Sign out">
+                        <span class="octicon octicon-log-out"></span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="js-new-dropdown-contents hidden">
+
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
+                    </li>
+                    <li>
+                        <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        {{content}}
+    </div>
+</div>
 <!--S comments-->
 <div id="disqus_thread"></div>
 <script>
-/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'wojoz'; // required: replace example with your forum shortname
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-	var dsq = document.createElement('script'); 
-  	dsq.type = 'text/javascript'; dsq.async = true;
-  	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wojoz'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 <!--E comments-->
 </body>

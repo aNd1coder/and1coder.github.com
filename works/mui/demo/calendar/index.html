@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>calendar - 梦天堂前端开发平台</title>
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-base.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-layout.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-navigator.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/ui-widgets.css" />
+    <link rel="stylesheet" href="/works/mui/demo/assets/css/shCoreEclipse.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style>
+        .ui-calendar {margin:50px 0;border-radius: 10px 10px 10px 10px;box-shadow: 2px 2px 20px 0; background-color:#FFF; position:relative;}
+        .ui-calendar caption,.ui-calendar th,.ui-calendar-cell-current a {background: url(/works/mui/demo/assets/img/sprite-calendar.png) repeat-x;}
+        .ui-calendar caption { height:26px; padding-top: 6px; text-align:left; font-family:Simsun; background-position: 0 -30px; border: 1px solid #861e1b;}
+        .ui-calendar caption a{ display:inline-block; margin:0 3px; padding: 0 2px; background-repeat: no-repeat; color: #FFF;}
+        .ui-calendar-selected-date,.ui-calendar-select {background-color:rgba(34,34,34,0.3);border-radius: 10px 10px 10px 10px;}
+        .ui-calendar-selected-date {  display:inline-block; padding:2px 10px; color:#FFF; position:relative; z-index:2;}
+        .ui-calendar-select {position: absolute; width: 104px; left: 51px; background-color:rgba(0,0,0,0.8); z-index:1;top:7px;display:none; padding:25px 0 10px 0;}
+        .ui-calendar-select li a{ height:25px; line-height:25px;text-align:center; display:block;color:#FFF; margin:0;}
+        .ui-calendar-select li a:hover{background-color:#222;}
+        .ui-calendar a {text-decoration:none;color:#4d4d4d;}
+        .ui-calendar th {color:#707687; height: 26px; background-position: 0 0;}
+        .ui-calendar th,.ui-calendar td {text-align:center;}
+        .ui-calendar th,.ui-calendar td {width:30px; height:30px; line-height:30px;}
+        .ui-calendar td a {display:block;}
+        .ui-calendar-cell-disabled {color:#c0c0c0;}
+        .ui-calendar-cell-current a{border-radius: 8px 8px 8px 8px; font-weight: bold;margin: 0 auto;background-position:20px -104px;background-repeat: no-repeat;width:28px; height:28px; color:#EA5454;}
+    </style>
+</head>
+<body>
+<div id="navigator">
+    <div class="w960 fix">
+        <div id="logo"><span class="m">M</span><span class="u">U</span><span class="i">I</span><span class="intro">梦天堂前端开发平台</span>
+        </div>
+        <ul>
+            <li><a id="menu-1" class="group1" href="/works/mui/" title="MUI首页">首页</a></li>
+            <li><a id="menu-2" class="group1" href="/works/mui/mui.html" title="MUI基础类库主页">类库</a></li>
+            <li><a id="menu-3" class="group1" href="/works/mui/demo/" title="MUI组件库演示">组件</a></li>
+            <li><a id="menu-4" class="group1" href="/works/mui/api" title="MUI类库以及组件库Api文档">文档</a></li>
+            <li><a id="menu-5" class="group1" href="/works/mui/labs" title="各种在实验状态的想法示例和测试">实验室</a></li>
+            <li><a id="menu-6" class="group1" href="/works/mui/tools.html" title="前端工具集合">工具</a></li>
+            <li><a id="menu-7" class="group1" href="/works/mui/tasks.html" title="计划任务列表">任务</a></li>
+            <li><a id="menu-8" class="group2" href="http://m.mttang.com/" title="梦天堂网络移动平台" target="_blank">移动</a></li>
+            <li><a id="menu-9" class="group2" href="http://192.168.131.115/wordpress/" title="梦天堂网站部博客" target="_blank">博客</a></li>
+            <li><a id="menu-10" class="group2" href="http://192.168.131.115/forum/" title="梦天堂网站部论坛" target="_blank">论坛</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="wrapper">
+    <div id="header">
+        <div id="widgets">
+            <h3>Widgets</h3>
+            <ul>
+                <li><a title="tips示例" href="/works/mui/demo/tips/">Tips</a></li>
+                <li><a title="calendar示例" href="/works/mui/demo/calendar/">Calendar</a></li>
+                <li><a title="slide示例" href="/works/mui/demo/slide/">Slide</a></li>
+                <li><a title="tab示例" href="/works/mui/demo/tab/">Tab</a></li>
+                <li><a title="masktip示例" href="/works/mui/demo/masktip/">Masktip</a></li>
+                <li><a title="placeholder示例" href="/works/mui/demo/placeholder/">Placeholder</a></li>
+                <li><a title="waterfall示例" href="/works/mui/demo/waterfall/">Waterfall</a></li>
+                <li><a title="gridview示例" href="/works/mui/demo/gridview/">Gridview</a></li>
+                <li><a title="validate示例" href="/works/mui/demo/validate/">Validate</a></li>
+                <li><a title="fixedlay示例" href="/works/mui/demo/fixedlay/">Fixedlay</a></li>
+                <li><a title="imgready示例" href="/works/mui/demo/imgready/">Imgready</a></li>
+                <li><a title="ckeditor示例" href="/works/mui/demo/ckeditor/">ckeditor</a></li>
+                <li><a title="scroll示例" href="/works/mui/demo/scroll/">Scroll</a></li>
+                <li><a title="弹出层" href="/works/mui/demo/dialog/">Dialog</a></li>
+                <li><a title="表单代码" href="/works/mui/demo/form/">Form</a></li>
+                <li><a title="滚动条" href="/works/mui/demo/jscroll/">JScroll</a></li>
+                <li><a title="留言滚动" href="/works/mui/demo/convscrollpic/">Conv-scrollpic</a></li>
+                <li><a title="返回顶部" href="/works/mui/demo/returntop/">Returntop</a></li>
+                <li><a title="示例" href="javascript:">--</a></li>
+                <li><a title="示例" href="javascript:">--</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="container">
+        <h2>calendar示例</h2>
+        <!--S calendar-->
+        <div class="mod" id="widgetid">
+            <div class="hd">
+                <h3>简易日历控件</h3>
+            </div>
+            <div class="bd" id="j_calendar_wrapper">
+                <table id="j_calendar1" class="ui-calendar" summary="活动日历">
+                    <caption>
+                        <a href="javascript:" class="ui-calendar-prev-year" id="j_prev_year1" title="上一年"><<</a>
+                        <a href="javascript:" class="ui-calendar-prev-month" id="j_prev_month1" title="上一月"><</a>
+                        <span id="j_selected_date1" class="ui-calendar-selected-date"></span>
+                        <a href="javascript:" class="ui-calendar-next-month" id="j_next_month1" title="下一年">></a>
+                        <a href="javascript:" class="ui-calendar-next-year" id="j_next_year1" title="下一月">>></a>
+                        <div id="ui-calendar-select" class="ui-calendar-select">
+                            <ul>
+                                <li><a href="javascript:">2012</a></li>
+                                <li><a href="javascript:">2011</a></li>
+                                <li><a href="javascript:">2010</a></li>
+                                <li><a href="javascript:">2009</a></li>
+                                <li><a href="javascript:">2008</a></li>
+                            </ul>
+                        </div>
+                    </caption>
+                    <colgroup>
+                        <col id="sun1" />
+                        <col id="mon1" />
+                        <col id="tues1" />
+                        <col id="wed1" />
+                        <col id="thur1" />
+                        <col id="fri1" />
+                        <col id="sat1" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <pre class="brush:html">
+            <table id="j_calendar" class="ui-calendar" summary="活动日历">
+                <caption>
+                    <a href="javascript:" class="ui-calendar-prev-year" id="j_prev_year" title="上一年"><<</a>
+                    <a href="javascript:" class="ui-calendar-prev-month" id="j_prev_month" title="上一月"><</a>
+                    <span id="j_selected_date" class="ui-calendar-selected-date"></span>
+                    <a href="javascript:" class="ui-calendar-next-month" id="j_next_month" title="下一年">></a>
+                    <a href="javascript:" class="ui-calendar-next-year" id="j_next_year" title="下一月">>></a>
+                    <div id="ui-calendar-select1" class="ui-calendar-select">
+                        <ul>
+                            <li><a href="javascript:">2012</a></li>
+                            <li><a href="javascript:">2011</a></li>
+                            <li><a href="javascript:">2010</a></li>
+                            <li><a href="javascript:">2009</a></li>
+                            <li><a href="javascript:">2008</a></li>
+                        </ul>
+                    </div>
+                </caption>
+                <colgroup>
+                    <col id="sun" />
+                    <col id="mon" />
+                    <col id="tues" />
+                    <col id="wed" />
+                    <col id="thur" />
+                    <col id="fri" />
+                    <col id="sat" />
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>日</th>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </pre>
+        <pre class="brush:css">
+            <!--<link rel="stylesheet" href="/build/css/ui-calendar-min.css" />-->
+        </pre>
+        <pre class="brush:js">
+            <!--<script src="/build/js/ui-calendar-min.js"></script>
+            new Calendar({
+                container:"j_calendar",  //表格id
+                labelSelectedDate:"j_selected_date",//显示当前日期的标签
+                btnPrevMonth:"j_prev_month",//触发上一月元素
+                btnNextMonth:"j_next_month",//触发下一月元素
+                btnPrevYear:"j_prev_year",//触发上一年元素
+                btnNextYear:"j_next_year" //触发下一年元素
+            });-->
+        </pre>
+        <!--E calendar-->
+    </div>
+    <div id="footer">
+        <p>梦天堂前端开发团队 <span>&copy;</span>2011-2012</p>
+    </div>
+    <script src="/works/mui/demo/assets/js/shCore.js"></script>
+    <script src="/works/mui/demo/assets/js/shBrushXml.js"></script>
+    <script src="/works/mui/demo/assets/js/shBrushJScript.js"></script>
+    <script src="/works/mui/demo/assets/js/shBrushCss.js"></script>
+    <script>SyntaxHighlighter.all();</script>
+</div>
+<script src="/works/mui/src/js/ui-calendar.js"></script>
+<script>
+    $(function () {
+        new Calendar({
+            container:"j_calendar1",
+            labelSelectedDate:"j_selected_date1",
+            btnPrevMonth:"j_prev_month1",
+            btnNextMonth:"j_next_month1",
+            btnPrevYear:"j_prev_year1",
+            btnNextYear:"j_next_year1"
+        });
+    })
+</script>
+<!--# include virtual="/works/mui/inc/ftplaceholder.html" -->
+</body>
+</html>

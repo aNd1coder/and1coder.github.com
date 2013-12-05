@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>返回顶部组件 - 梦天堂前端开发平台</title>
+<!--# include virtual="/works/mui/inccss.html" -->
+<link rel="stylesheet" href="/works/mui/src/css/ui-slide.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<style>
+    .mod{
+        position:relative;
+        margin:30px auto 10px auto;
+    }
+    .ui-slide {
+        height:350px;
+        background:url(http://static.mttang.com/images/loading/5.gif) no-repeat center;
+    }
+    .ui-slide-trigger span{
+         color:#FFF;
+         font-size:14px;
+     }
+
+    .ui-slide-trigger a{
+        width:16px;
+        height:16px;
+        background-color:#333;
+        margin:9px 5px 0 0;
+    }
+
+    .ui-slide-trigger .current{
+        background-color:#999;
+    }
+</style>
+</head>
+<body>
+<div id="navigator">
+    <div class="w960 fix">
+        <div id="logo"><span class="m">M</span><span class="u">U</span><span class="i">I</span><span class="intro">梦天堂前端开发平台</span>
+        </div>
+        <ul>
+            <li><a id="menu-1" class="group1" href="/works/" title="MUI首页">首页</a></li>
+            <li><a id="menu-2" class="group1" href="/works/mui/" title="MUI基础类库主页">类库</a></li>
+            <li><a id="menu-3" class="group1" href="/works/mui/demo/" title="MUI组件库演示">组件</a></li>
+            <li><a id="menu-4" class="group1" href="/works/mui/api" title="MUI类库以及组件库Api文档">文档</a></li>
+            <li><a id="menu-5" class="group1" href="/works/mui/labs" title="各种在实验状态的想法示例和测试">实验室</a></li>
+            <li><a id="menu-6" class="group1" href="/works/mui/tools.html" title="前端工具集合">工具</a></li>
+            <li><a id="menu-7" class="group1" href="/works/mui/tasks.html" title="计划任务列表">任务</a></li>
+            <li><a id="menu-8" class="group2" href="http://m.mttang.com/" title="梦天堂网络移动平台" target="_blank">移动</a></li>
+            <li><a id="menu-9" class="group2" href="http://192.168.131.115/wordpress/" title="梦天堂网站部博客" target="_blank">博客</a></li>
+            <li><a id="menu-10" class="group2" href="http://192.168.131.115/forum/" title="梦天堂网站部论坛" target="_blank">论坛</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="wrapper">
+    <!--# include virtual="/works/mui/incheader.html" -->
+    <div id="container">
+        <h2>返回顶部组件示例</h2>
+        <!--S {widget}-->
+		<p style="height:20px;width:1000px;color:#f60;">请滚动一下滑轮</p>
+        <pre class="brush:js">
+            <!--<script src="/build/js/ui-returntop-min.js"></script>-->
+            <script>
+                $(function () {
+					/*var rt = new ReturnTop({
+						img : 'http://static.mttang.com/p/7366/v1/img/return.gif',
+						top : 220,
+						right : 190,
+						height : 98,
+						width : 28
+					});
+					*/
+					//rt.init();
+                })
+            </script>
+        </pre>
+        <!--E {widget}-->
+        <!--S options-->
+        <div class="options mod">
+            <h4>参数说明</h4>
+            <pre class="brush:js">
+			img : './img/return.gif',//图片的路径
+			top : 220,//距离顶
+			right : 190,//距离右边
+			height : 98,//高度
+			width : 28//宽度
+            </pre>
+        </div>
+		<div style="height:800px;width:1000px;"></div>
+        <!--E options-->
+    </div>
+    <!--# include virtual="/works/mui/inc/footer.html" -->
+</div>
+<script src="/works/mui/src/js/ui-returntop.js"></script>
+<script>
+    $(function () {
+		var rt = new ReturnTop();
+		rt.init({
+			right : 500
+		});
+    })
+</script>
+<!--# include virtual="/works/mui/inc/ftplaceholder.html" -->
+</body>
+</html>

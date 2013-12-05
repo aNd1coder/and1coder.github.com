@@ -1,0 +1,300 @@
+﻿<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>便捷滚动 - 梦天堂前端开发平台</title>
+    <!--# include virtual="/works/mui/inccss.html" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="/works/mui/src/css/ui-convscrollpic.css"/>
+    <style>
+	   .mask-1 {width:250px;height:305px;margin:8px 10px 10px;position:relative;overflow:hidden;}
+	   .mask-1 ul {width:250px;position:absolute;top:0;left:0;}
+	   .mask-1 li {width:250px;height:72px;margin:0 0 4px;padding:0;border-bottom:1px dashed #502802;clear:both;overflow:hidden;}
+	   .head-msg {width:52px;height:66px;text-align:center;color:#fdb231;}
+	   .head-msg img {border:none;}
+	   .head-msg b {font-size:14px;font-weight:bold;}
+	   .msg {width:190px;height:66px;position:relative;color:#914a05;margin:0 0 0 8px;}
+	   .time {position:absolute;bottom:-2px;right:10px;}
+    </style>
+</head>
+<body>
+<div id="navigator">
+    <div class="w960 fix">
+        <div id="logo"><span class="m">M</span><span class="u">U</span><span class="i">I</span><span class="intro">梦天堂前端开发平台</span>
+        </div>
+        <ul>
+            <li><a id="menu-1" class="group1" href="/works" title="MUI首页">首页</a></li>
+            <li><a id="menu-2" class="group1" href="/works/mui" title="MUI基础类库主页">类库</a></li>
+            <li><a id="menu-3" class="group1" href="/works/mui/demo/" title="MUI组件库演示">组件</a></li>
+            <li><a id="menu-4" class="group1" href="/works/mui/api" title="MUI类库以及组件库Api文档">文档</a></li>
+            <li><a id="menu-5" class="group1" href="/works/mui/labs" title="各种在实验状态的想法示例和测试">实验室</a></li>
+            <li><a id="menu-6" class="group1" href="/works/mui/tools.html" title="前端工具集合">工具</a></li>
+            <li><a id="menu-7" class="group1" href="/works/mui/tasks.html" title="计划任务列表">任务</a></li>
+            <li><a id="menu-8" class="group2" href="http://m.mttang.com/" title="梦天堂网络移动平台" target="_blank">移动</a></li>
+            <li><a id="menu-9" class="group2" href="http://192.168.131.115/wordpress/" title="梦天堂网站部博客" target="_blank">博客</a></li>
+            <li><a id="menu-10" class="group2" href="http://192.168.131.115/forum/" title="梦天堂网站部论坛" target="_blank">论坛</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="wrapper">
+    <!--# include virtual="/works/mui/incheader.html" -->
+    <div id="container">
+        <h2>便捷滚动代码示例 - 留言滚动</h2>
+        <!--S media-->
+		<div class="mask-1">
+			<ul>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/37.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/38.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+
+						<img src="http://static.mttang.com/event/js/wendao/img/39.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+				<li>
+					<div class="head-msg l">
+
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+
+				</li>
+				<li>
+					<div class="head-msg l">
+						<img src="http://static.mttang.com/event/js/wendao/img/40.jpg" alt="" />
+						<b>梦天堂</b>
+					</div>
+					<div class="msg l">
+						<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+
+						<p class="time">2012-12-12 18:56:20</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<pre name="code" class="css">
+		   <link rel="stylesheet" href="/works/mui/src/css/ui-convscrollpic.css"/>
+        </pre>
+		<pre name="code" class="brush: html;">
+			<div class="mask">
+				<ul>
+					<li>
+						<div class="head-msg l">
+							<img src="http://static.mttang.com/event/js/wendao/img/37.jpg" alt="" />
+							<b>梦天堂</b>
+						</div>
+						<div class="msg l">
+							<p> 剑圣一出，谁与争锋，明教张无忌到此一剑圣一出，谁与争锋，明教张无忌到此一...  </p>
+
+							<p class="time">2012-12-12 18:56:20</p>
+						</div>
+					</li>
+					<li>
+						<!-- 节点内容 -->
+					</li>
+					<!-- 至少N个节点 -->
+				</ul>
+			</div>
+        </pre>
+        <pre name="code" class="brush: js;">
+            <script>
+					/*
+						setTimeout(function(){//基于jquery.js,定位内容滚动
+							var $ul = $(".mask ul");//滚动所有节点
+							var $lis = $ul.children();
+							if($lis.length > 4){
+								var distance = $lis.length;
+								var num = 1;
+								$ul.append($ul.html());
+								setInterval(function(){
+									if(distance < num){
+										$ul.css({top: 0});//top,选中的方向，根据需要可以更改为:left、bottom、right
+										num = 1;
+									}
+									$ul.animate({top: - (25*num++)},300);//25,每次滚动的距离,随实际应用改变;同上方向
+								},3000);//间隔3秒移动一次,随实际需要更改
+							}
+						},1000);//1秒为延迟
+					*/
+            </script>
+        </pre>
+        <!--E media-->
+    </div>
+    <!--# include virtual="/works/mui/inc/footer.html" -->
+</div>
+<script>
+$(function(){
+	var $ul = $(".mask-1 ul");
+	var $lis = $ul.children();
+	if($lis.length > 4){
+		var distance = $lis.length;
+		var num = 1;
+		$ul.append($ul.html());
+		setInterval(function(){
+			if(distance < num){
+				$ul.css({top: 0});
+				num = 1;
+			}
+			$ul.animate({top: - (77*num++)},300);
+		},3000);//间隔3秒移动一次
+	}
+});
+</script>
+<!--# include virtual="/works/mui/inc/ftplaceholder.html" -->
+</body>
+</html>
