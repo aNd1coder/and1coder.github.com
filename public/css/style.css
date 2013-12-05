@@ -1,0 +1,6 @@
+html,
+body { color: #555; font: normal 16px/1.6 helivetica, arial, sans-serif; }
+h1 { color: steelblue; font-size: 2em; }
+h2 { font-size: 1em; }
+p { font-size: 1.5em; }
+ul { list-style-type: square; margin-left: 1.2em; }
