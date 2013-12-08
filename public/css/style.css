@@ -1,11 +1,11 @@
 html,
 body { color: #555; font: normal 16px/1.6 helivetica, arial, sans-serif; }
 h1.title { color: steelblue; font-size: 2em; }
-h1.title .date { color: #666; font-size: .8em; }
+h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
 h2 { font-size: 1.5em; }
 p { font-size: 1em; }
 ul, ol { margin-left: 1.2em; }
 ul { list-style-type: square; }
-.container { width: auto; margin: 5em 8em; }
+.container { width: auto; margin: 2em 8em; }
 .header .container { margin: 0 8em; }
 .octicon-mark-github:before { vertical-align: 1px; }
