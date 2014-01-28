@@ -1,34 +1,28 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <!--viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <title>{{page.title}}</title>
-    <link href="https://github.global.ssl.fastly.net/assets/github-7f0d8b6428960eb6590c22021e3a46458f3d3aad.css" rel="stylesheet"/>
-    <link href="https://github.global.ssl.fastly.net/assets/github2-ab9a34a21f2309f4d6df91ace9e425b2aacc069a.css" rel="stylesheet"/>
-    <link href="/public/css/style.css" rel="stylesheet"/>
+    <!--icon-->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <!--link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" /-->
+    <link rel="apple-touch-startup-image" href="startup.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="/public/css/app.css" rel="stylesheet"/>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="header header-logged-in">
-			<div class="container clearfix">
-				<a class="header-logo-invertocat" href="https://and1coder.github.io/">
-					<span class="mega-octicon octicon-mark-github"> 蜗居族</span>
-				</a>
-				<ul id="user-links">
-					<li>
-						<a href="https://github.com/and1coder" class="name">
-							<img height="20" src="https://0.gravatar.com/avatar/e0c987d94d37f5d19f5b6c4fedff65e0?d=https%3A%2F%2Fidenticons.github.com%2F452d53ad8bacae3b21116c716b0871d3.png&amp;r=x&amp;s=140" width="20"> 三桂
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="container">
-			<h1 class="title">{{page.title}}</h1>
-			<div class="content">
-				{{content}}
-			</div>
-		</div>
-	</div>
+<div class="container">
+    <h1 class="title">{{page.title}}</h1>
+
+    <div class="content">
+        {{content}}
+    </div>
+</div>
+<script src="/public/js/app.js"></script>
 </body>
 </html>

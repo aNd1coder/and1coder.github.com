@@ -1,11 +1,14 @@
 html,
 body { color: #555; font: normal 16px/1.6 helivetica, arial, sans-serif; }
+a { color: #4183c4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:active, a:hover { outline: 0; }
 h1.title { color: steelblue; font-size: 2em; }
 h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
 h2 { font-size: 1.5em; }
 p { font-size: 1em; }
 ul, ol { margin-left: 1.2em; }
 ul { list-style-type: square; }
-.container { width: auto; margin: 2em 10em; }
+.container { width: auto; margin: 2em 10em; font-size: 14px; }
 .header .container { margin: 0 10em; }
 .octicon-mark-github:before { vertical-align: 1px; }
