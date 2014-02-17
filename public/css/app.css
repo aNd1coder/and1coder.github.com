@@ -8,7 +8,5 @@ h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
 h2 { font-size: 1.5em; }
 p { font-size: 1em; }
 ul, ol { margin-left: 1.2em; }
-ul { list-style-type: square; }
-.container { width: auto; margin: 2em 10em; font-size: 14px; }
-.header .container { margin: 0 10em; }
-.octicon-mark-github:before { vertical-align: 1px; }
+ul { padding: 0; list-style-type: square; }
+.container { margin: 0 auto; min-width: 320px; max-width: 640px; font-size: 14px; }
