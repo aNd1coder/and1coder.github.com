@@ -6,7 +6,6 @@ a:active, a:hover { outline: 0; }
 h1.title { color: steelblue; font-size: 2em; }
 h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
 h2 { font-size: 1.5em; }
-p { font-size: 1em; }
 ul, ol { margin-left: 1.2em; }
 ul { padding: 0; list-style-type: square; }
-.container { margin: 0 auto; min-width: 320px; max-width: 640px; font-size: 14px; }
+.container { min-width: 320px; max-width: 640px; margin: 0 auto; padding: 0 1em; }
