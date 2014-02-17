@@ -9,3 +9,4 @@ h2 { font-size: 1.5em; }
 ul, ol { margin-left: 1.2em; }
 ul { padding: 0; list-style-type: square; }
 .container { min-width: 320px; max-width: 640px; margin: 0 auto; padding: 0 1em; }
+h1.title, .content { padding: 0 1em; }
