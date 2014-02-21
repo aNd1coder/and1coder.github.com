@@ -94,7 +94,6 @@
                 sources = this.data.sources, dests,
                 len = sources.length, total = 0,
                 gap = 4, delta = 10, angle = 95, maxangle = 170, color, w, tx = 15,
-                ie = $.browser.msie && parseFloat($.browser.version) < 9,
                 percent, name, pv,
                 sectors = this.paper.set(), names = this.paper.set(),
                 pvs = this.paper.set(), percents = this.paper.set(),
@@ -130,14 +129,14 @@
                         //重新绘制圆圈图
                         me.data.index = i;
                         var data = me.data,
-                            holder = $("#holder"),
+                            graph = $("#graph"),
                             option = {
-                                elem: holder[0],
+                                elem: graph[0],
                                 data: data
                             }
 
                         //清空画图区域，避免累加画出多张图
-                        holder.html('');
+                        graph.html('');
                         new FlowGraph(option);
                     });
                 })(this, i);
@@ -156,7 +155,7 @@
 
                     // 来源占比
                     percent = this.paper.text(cx, cy, source.percent)
-                        .attr({ font: ie ? '35px s' : '45px webfont', fill: '#464646', 'text-anchor': 'end'})
+                        .attr({ font: '45px webfont', fill: '#464646', 'text-anchor': 'end'})
                         .transform('t-10,28');
                     percents.push(percent);
 
@@ -165,7 +164,7 @@
                     // 来源pv
                     pv = this.paper.text(cx, cy, source.pv)
                         .attr({ font: '12px 微软雅黑', fill: '#999', 'text-anchor': 'end'})
-                        .transform('t-' + (w + tx + (ie ? -15 : 0)) + ',32');
+                        .transform('t-' + (w + tx ) + ',32');
                     pvs.push(pv);
                 }
 
@@ -215,15 +214,15 @@
 
                         // 占比
                         _percent = this.paper.text(_cx, _cy, dest.percent)
-                            .attr({font: ie ? '25px s' : '30px webfont', fill: '#464646', 'text-anchor': 'start'})
-                            .transform('t' + _tx + ',' + ((ie ? 20 : 22) + _ty));
+                            .attr({font: '30px webfont', fill: '#464646', 'text-anchor': 'start'})
+                            .transform('t' + _tx + ',' + (22 + _ty));
                         _w = _percent.getBBox().width;
                         _percents.push(_percent);
 
                         // pv
                         _pv = this.paper.text(_cx, _cy, dest.pv)
                             .attr(_attr).attr({ fill: '#999'})
-                            .transform('t' + (_w + (ie ? -5 : 5) + _tx) + ',' + ((ie ? 23 : 25) + _ty));
+                            .transform('t' + (_w + 5 + _tx) + ',' + (25 + _ty));
                         _pvs.push(_pv);
 
                         //隐藏少于5%的数据
