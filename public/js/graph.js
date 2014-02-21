@@ -1,5 +1,5 @@
-/*
- *ÉÌÆ·Á÷Á¿À´Ô´Í¼±í
+ï»¿/*
+ *å•†å“æµé‡æ¥æºå›¾è¡¨
  */
 
 ~function (window) {
@@ -19,40 +19,40 @@
     }
 
     function FlowGraph(option) {
-        // »­Í¼²ÎÊı
+        // ç”»å›¾å‚æ•°
         this.paperWidth = option.paperWidth || 650;
         this.paperHeight = option.paperHeight || 600;
 
-        // µ×Í¼²ÎÊı
+        // åº•å›¾å‚æ•°
         this.bottomMapRadius = option.bottomMapRadius || 160;
         this.bottomMapFill = option.bottomMapFill || '#fafafa';
         this.bottomMapCenter = option.bottomMapCenter || {x: this.paperWidth / 2, y: this.paperHeight / 2};
 
-        // ºóÌ¨Êı¾İ
+        // åå°æ•°æ®
         this.data = option.data || {};
-        //µ±Ç°À´Ô´Ë÷Òı
+        //å½“å‰æ¥æºç´¢å¼•
         this.index = this.data.index || 0;
 
-        // Í¼ÈİÆ÷
+        // å›¾å®¹å™¨
         this.elem = option.elem || document.body;
 
-        // ÑÕÉ«
+        // é¢œè‰²
         this.colors = option.colors || [ "#7687ce", "#8975d3", "#f74d7a", "#fa6a01", "#8bc63f", "#29af61"];
 
-        // »­²¼¶ÔÏó
+        // ç”»å¸ƒå¯¹è±¡
         this.paper = Raphael(this.elem, this.paperWidth, this.paperHeight);
 
-        // ³õÊ¼»¯º¯Êı
+        // åˆå§‹åŒ–å‡½æ•°
         this.init();
     }
 
     FlowGraph.prototype = {
         init: function () {
-            //À´Ô´È¥Ïò
+            //æ¥æºå»å‘
             this.renderFlow(this.index);
         },
 
-        //µ×Í¼
+        //åº•å›¾
         renderBottomMap: function () {
             var x = this.bottomMapCenter.x,
                 y = this.bottomMapCenter.y ,
@@ -70,21 +70,21 @@
                 c2.hide();
             });
 
-            // »·ÈÆÉÌÆ·µÄ¹â»·
+            // ç¯ç»•å•†å“çš„å…‰ç¯
             this.paper.image('http://static.paipaiimg.com/v5/img/pms/map.png', x - 100, y - 100, 201, 201);
 
-            // À´Ô´È¥Ïò·Ö¸îÏß
+            // æ¥æºå»å‘åˆ†å‰²çº¿
             this.paper.path("M" + x + " 0L" + x + " " + this.paperHeight)
                 .attr({'stroke': '#666', 'stroke-dasharray': '.', 'stroke-opacity': .2});
 
-            // À´Ô´È¥ÏòÎÄ±¾
-            this.paper.text(x - 30, 80, 'À´Ô´').attr({'font': '12px Î¢ÈíÑÅºÚ', fill: '#666'});
-            this.paper.text(x + 30, 80, 'È¥Ïò').attr({'font': '12px Î¢ÈíÑÅºÚ', fill: '#666'});
+            // æ¥æºå»å‘æ–‡æœ¬
+            this.paper.text(x - 30, 80, 'æ¥æº').attr({'font': '12px å¾®è½¯é›…é»‘', fill: '#666'});
+            this.paper.text(x + 30, 80, 'å»å‘').attr({'font': '12px å¾®è½¯é›…é»‘', fill: '#666'});
         },
 
         /**
-         * »æÖÆ
-         * @param index µ±Ç°À´Ô´Ë÷Òı
+         * ç»˜åˆ¶
+         * @param index å½“å‰æ¥æºç´¢å¼•
          */
         renderFlow: function (index) {
             var me = this,
@@ -104,30 +104,30 @@
 
             this.paper.clear();
 
-            //¼ÆËãÀ´Ô´×ÜÕ¼±È
+            //è®¡ç®—æ¥æºæ€»å æ¯”
             forEach(sources, function (source, i) {
                 total += parseInt(source.percent, 10);
             });
 
             forEach(sources, function (source, i) {
                 var per = parseInt(source.percent, 10);
-                //½Ç¶È
+                //è§’åº¦
                 angleplus = (maxangle - (len - 1) * gap) * per / total;
                 popangle = angle + (angleplus / 2);
 
-                // ×ø±ê
+                // åæ ‡
                 cx = x + (r + delta) * Math.cos(-popangle * rad);
                 cy = y + (r + delta) * Math.sin(-popangle * rad);
 
-                // À´Ô´ÉÈÇø
+                // æ¥æºæ‰‡åŒº
                 color = i == index ? '#0c8de5' : '#ccc';
                 sector = this.sector(x, y, r, angle, angle + angleplus, { fill: color, stroke: 'none' }).attr('cursor', 'pointer');
                 sectors.push(sector);
 
-                //Á÷Á¿À´Ô´TOPÁĞ±í
+                //æµé‡æ¥æºTOPåˆ—è¡¨
                 (function (r, i) {
                     sector.click(function () {
-                        //ÖØĞÂ»æÖÆÔ²È¦Í¼
+                        //é‡æ–°ç»˜åˆ¶åœ†åœˆå›¾
                         me.data.index = i;
                         var data = me.data,
                             holder = $("#holder"),
@@ -136,15 +136,15 @@
                                 data: data
                             }
 
-                        //Çå¿Õ»­Í¼ÇøÓò£¬±ÜÃâÀÛ¼Ó»­³ö¶àÕÅÍ¼
+                        //æ¸…ç©ºç”»å›¾åŒºåŸŸï¼Œé¿å…ç´¯åŠ ç”»å‡ºå¤šå¼ å›¾
                         holder.html('');
                         new FlowGraph(option);
                     });
                 })(this, i);
 
-                // À´Ô´ÎÄ±¾
+                // æ¥æºæ–‡æœ¬
                 name = this.paper.text(cx, cy, source.name)
-                    .attr({ font: '12px Î¢ÈíÑÅºÚ', fill: i == index ? '#464646' : '#999', 'text-anchor': 'end' })
+                    .attr({ font: '12px å¾®è½¯é›…é»‘', fill: i == index ? '#464646' : '#999', 'text-anchor': 'end' })
                     .transform('t-10,0');
                 names.push(name);
 
@@ -154,7 +154,7 @@
 
                     name.show();
 
-                    // À´Ô´Õ¼±È
+                    // æ¥æºå æ¯”
                     percent = this.paper.text(cx, cy, source.percent)
                         .attr({ font: ie ? '35px s' : '45px webfont', fill: '#464646', 'text-anchor': 'end'})
                         .transform('t-10,28');
@@ -162,43 +162,43 @@
 
                     w = percent.getBBox().width;
 
-                    // À´Ô´pv
+                    // æ¥æºpv
                     pv = this.paper.text(cx, cy, source.pv)
-                        .attr({ font: '12px Î¢ÈíÑÅºÚ', fill: '#999', 'text-anchor': 'end'})
+                        .attr({ font: '12px å¾®è½¯é›…é»‘', fill: '#999', 'text-anchor': 'end'})
                         .transform('t-' + (w + tx + (ie ? -15 : 0)) + ',32');
                     pvs.push(pv);
                 }
 
                 dests = source.dests;
 
-                // È¥Ïò
+                // å»å‘
                 var _len = dests.length, _total = 0,
                     _w , _cx, _cy, _tx = 18, _ty,
-                    _attr = {font: '12px Î¢ÈíÑÅºÚ', 'text-anchor': 'start'},
+                    _attr = {font: '12px å¾®è½¯é›…é»‘', 'text-anchor': 'start'},
                     _angle = -85, _delta = 0, _angleplus, _popangle,
                     _sector, _percent, _name, _pv;
 
                 if (i == index) {
-                    //¼ÆËãÈ¥Ïò×ÜÕ¼±È
+                    //è®¡ç®—å»å‘æ€»å æ¯”
                     forEach(dests, function (dest, d) {
                         _total += parseInt(dest.percent, 10);
                     });
 
                     forEach(dests, function (dest, j) {
 
-                        // ½Ç¶È
+                        // è§’åº¦
                         _angleplus = (maxangle - (_len - 1) * gap) * parseInt(dest.percent, 10) / _total;
                         _popangle = _angle + (_angleplus / 2);
 
-                        // ×ø±ê
+                        // åæ ‡
                         _cx = x + (r + _delta ) * Math.cos(-_popangle * rad);
                         _cy = y + (r + _delta ) * Math.sin(-_popangle * rad);
 
-                        // È¥ÏòÉÈÇø
+                        // å»å‘æ‰‡åŒº
                         _sector = this.sector(x, y, r, _angle, _angle + _angleplus, { fill: this.colors[j], stroke: 'none' });
                         _sectors.push(_sector);
 
-                        //µ÷ÕûÊ×Î»È¥ÏòµÄÎ»ÖÃ·ÀÖ¹µ²×¡É«¿éÇøÓò
+                        //è°ƒæ•´é¦–ä½å»å‘çš„ä½ç½®é˜²æ­¢æŒ¡ä½è‰²å—åŒºåŸŸ
                         if (j == 0) {
                             _ty = 5;
                         } else if (j == _len - 1) {
@@ -207,13 +207,13 @@
                             _ty = -10;
                         }
 
-                        // È¥ÏòÎÄ±¾
+                        // å»å‘æ–‡æœ¬
                         _name = this.paper.text(_cx, _cy, dest.name)
                             .attr(_attr).attr({ fill: '#464646'})
                             .transform('t' + _tx + ',' + (_ty));
                         _names.push(_name);
 
-                        // Õ¼±È
+                        // å æ¯”
                         _percent = this.paper.text(_cx, _cy, dest.percent)
                             .attr({font: ie ? '25px s' : '30px webfont', fill: '#464646', 'text-anchor': 'start'})
                             .transform('t' + _tx + ',' + ((ie ? 20 : 22) + _ty));
@@ -226,13 +226,13 @@
                             .transform('t' + (_w + (ie ? -5 : 5) + _tx) + ',' + ((ie ? 23 : 25) + _ty));
                         _pvs.push(_pv);
 
-                        //Òş²ØÉÙÓÚ5%µÄÊı¾İ
+                        //éšè—å°‘äº5%çš„æ•°æ®
                         if (parseInt(dest.percent) < 5) {
                             _name.hide();
                             _percent.hide();
                             _pv.hide();
 
-                            //hoverÊ±ÏÔÊ¾ÉÙÓÚ5%µÄÊı¾İ
+                            //hoveræ—¶æ˜¾ç¤ºå°‘äº5%çš„æ•°æ®
                             (function (n) {
                                 _sectors[n].hover(function () {
                                     _names[n].show().toFront();
@@ -250,7 +250,7 @@
                     }, this);
                 }
 
-                //·Çµ±Ç°À´Ô´ÇÒÕ¼±ÈÉÙÓÚ5%Ìí¼ÓhoverÏÔÊ¾ÓëÒş²Ø
+                //éå½“å‰æ¥æºä¸”å æ¯”å°‘äº5%æ·»åŠ hoveræ˜¾ç¤ºä¸éšè—
                 if (per < 5 && i != index) {
                     name.hide();
 
@@ -266,16 +266,16 @@
                 angle += angleplus + gap;
             }, this);
 
-            // µ×ÅÌ
+            // åº•ç›˜
             this.renderBottomMap();
 
-            // À´Ô´Á¬½ÓÏß
+            // æ¥æºè¿æ¥çº¿
             var dot = this.circle(cx1, cy1, 4, { fill: '#0c8de5', stroke: '#ffffff', 'stroke-width': 2 });
             var line = this.paper.path("M" + cx1 + " " + cy1 + "L" + x + " " + y).attr('stroke', '#0c8de5');
             var anim = Raphael.animation({cx: x, cy: y }, 1500, '<>');
             dot.animate(anim.repeat(Infinity));
 
-            // È¥ÏòÁ¬½ÓÏß
+            // å»å‘è¿æ¥çº¿
             var __dests = sources[index].dests,
                 __len = __dests.length, __cx, __cy, __angle = -85,
                 __angleplus, __popangle, __dot, __line, __anim, __anim1;
@@ -293,7 +293,7 @@
                 __angle += __angleplus + gap;
             }, this);
 
-            // ÎÄ±¾²ãÉÏÒÆ,·ÀÖ¹±»¸²¸Ç
+            // æ–‡æœ¬å±‚ä¸Šç§»,é˜²æ­¢è¢«è¦†ç›–
             percent.toFront();
             pv.toFront();
             _names.toFront();
@@ -302,11 +302,11 @@
         },
 
         /**
-         * »­Ô²
-         * @param {Number} cx ×ø±ê x
-         * @param {Number} cy ×ø±ê y
-         * @param {Number} r ÉÈĞÎ°ë¾¶
-         * @param {Object} ÅäÖÃ²ÎÊı {fill: '#d8d8d8', stroke: 'none'}
+         * ç”»åœ†
+         * @param {Number} cx åæ ‡ x
+         * @param {Number} cy åæ ‡ y
+         * @param {Number} r æ‰‡å½¢åŠå¾„
+         * @param {Object} é…ç½®å‚æ•° {fill: '#d8d8d8', stroke: 'none'}
          *
          */
         circle: function (x, y, r, option) {
@@ -319,13 +319,13 @@
         },
 
         /**
-         * »­ÉÈĞÎ
-         * @param {Number} cx ×ø±ê x
-         * @param {Number} cy ×ø±ê y
-         * @param {Number} r ÉÈĞÎ°ë¾¶
-         * @param {Number} startAngle ¿ªÊ¼»¡¶È
-         * @param {Number} endAngle ½áÊø»¡¶È
-         * @param {Object} params ÅäÖÃ²ÎÊı  {fill: '#d8d8d8', stroke: 'none'}
+         * ç”»æ‰‡å½¢
+         * @param {Number} cx åæ ‡ x
+         * @param {Number} cy åæ ‡ y
+         * @param {Number} r æ‰‡å½¢åŠå¾„
+         * @param {Number} startAngle å¼€å§‹å¼§åº¦
+         * @param {Number} endAngle ç»“æŸå¼§åº¦
+         * @param {Object} params é…ç½®å‚æ•°  {fill: '#d8d8d8', stroke: 'none'}
          */
         sector: function (cx, cy, r, startAngle, endAngle, params) {
             var x1 = cx + r * Math.cos(-startAngle * rad)
@@ -337,14 +337,14 @@
         },
 
         /**
-         * ÔØÈëÍ¼Æ¬
-         * @param {Number} src Í¼Æ¬src
-         * @param {Number} x ×ø±ê y
-         * @param {Number} y ÉÈĞÎ°ë¾¶
-         * @param {Number} w ¿ªÊ¼»¡¶È
-         * @param {Number} h ½áÊø»¡¶È
-         * @param {Object} params ÅäÖÃ²ÎÊı  {fill: '#d8d8d8', stroke: 'none'}
-         * @param {Number} trans ±ä»»  Èç?'r40,t0,10'
+         * è½½å…¥å›¾ç‰‡
+         * @param {Number} src å›¾ç‰‡src
+         * @param {Number} x åæ ‡ y
+         * @param {Number} y æ‰‡å½¢åŠå¾„
+         * @param {Number} w å¼€å§‹å¼§åº¦
+         * @param {Number} h ç»“æŸå¼§åº¦
+         * @param {Object} params é…ç½®å‚æ•°  {fill: '#d8d8d8', stroke: 'none'}
+         * @param {Number} trans å˜æ¢  å¦‚?'r40,t0,10'
          */
         image: function (src, x, y, w, h, option, trans) {
             var img = this.paper.image(src, x, y, w, h)
