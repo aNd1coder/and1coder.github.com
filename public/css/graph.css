@@ -12,7 +12,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.holder {
+.wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
