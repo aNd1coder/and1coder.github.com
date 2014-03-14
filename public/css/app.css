@@ -1,12 +1,30 @@
-html,
-body { color: #555; font: normal 16px/1.6 helivetica, arial, sans-serif; }
-a { color: #4183c4; text-decoration: none; }
+/* rest */
+* { -webkit-tap-highlight-color: transparent; outline: 0; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
+img { max-width: 100%; border: 0 none; }
+i, em { font-style: normal; }
+ol, ul { margin-left: 1.2em; list-style: square; }
+input, select, h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration: none; color: #4183c4; }
 a:hover { text-decoration: underline; }
-a:active, a:hover { outline: 0; }
-h1.title { color: steelblue; font-size: 2em; }
+a, img { -webkit-touch-callout: none; }
+body {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 640px;
+    height: 100%;
+    background: #e6e6e6;
+    font-size: 14px;
+    font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+    line-height: 1.5;
+    color: #555;
+    -webkit-text-size-adjust: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+h1.title { color: rgb(71, 132, 182); font-size: 1.5em; }
 h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
-h2 { font-size: 1.5em; }
-ul, ol { margin-left: 1.2em; }
-ul { padding: 0; list-style-type: square; }
-.container { min-width: 320px; max-width: 640px; margin: 0 auto; }
-h1.title, .content { padding: 0 5px; }
+h2 { font-size: 1.2em; }
+.container { padding: 0 10px; }
