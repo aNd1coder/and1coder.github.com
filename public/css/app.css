@@ -26,5 +26,6 @@ body {
 
 h1.title { color: rgb(71, 132, 182); font-size: 1.5em; }
 h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
-h2 { font-size: 1.2em; }
-.container { padding: 0 10px; }
+h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
+.container { padding: 10px; }
+.content { word-wrap: break-word; word-break: break-all; }
