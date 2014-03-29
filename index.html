@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>三桂(samgui)</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>三桂</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="非著名前端狗，崇尚简单和高效" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel='shortcut icon' type="image/x-icon" href="https://2.gravatar.com/avatar/e0c987d94d37f5d19f5b6c4fedff65e0" />
     <style>
         html, body { overflow: hidden; margin: 0; }
-        body { font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif; color: #333; }
+        ul { margin: 0; padding: 0; list-style: none; }
+        li { line-height: 1.8em; }
         .wrapper { position: absolute; left: 0; width: 320px; text-align: center; top: 50%; left: 50%; margin-left: -160px; margin-top: -160px; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
-        h1 { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 30px; letter-spacing: 9px; text-transform: uppercase; margin: 12px 0; left: 4px; }
-        h2 { color: #999; font-weight: normal; font-size: 15px; letter-spacing: .12em; margin-bottom: 30px; left: 3px; }
+        .avatar { display: block; margin: 0 auto 10px; border-radius: 100px; border: 5px solid rgba(0, 0, 0, .1);transition:all .5 ease-in }
+        .avatar:hover { border-color: #4183c4; }
         h1, h2 { position: relative; }
-        p { font-size: 14px; line-height: 2em; margin: 0; letter-spacing: 2px; }
+        h1 { color: #333; }
+        h2 { color: #999; font-weight: normal; font-size: 15px; letter-spacing: .12em; }
         canvas { position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; }
-        a { color: #999; text-decoration: none; transition: color .2s ease; }
-        a:hover { color: #f33; }
+        a { color: #4183c4; text-decoration: none; transition: color .2s ease; }
     </style>
 </head>
 <body>
 <div class="wrapper">
-    <h1>三桂(samgui)</h1>
-    <h2>Designer, Hacker, Googler&nbsp;</h2>
-    <p><a href="http://samgui.com/about">About</a></p>
-    <p><a href="http://samgui.com/archive">Blog</a></p>
-    <p><a href="https://twitter.com/and1coder" target="_blank">Twitter</a></p>
-    <p><a href="https://github.com/and1coder" target="_blank">Github</a></p>
-    <p><a href="http://t.qq.com/and1coder" target="_blank">微博</a></p>
-    <p><a href="http://samgui.com/atom">RSS</a></p>
+    <h1>
+        <img class="avatar" width="100" height="100"
+             src="https://2.gravatar.com/avatar/e0c987d94d37f5d19f5b6c4fedff65e0"
+             alt=""/>
+        三桂
+    </h1>
+
+    <h2>非著名前端狗，崇尚简单和高效</h2>
+
+    <ul>
+        <li><a href="http://samgui.com/archive">Blog</a></li>
+        <li><a href="https://speakerdeck.com/and1coder" target="_blank">Slide</a></li>
+        <li><a href="https://github.com/and1coder" target="_blank">Github</a></li>
+        <li><a href="http://samgui.com/about">About</a></li>
+    </ul>
 </div>
 <canvas></canvas>
 <script>
