@@ -19,7 +19,7 @@ body {
     font-size: 14px;
     font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
     line-height: 1.5;
-    color: #555;
+    color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-user-select: none;
     user-select: none;
@@ -30,4 +30,4 @@ h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
 h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 .container { padding: 10px; }
 .content { padding: 20px 0; font-size: 1.2em; word-wrap: break-word; word-break: break-all; }
-.posts { margin-left: 0; font-size: 1em; }
+.posts { margin-left: 0; font-size: 1em; color: #666; }
