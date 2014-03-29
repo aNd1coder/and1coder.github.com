@@ -11,7 +11,7 @@
 .avatar { position: absolute; top: 50%; left: 50%; width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50px; }
 
 /* lottery*/
-.lottery { position: relative; width: 666px; height: 364px; background: #860f1c; url(/public/img/lottery.png) no-repeat center }
+.lottery { position: relative; width: 666px; height: 364px; background: #860f1c url(/public/img/lottery.png) no-repeat center }
 .lottery.disabled { background: url(/public/img/lottery-disabled.png) no-repeat center }
 .lottery-box { width: 100%; height: 100% }
 .lottery-box td.hover { position: relative; width: 132px; background: url(/public/img/lottery-hover.png) no-repeat }
