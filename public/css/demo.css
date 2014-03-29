@@ -1,6 +1,6 @@
 /* raphael.js */
 @font-face { font-family: "webfont"; src: url(/public/font/webfont.eot); src: url(/public/font/webfont.eot?#iefix) format("embedded-opentype"), url(/public/font/webfont.svg#webfontregular) format("svg"), url(/public/font/webfont.woff) format("woff"), url(/public/font/webfont.ttf) format("truetype"); font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; }
-.raphael-wrapper { position: relative; height: 650px; margin-top: 100px; }
+.raphael-wrapper { position: relative; width: 320px; height: 325px; }
 .avatar { position: absolute; top: 255px; left: 280px; width: 90px; height: 90px; border-radius: 50px; box-shadow: 0 0 10px rgba(0, 0, 0, .3); }
 
 /* lottery*/
