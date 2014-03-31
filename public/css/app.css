@@ -60,14 +60,14 @@ pre, code {
 h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 
 .content {
-    padding: 20px 10px;
+    padding: 10px;
     font-size: 1.2em;
     word-wrap: break-word;
     word-break: break-all;
 }
 
 .posts {
-    margin: 0 10px 0 27px;
+    margin: 0 10px 0 25px;
     list-style-type: square;
     font-size: 1em;
 }
