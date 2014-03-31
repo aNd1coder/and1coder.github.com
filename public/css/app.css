@@ -7,7 +7,8 @@ ol, ul { list-style: none; }
 input, select, h1, h2, h3, h4, h5, h6 { font-size: 100%; }
 table { border-collapse: collapse; border-spacing: 0; }
 p { margin: .5em 0; }
-a { text-decoration: none; color: #4183c4; }
+a, ul { color: #4183c4; }
+a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 a, img { -webkit-touch-callout: none; }
 
