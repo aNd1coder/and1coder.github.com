@@ -7,7 +7,7 @@ ol, ul { list-style: none; }
 input, select, h1, h2, h3, h4, h5, h6 { font-size: 100%; }
 table { border-collapse: collapse; border-spacing: 0; }
 p { margin: .5em 0; }
-a, ul { color: #4183c4; }
+a, .posts { color: #4183c4; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 a, img { -webkit-touch-callout: none; }
@@ -55,5 +55,5 @@ h1.title .date { color: #666; font-size: .8em; margin-bottom: 1em; }
 h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 .container { padding: 10px; }
 .content { padding: 20px 0; font-size: 1.2em; word-wrap: break-word; word-break: break-all; }
-.posts { margin-left: 20px; list-style-type: square; font-size: 1em; color: #666; }
+.posts { margin-left: 20px; list-style-type: square; font-size: 1em; }
 .date { color: #999; }
