@@ -43,7 +43,6 @@ pre {
     overflow: auto;
     padding: 6px 10px;
     border-radius: 3px;
-    word-wrap: normal;
 }
 
 .toolbar {
@@ -51,6 +50,7 @@ pre {
     font-size: 1.6em;
     color: #fff;
     background-color: #323a45;
+    overflow: hidden;
 }
 
 h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
@@ -58,8 +58,6 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 .content {
     padding: 10px 10px 50px;
     font-size: 1.2em;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 
 .posts {
