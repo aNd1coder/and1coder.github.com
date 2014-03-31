@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>新淘宝首页设计创新点</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <script>document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">'); </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        .reveal .roll { font-size: .7em;}
+    </style>
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section id="home">
+            <!--首页截图渐变处理作为背景图-->
+            <h1 style="font-size: 2.8em;">新淘宝首页设计创新点</h1>
+            <p>
+                <small>samgui(kamalyu、jfengjiang) @ 2013/09/26</small>
+            </p>
+        </section>
+
+        <section id="summary">
+            <h2>主要内容</h2>
+            <ul>
+                <li class="fragment">性能优化</li>
+                <li class="fragment">交互体验</li>
+                <li class="fragment">iconfont</li>
+            </ul>
+        </section>
+
+        <section id="wpo">
+
+            <section id="wpo-summary">
+                <h2>性能优化</h2>
+                <ul>
+                    <li class="fragment">dns-prefetch</li>
+                    <li class="fragment">url去协议</li>
+                    <li class="fragment">图片css化</li>
+                </ul>
+            </section>
+
+            <section id="dns-prefetch">
+                <h2>dns-prefetch</h2>
+                <pre><code>
+                        &lt;link rel="dns-prefetch" href="//g.tbcdn.cn" /&gt;
+                        &lt;link rel="dns-prefetch" href="//img01.taobaocdn.com" /&gt;
+                        &lt;link rel="dns-prefetch" href="//img02.taobaocdn.com" /&gt;
+                        &lt;link rel="dns-prefetch" href="//img03.taobaocdn.com" /&gt;
+                        &lt;link rel="dns-prefetch" href="//img04.taobaocdn.com" /&gt;
+                </code></pre>
+                <a href="http://dbanotes.net/web/dns_prefetching.html" target="_blank" class="fragment" data-fragment-index="2">http://dbanotes.net/web/dns_prefetching.html</a>
+                <blockquote class="fragment" data-fragment-index="1">
+                    典型的一次 DNS 解析耗费 20-120 毫秒，减少 DNS 解析数是个优化的方式，而能够缩减 DNS 解析的时间也是有经济效益的事情。
+                </blockquote>
+                <p style="margin-top: 1em;" class="fragment" data-fragment-index="3">
+                    <a href="http://www.chromium.org/developers/design-documents/dns-prefetching/" target="_blank">http://www.chromium.org/developers/design-documents/dns-prefetching/</a>
+                    <a href="https://developer.mozilla.org/en/docs/Controlling_DNS_prefetching" target="_blank">https://developer.mozilla.org/en/docs/Controlling_DNS_prefetching</a>
+                    <a href="http://msdn.microsoft.com/zh-cn/library/ms534366(en-us,VS.85).aspx" target="_blank">http://msdn.microsoft.com/zh-cn/library/ms534366(en-us,VS.85).aspx</a>
+                </p>
+            </section>
+
+            <section id="remove-url-protocol">
+                <h2>url去协议</h2>
+                <pre><code>
+                        &lt;link rel="stylesheet" href="//g.tbcdn.cn/??tb/global/2.1.0/global-min.css,tb/tb-fp/1.1.6/style-min.css?t=20130905" /&gt;
+                </code></pre>
+                可以减少文件大小，而浏览器会自动补上url缺失的协议
+            </section>
+
+            <section>
+                <h2>图片css化</h2>
+                <p>用CSS实现箭头，类似iconfont，查看<a href="../lab/css_arrow.html" target="_blank">demo</a></p>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>交互体验</h2>
+                <ul>
+                    <li class="fragment">弹性布局</li>
+                    <li class="fragment">响应式设计</li>
+                    <li class="fragment">移动端meta</li>
+                    <li class="fragment">类目导航</li>
+                    <li class="fragment">两栏等高</li>
+                    <li class="fragment">搜索历史</li>
+                    <li class="fragment">字体优化</li>
+                    <li class="fragment">"找入口"</li>
+                    <li class="fragment">无障碍</li>
+                </ul>
+            </section>
+
+            <section id="flexible-layout">
+                <h2>弹性布局</h2>
+                不定宽采用百分比，灵活响应不同屏幕分辨率以及窗口缩放
+            </section>
+
+            <section>
+                <h3>"主题市场"</h3>
+				<a href="http://www.taobao.com/" target="_blank">&raquo;</a>
+                <pre><code>
+                    .screen-hd .map .mod .mod-wrap li {
+                        display: inline;
+                        float: left;
+                        padding-top: 5px;
+                        width: 25%;
+                        height: 25px;
+                        overflow: hidden;
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>"试用"</h3>
+                <pre><code>
+                    .market-bd .mod .mod-bd .mod-bd-l,
+                    .market-bd .mod .mod-bd .mod-bd-r {
+                        display: inline;
+                        float: left;
+                        width: 50%;
+                    }
+
+
+                    .market-bd .mod .mod-bd .mod-bd-r .mod-cont {
+                        padding-left: 3%;
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>"热卖单品"</h3>
+                <pre><code>
+                    .sale .sale-bd li {
+                        display: inline;
+                        float: left;
+                        margin-bottom: 30px;
+                        width: 14.28571%;
+                    }
+                </code></pre>
+            </section>
+
+            <section id="responsive-design">
+                <h2>响应式设计</h2>
+                <p>基于Media Queries适配不同分辨率</p>
+                <pre><code>
+                    @media (max-width:1009px) {}
+                    @media (min-width:1010px) and (max-width:1024px) {}
+                    @media (max-width:1219px) {}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>针对retina屏优化</h2>
+                <pre><code>
+                    .screen-hd .map .mod .mod-wrap h4 {
+                        background: url(http://gtms03.alicdn.com/tps/i3/T1DrqOFflcXXcsSpY4-200-200.png);
+                        background-image: -webkit-image-set(url(http://gtms03.alicdn.com/tps/i3/T1DrqOFflcXXcsSpY4-200-200.png) 1x,url(http://gtms03.alicdn.com/tps/i3/T1N2SNFkRaXXcUdm2I-400-400.png) 2x);
+                        background-image: -moz-image-set(url(http://gtms03.alicdn.com/tps/i3/T1DrqOFflcXXcsSpY4-200-200.png) 1x,url(http://gtms03.alicdn.com/tps/i3/T1N2SNFkRaXXcUdm2I-400-400.png) 2x);
+                        background-image: -ms-image-set(url(http://gtms03.alicdn.com/tps/i3/T1DrqOFflcXXcsSpY4-200-200.png) 1x,url(http://gtms03.alicdn.com/tps/i3/T1N2SNFkRaXXcUdm2I-400-400.png) 2x);
+                        background-image: -o-image-set(url(http://gtms03.alicdn.com/tps/i3/T1DrqOFflcXXcsSpY4-200-200.png) 1x,url(http://gtms03.alicdn.com/tps/i3/T1N2SNFkRaXXcUdm2I-400-400.png) 2x);
+                        background-repeat: no-repeat;
+                    }
+                </code></pre>
+                <a href="https://coderwall.com/p/6ltcnw" target="_blank">https://coderwall.com/p/6ltcnw</a>
+            </section>
+
+            <section id="mobile-device-adapter">
+                <h2>移动端meta</h2>
+                <pre><code>
+                &lt;meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" /&gt;
+                &lt;meta name="apple-itunes-app" content="app-id=438865278" /&gt;
+                </code></pre>
+                <a href="http://segmentfault.com/q/1010000000171226" target="_blank">http://segmentfault.com/q/1010000000171226</a>
+            </section>
+
+            <section id="categoty-navigation-menu">
+                <h2>类目导航</h2>
+                <p>专门优化过的菜单，体验更快更爽。</p>
+                <p>鼠标垂直移动，切换速度很快；向右偏斜移动，稍有延迟。</p>
+                <a href="http://www.36kr.com/p/201751.html " target="_blank">http://www.36kr.com/p/201751.html </a>
+                <a href="https://github.com/kamens/jQuery-menu-aim" target="_blank">https://github.com/kamens/jQuery-menu-aim</a>
+            </section>
+
+            <section id="two-columns-equal-height">
+                <h2>两栏等高</h2>
+                <p>fixed侧栏，保持左右栏始终对齐</p>
+            </section>
+
+            <section id="search-history">
+                <h2>搜索历史</h2>
+                <p>记录用户搜索历史，提升搜索体验，同时也可以减少http请求</p>
+                <pre><code>
+                    http://a.tbcdn.cn/apps/tbskip/public/flashStorage.swf
+                </code></pre>
+            </section>
+
+			<section>
+                <h2>字体优化</h2>
+                <pre><code>
+                    font:12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif
+                </code></pre>
+                <p>Mac系统下内置的中文字体'Hiragino Sans GB'（苹果丽黑字体），接近宋体以及微软雅黑等Windows下的中文字体，但是有更优秀的表现</p>
+			</section>
+            <section id="find-the-portal">
+                <h2>"找入口"</h2>
+                <p>"解决"首页信息量大入口难找难题</p>
+            </section>
+
+            <section id="accessibility">
+                <h2>无障碍</h2>
+                <pre><code>
+                        &lt;div id="J_Search" class="search" role="search">&lt;/div&gt;
+                </code></pre>
+                <pre><code>
+                        &lt;div class="search-combobox search-combobox-shown" aria-disabled="false"&gt;
+                            &lt;div class="search-combobox-invalid-el"&gt;
+                                &lt;div class="search-combobox-invalid-inner"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="search-combobox-input-wrap"&gt;
+                                &lt;input id="q"
+                                       name="q"
+                                       aria-label="请输入搜索文字"
+                                       accesskey="s"
+                                       autofocus="true"
+                                       autocomplete="off"
+                                       aria-haspopup="true"
+                                       aria-combobox="list"
+                                       role="combobox"
+                                       class="search-combobox-input"
+                                       x-webkit-speech=""
+                                       x-webkit-grammar="builtin:translate"
+                                       tabindex="0"
+                                       aria-expanded="true"
+                                       hidefocus="true"/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                </code></pre>
+            </section>
+
+        </section>
+
+        <section id="iconfont">
+
+            <section id="iconfont-summary">
+                <h2>iconfont</h2>
+                <ul>
+                    <li class="fragment">优点</li>
+                    <li class="fragment">缺点</li>
+                    <li class="fragment">使用</li>
+                    <li class="fragment">资源</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>优点</h2>
+                <p><a href="../lab/qzonefonticon_proj/demo.html" target="_blank">&raquo;</a></p>
+                <ul>
+                    <li>可以设置颜色，大小，阴影</li>
+                    <li>字体文件很小，20-30kb左右</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>缺点</h2>
+                <ul>
+                    <li>只适用于纯色扁平的图形（最多在高端浏览器比如webkit上支持些渐变和蒙板）</li>
+                    <li>
+                        字体跨域（IE9+，FF）
+                        <p>根据Request Headers中的Origin来配置Reponse Headers中的Access-Control-Allow-Origin</p>
+                        <a href="http://km.oa.com/group/19251/articles/show/129688" target="_blank">http://km.oa.com/group/19251/articles/show/129688</a>
+                    </li>
+                    <li>
+                        维护难度增大，如icon有变动则需要更多时间进行调整，中间涉及较多工具，不宜大规模使用
+                    </li>
+                </ul>
+            </section>
+
+            <section id="iconfont-font-face">
+                <h2>使用</h2>
+                <pre><code>
+                        @font-face {
+                            font-family: iconfont;  /*名称可跟字体文件名不同*/
+                            src: url(http://g.tbcdn.cn/tb/icon-font/1.0.6/iconfont.eot);   /* IE9 Compat Modes */
+                            src: url(http://g.tbcdn.cn/tb/icon-font/1.0.6/iconfont.eot?#iefix) format("embedded-opentype"),   /* IE6-IE8 */
+                            url(http://g.tbcdn.cn/tb/icon-font/1.0.6/iconfont.woff) format("woff"),   /* Modern Browsers */
+                            url(http://g.tbcdn.cn/tb/icon-font/1.0.6/iconfont.ttf) format("truetype"),   /* Safari, Android, iOS */
+                            url(http://g.tbcdn.cn/tb/icon-font/1.0.6/iconfont.svg#uxiconfont) format("svg")  /* Legacy iOS */
+                        }
+                </code></pre>
+            </section>
+
+            <section id="iconfont-setting">
+                <pre><code>
+                        .iconfont {
+                            font-family: iconfont;
+                            font-size: 12px;
+                            font-style: normal;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                        }
+                </code></pre>
+            </section>
+
+            <section id="iconfont-usage">
+                <pre><code>
+                        &lt;i class="iconfont">&#61505&lt;/i&gt;
+                </code></pre>
+                <a href="http://km.oa.com/articles/show/121166" target="_blank">http://km.oa.com/articles/show/121166</a>
+                <a href="http://km.oa.com/group/3292/articles/show/116741" target="_blank">http://km.oa.com/group/3292/articles/show/116741</a>
+                <a href="http://www.qianduan.net/css3-icon-font-guide.html" target="_blank">http://www.qianduan.net/css3-icon-font-guide.html</a>
+                <a href="http://www.zhangxinxu.com/wordpress/?p=2041" target="_blank">http://www.zhangxinxu.com/wordpress/?p=2041</a>
+            </section>
+
+            <section id="iconfont-resources">
+                <h2>资源</h2>
+                <a href="http://pub.code.oa.com/project/home?comeFrom=103&projectId=3781" target="_blank">http://pub.code.oa.com/project/home?comeFrom=103&projectId=3781</a>
+                <a href="http://www.qianduan.net/icon-font-large-collecting.html" target="_blank">http://www.qianduan.net/icon-font-large-collecting.html</a>
+                <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">http://fortawesome.github.io/Font-Awesome/</a>
+                <a href="http://getbootstrap.com/components/#glyphicons-glyphs" target="_blank">http://getbootstrap.com/components/#glyphicons-glyphs</a>
+            </section>
+
+        </section>
+
+        <section>
+            <h2>Thank you!</h2>
+        </section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/showdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>

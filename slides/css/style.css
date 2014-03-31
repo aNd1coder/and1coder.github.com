@@ -1,0 +1,27 @@
+.slides {
+  list-style: square;
+}
+
+.slides a {
+  color: #333;
+  text-decoration: none;
+}
+
+.slides .date {
+  color: #999;
+  margin-left: 5px;
+}
+
+body {
+  color: red;
+}
+
+.noQuery body {
+  color: green;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    color: green;
+  }
+}
