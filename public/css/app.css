@@ -10,6 +10,7 @@ p { margin: .5em 0; }
 a { text-decoration: none; color: #4183c4; }
 a:hover { text-decoration: underline; }
 a, img { -webkit-touch-callout: none; }
+
 body {
     margin: 0 auto;
     min-width: 320px;
@@ -22,6 +23,30 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-user-select: none;
     user-select: none;
+}
+
+blockquote {
+    margin: 15px 0px;
+    border-left: 4px solid #ddd;
+    padding: 0px 15px;
+    color: #777777;
+    font-family: Helvetica, arial, freesans, clean, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+pre {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    font-size: 13px;
+    line-height: 19px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #dddddd;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+    word-wrap: normal;
 }
 
 h1.title { color: rgb(71, 132, 182); font-size: 1.6em; }
