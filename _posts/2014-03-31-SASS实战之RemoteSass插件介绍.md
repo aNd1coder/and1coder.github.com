@@ -14,21 +14,21 @@ SASS中关于[CUSTOM-IMPORTERS](http://sass-lang.com/docs/yardoc/file.SASS_REFER
 
 内网安装需要先设置代理
 
-`
+
     set http_proxy=http://proxy.ooxx.com:8080/
-`
+
 
 接下来安装remote-sass模块
 
-`gem install remote-sass`
+    gem install remote-sass
 
 安装成功之后把下面2行配置添加到本机的config.rb
 
-`
+
     # import远程scss文件.
     require 'remote-sass'
     RemoteSass.location = "http://static.paipaiimg.com/"
-`
+
 
 其中RemoteSass.location是你需要远程引入的http地址的前缀，同时也作为load-path加入到SASS中。如你在/path/to/xx/_share.scss文件中@import "path/to/oo/a.scss";在本地都找不到文件后，会去请求http://path/to/oo/a.scss.
 

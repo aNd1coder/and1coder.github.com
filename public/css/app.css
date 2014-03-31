@@ -32,7 +32,7 @@ blockquote {
     line-height: 25px;
 }
 
-pre, code {
+pre {
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
     font-size: 13px;
     line-height: 19px;
@@ -56,14 +56,14 @@ pre, code {
 h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 
 .content {
-    padding: 10px;
+    padding: 10px 10px 50px;
     font-size: 1.2em;
     word-wrap: break-word;
     word-break: break-all;
 }
 
 .posts {
-    margin: 0 10px 0 25px;
+    margin: 0 10px 0 20px;
     list-style-type: square;
     font-size: 1em;
 }
