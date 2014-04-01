@@ -1,0 +1,114 @@
+.txt_number { width: 188px; }
+
+.hide { display: none; }
+
+.grid { width: 950px; margin: 0 auto 10px; }
+
+.angle {
+  position: absolute;
+  top: -5px;
+  left: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 1px solid #747474;
+  border-width: 1px 0 0 1px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mod_close {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  font-style: normal;
+  font-family: arial;
+  font-size: 12px;
+  background: #747474 url(../img/x.png) no-repeat center;
+  border-radius: 10px;
+  z-index: 91;
+  -webkit-transform: translateZ(0);
+}
+
+.mod_close:hover { background-color: #474747; }
+
+.mod_close:hover,
+.lnk_label:hover { color: #fff; }
+
+.mod_tip {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: -120px;
+  width: 160px;
+  padding: 5px 10px;
+  border: 1px solid #f5e3b8;
+  color: #d0b574;
+  font: normal 12px/15px simsun;
+  background-color: #fffddd;
+}
+
+.mod_tip .angle {
+  top: 50%;
+  left: 100%;
+  margin: -5px 0 0 -5px;
+  border-color: #f5e3b8;
+  border-width: 1px 1px 0 0;
+  background-color: #fffddd;
+}
+
+.mod_tip .hl { color: #ddc999; }
+
+.fixed_tip span,
+.skin_tip ol,
+.skin_tip .mod_close { display: none; }
+
+.fixed_tip {
+  display: block;
+  top: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+}
+
+.skin_tip {
+  display: block;
+  left: 852px;
+  width: auto;
+  text-align: center;
+}
+
+.lnk_label {
+  position: absolute;
+  right: -59px;
+  top: 0;
+  width: 58px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background-color: #e7376a;
+  border-radius: 3px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transform: translateZ(0);
+}
+
+.lnk_label:focus { color: #fff; outline: none; text-decoration: none; }
+
+.slogan_edit { top: -2px !important; right: -70px !important; }
+
+.new_hotspot, .reset_hotspot { top: 36px; }
+
+.new_hotspot { right: 0; }
+
+.reset_hotspot { right: 59px; }
+
+.change_skin { top: 24px; }

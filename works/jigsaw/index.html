@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>商品运营规范系统</title>
+    <link rel="stylesheet" href="../vendor/bootstrap.min.css?v=1572"/>
+    <link rel="stylesheet" href="../vendor/jquery-colorpicker/colorpicker.css?v=1572"/>
+    <link rel="stylesheet" href="../vendor/ui-darkness/jquery-ui-1.10.3.custom.min.css?v=1572"/>
+    <link rel="stylesheet" href="../css/fa/font-awesome.css?v=1572"/>
+    <link rel="stylesheet" href="../css/jigsaw.css?v=1572"/>
+</head>
+<body class="design-mode">
+
+<div class="desktop" id="desktop">
+    <!--S 工具栏-->
+    <div class="toolbar" id="toolbar">
+        <h1 class="logo"><a href="/">素材规范系统 - 在线拼图</a><a class="help" href="#" target="_blank">帮助文档</a></h1>
+
+        <div class="userinfo">
+            <a href="http://km.oa.com/user/samgui" title="个人中心" target="_blank">
+                <img src="https://2.gravatar.com/avatar/e0c987d94d37f5d19f5b6c4fedff65e0" width="30" height="30"
+                     class="avatar">
+                <span class="username">Samgui</span>
+            </a>
+            <a href="logout" title="退出" class="logout">退出</a>
+        </div>
+        <div class="controller" id="controller">
+            <a href="###" class="btn btn-view-mode" id="btn-view-mode">
+                <i class="icon-th"></i>切换到<span>拼图</span>模式
+            </a>
+            <a href="###" class="btn btn-image-gallery" id="btn-image-gallery">
+                <i class="icon-folder-open"></i>打开图库
+            </a>
+        </div>
+
+        <ul class="toolbox" id="toolbox">
+            <li>
+                <a href="###" class="btn btn-success btn-dl-pic" id="btn-dl-pic">
+                    <i class="icon-download"></i>导出拼图
+                </a>
+                <a href="#code" class="btn btn-gen-code" id="btn-gen-code" role="button" data-toggle="modal">
+                    <i class="icon-tasks"></i>生成代码
+                </a>
+                <a href="#preview" class="btn btn-dl-pkg" id="btn-dl-pkg" role="button" data-toggle="modal">
+                    <i class="icon-download"></i>打包下载
+                </a>
+                <a href="###" class="btn btn-info btn-clearcache" id="btn-clearcache">
+                    <i class="icon-trash"></i><span>清理缓存</span>
+                </a>
+                <a href="###" class="btn btn-fullscreen" id="btn-fullscreen">
+                    <i class="icon-fullscreen"></i><span>全屏浏览</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="msgbox" id="msgbox"></div>
+    </div>
+    <!--E 工具栏-->
+
+    <!--S 属性面版-->
+    <!--E 属性面版-->
+
+    <!--S 画布-->
+    <div class="canvas" id="canvas">
+
+        <!--S 工具条-->
+        <div class="canvas-toolbar">
+            <div class="input-prepend">
+                <label class="add-on" for="canvas-name">名称</label>
+                <input type="text" class="span2 txt-canvas-name" id="canvas-name" placeholder="请输入拼图名称"/>
+            </div>
+            <div class="input-prepend input-append">
+                <label class="add-on" for="canvas-width">宽</label>
+                <input type="number" class="span2" id="canvas-width" value="950" min="100" max="1225"/>
+                <span class="add-on">PX</span>
+            </div>
+            <div class="input-prepend input-append">
+                <label class="add-on" for="canvas-height">高</label>
+                <input type="number" class="span2" id="canvas-height" value="300" min="100" max="9999"/>
+                <span class="add-on">PX</span>
+            </div>
+            <div class="input-prepend" style="display: none;">
+                <label class="add-on" for="canvas-height">背景色</label>
+                <input type="color" class="span2" id="canvas-bgcolor" value="#ffffff"/>
+            </div>
+            <div class="btn-group">
+                <a href="###" class="btn" id="btn-new-hotspot"><i class="icon-plus-sign"></i>添加热区</a>
+            </div>
+            <div class="btn-group">
+                <a href="###" class="btn btn-clear" id="btn-clear">
+                    <i class="icon-trash"></i>清除画布
+                </a>
+                <a href="###" class="btn" id="btn-save-tpl">
+                    <i class="fa fa-save"></i> 保存模版<span class="icon-notify" title="模版有变动,别忘记保存哦^^"></span>
+                </a>
+            </div>
+        </div>
+        <!--E 工具条-->
+
+        <!--S 画布-->
+        <div class="canvas-container" id="canvas-container"></div>
+        <!--E 画布-->
+
+        <!--S 文本编辑器-->
+        <div id="editor" class="editor">
+            <div id="editor-toolbar" class="editor-toolbar">
+                <div class="btn-group btn-align">
+                    <a href="###" class="btn active" data-align="left" title="文字居左"><i class="icon-align-left"></i></a>
+                    <a href="###" class="btn" data-align="center" title="文字居中"><i class="icon-align-center"></i></a>
+                    <a href="###" class="btn" data-align="right" title="文字居右"><i class="icon-align-right"></i></a>
+                </div>
+                <div class="btn-group">
+                    <a href="###" class="btn btn-bold" title="文字加粗"><i class="icon-bold"></i></a>
+                    <a href="###" class="btn btn-forecolor" title="文字颜色"><i class="icon-forecolor"></i></a>
+                    <a href="###" class="btn btn-backcolor" title="背景颜色"><i class="icon-backcolor"></i></a>
+                </div>
+                <div class="btn-group">
+                    <div class="btn btn-fontsize" title="文字大小">
+                        <i class="icon-fontsize"></i><i class="caret"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="###" data-value="12">12</a></li>
+                            <li><a href="###" data-value="14">14</a></li>
+                            <li><a href="###" data-value="16">16</a></li>
+                            <li><a href="###" data-value="18">18</a></li>
+                            <li><a href="###" data-value="20">20</a></li>
+                            <li><a href="###" data-value="22">22</a></li>
+                            <li><a href="###" data-value="24">24</a></li>
+                            <li><a href="###" data-value="26">26</a></li>
+                            <li><a href="###" data-value="28">28</a></li>
+                            <li><a href="###" data-value="36">36</a></li>
+                            <li><a href="###" data-value="48">48</a></li>
+                            <li><a href="###" data-value="72">72</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn btn-lineheight" title="文字行高">
+                        <i class="icon-lineheight"></i><i class="caret"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="###" data-value="12">12</a></li>
+                            <li><a href="###" data-value="14">14</a></li>
+                            <li><a href="###" data-value="16">16</a></li>
+                            <li><a href="###" data-value="18">18</a></li>
+                            <li><a href="###" data-value="20">20</a></li>
+                            <li><a href="###" data-value="22">22</a></li>
+                            <li><a href="###" data-value="24">24</a></li>
+                            <li><a href="###" data-value="26">26</a></li>
+                            <li><a href="###" data-value="28">28</a></li>
+                            <li><a href="###" data-value="36">36</a></li>
+                            <li><a href="###" data-value="48">48</a></li>
+                            <li><a href="###" data-value="72">72</a></li>
+                            <!--li><a href="###" data-value="00">居中</a></li-->
+                        </ul>
+                    </div>
+                </div>
+                <!--a class="editor-close" href="###" title="保存并关闭">&times;</a-->
+            </div>
+            <textarea id="editor-container" class="editor-container" placeholder="请输入文字"></textarea>
+        </div>
+        <!--E 文本编辑器-->
+    </div>
+    <!--E 画布-->
+
+    <!--S 右键菜单-->
+    <div class="dropdown-menu contextmenu" id="contextmenu">
+        <div class="input-prepend">
+            <label class="add-on" for="p_text">设置文字</label>
+            <input type="text" id="p_text" tabindex="1"/>
+        </div>
+        <div class="input-prepend">
+            <label class="add-on" for="p_link">设置连接</label>
+            <input type="text" id="p_link" placeholder="http://" tabindex="2"/>
+        </div>
+        <div class="action">
+            <span class="label label-success"></span>
+            <button class="btn" id="btn_close" tabindex="3">关 闭</button>
+            <button class="btn btn-primary" id="btn_sub" tabindex="4">确 定</button>
+        </div>
+    </div>
+    <!--E 右键菜单-->
+
+    <!--S 侧栏-->
+    <div class="sidebar" id="sidebar">
+        <h3>模版列表 <a id="btn-new-tpl" href="###"><i class="icon-plus-sign" title="新建模版"></i></a></h3>
+
+        <ul class="tpl-list" id="tpl-list">
+            <li>暂无模版</li>
+        </ul>
+    </div>
+    <!--E 侧栏-->
+
+    <!--S 状态栏-->
+    <div class="statusbar" id="statusbar"></div>
+    <!--E 状态栏-->
+</div>
+
+<!--S 代码-->
+<div id="code" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="codeLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="codeLabel">拼图代码</h3>
+    </div>
+    <div class="modal-body">
+        <pre><code id="code-output"></code></pre>
+    </div>
+    <div class="modal-footer">
+        <span class="label label-success"></span>
+        <button class="btn btn-primary" id="btn_copy" data-clipboard-target="code-output">拷贝代码</button>
+        <a class="btn" href="http://ppms.paipaioa.com/php/page_edit.php" target="_blank">PAGE系统</a>
+    </div>
+</div>
+<!--E 代码-->
+
+<!--S 预览-->
+<!--E 预览-->
+
+<!--S 代码模版-->
+<script type="text/html" id="hota_canvas">
+    &lt;!-- S Hota --&gt;
+    &lt;style scoped="scoped"&gt;
+    .hota_canvas a { position: absolute; background-image: url(about:blank); }
+    .hota_canvas a, .hota_canvas a:hover { text-decoration: none; }
+    &lt;/style&gt;
+    &lt;div class="hota_canvas" style="position: relative;{cssText}"&gt;
+    &lt;img src="<!--设置图片路径-->" alt="<!--设置图片名称-->" /&gt;{hotspot}
+    &lt;/div&gt;
+    &lt;!-- E Hota --&gt;
+</script>
+<!--E 代码模版-->
+
+<!--S 快捷键-->
+<!--E 快捷键-->
+
+<!--S 脚本-->
+<script src="/public/js/jquery-1.8.3.min.js?v=1572"></script>
+<script src="../vendor/jquery-ui-1.10.3.custom.min.js?v=1572"></script>
+<script src="../vendor/bootstrap.min.js?v=1572"></script>
+<script src="../vendor/jquery-colorpicker/colorpicker.js?v=1572"></script>
+<script src="../vendor/html2canvas.js?v=1572"></script>
+<script src="../vendor/ZeroClipboard.min.js?v=1572"></script>
+<script src="../vendor/mousetrap.js?v=1572"></script>
+<script src="../js/app.js?v=1572"></script>
+<script src="../js/jigsaw.js?v=1572"></script>
+<!--E 脚本-->
+
+</body>
+</html>

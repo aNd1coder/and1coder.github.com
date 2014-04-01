@@ -1,0 +1,23 @@
+/* 店招 */
+.slogan_container {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  z-index: 9;
+
+  .headline,
+  .subtitle {
+    margin: 0;
+  }
+
+  .headline:focus,
+  .subtitle span:focus { outline: 2px dashed #e7376a; }
+
+  .headline { float: left; padding: 0 10px; }
+
+  .subtitle { float: left; margin-left: 5px; }
+
+  .subtitle span { display: block; padding: 0 5px; }
+
+  .subtitle_zh { font-weight: 600; }
+}

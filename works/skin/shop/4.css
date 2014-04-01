@@ -1,0 +1,39 @@
+.head_container {
+    background-image: url(bg/4.png);
+}
+
+.slogan_container {
+    color: #fff;
+}
+
+.slogan_container .headline, .slogan_container .subtitle span {
+    text-shadow: 1px 0 0 rgba(109, 190, 181, .5);
+}
+
+.slogan_container .headline {
+    border-right: 1px solid rgba(255, 255, 255, .5);
+    font: bold 30px arial;
+}
+
+.slogan_container .subtitle {
+    font: normal 14px/1.3em 'microsoft yahei';
+}
+
+.slogan_container .subtitle_en {
+    color: rgba(255, 255, 255, .5);
+    font-family: arial;
+}
+
+.nav_container {
+    background-color: #107c79;
+}
+
+.nav_container .unit span {
+    color: #fff;
+    border-color: #fff;
+}
+
+.preview .nav_container .unit span {
+    color: #fff;
+    border-color: #35908d!important;
+}

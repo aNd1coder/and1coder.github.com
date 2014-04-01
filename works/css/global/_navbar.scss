@@ -1,0 +1,38 @@
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 950px;
+}
+
+.navbar {
+
+  .brand {
+    width: 215px;
+    height: 20px;
+    background: url(../img/logo-shop.png) no-repeat center;
+
+    .nav {
+      padding-top: 7px;
+
+      >li {
+        >a {
+          padding: 3px 15px;
+
+          .current {
+            border-radius: 3px;
+            color: #fff !important;
+            background-color: #e7376a;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-toggle .caret {
+    border-top-color: #999;
+    border-bottom-color: #999;
+  }
+
+  .dropdown-toggle:hover .caret, .dropdown-toggle:focus .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+}

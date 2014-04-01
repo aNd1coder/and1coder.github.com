@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@import "lib/reset";
+@import "global/navbar";
+@import "global/misc";
+@import "mod/head";
+@import "mod/toolbox";
+@import "mod/nav";
+@import "mod/slogan";
+@import "mod/skin_selector";
+@import "mod/sidebar";
+.sidebar, .main { overflow: hidden; }
+.main { float: right; width: 730px; }
+@import "global/footer";
+@import "mod/preview";

@@ -1,0 +1,20 @@
+.head_container {
+    background-color: #747474;
+}
+
+.slogan_container, .prop_text {
+    display: none;
+}
+
+.nav_container .unit span {
+    border-color: #fff;
+    overflow: hidden;
+    line-height: 999px !important;
+}
+
+.preview .nav_container .unit span, .preview .nav_container .current span {
+    border: none !important;
+    margin: 0;
+    height: 35px;
+    line-height: 35px;
+}

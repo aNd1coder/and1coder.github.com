@@ -1,0 +1,22 @@
+/* toolbox */
+.toolbox_container {
+  display: none;
+  position: absolute;
+  z-index: 999;
+}
+
+.property_editor_board {
+  padding: 10px 10px 0;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #747474;
+  color: #999;
+  border-radius: 3px;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, .3);
+}
+
+.toolbox_hotspot .skin_selector,
+.toolbox_hotspot .property_slogan,
+.toolbox_slogan .skin_selector,
+.toolbox_slogan .property_hotspot,
+.toolbox_skin_selector .property_editor_board { display: none; }

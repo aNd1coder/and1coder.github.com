@@ -1,0 +1,102 @@
+@charset "UTF-8";
+//@author    : aNd1coder
+//@overview  : 全局混入类
+//@update    : $Id$
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    height: 0;
+    content: ' ';
+    clear: both;
+  }
+}
+
+@mixin bg-url($color: '', $url: '', $repeat: 'no-repeat', $position: '') {
+  background: #{$color} url('#{image-url($url,true)}') #{$repeat} #{$position};
+}
+
+@mixin bg-png24($color: '', $url: '', $repeat: 'no-repeat', $position: '') {
+  background: #{$color} url('#{image-url($url,true)}') #{$repeat} #{$position};
+  _background:none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{image-url($url,true)}',sizingMethod='crop');
+}
+
+/*
+  $color 背景色
+  $alpha 透明度
+  $std   是否针对标准浏览器
+*/
+@mixin bgc-rgba($color: #ffffff, $alpha: .8, $std: true) {
+  $rgba: rgba($color, $alpha);
+  @if($std){
+  background-color: $rgba;
+  }
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#{ie-hex-str($rgba)}', EndColorStr = '#{ie-hex-str($rgba)}');
+  :root &{
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType = 0, StartColorStr = '#00000000', EndColorStr = '#00000000');
+  }
+}
+
+@mixin bg-gradient($starcolor, $endcolor) {
+  background: $starcolor;
+  @include background-image(linear-gradient($starcolor, $endcolor));
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$starcolor}', endColorstr='#{$endcolor}',GradientType=0 );//IE6-8
+}
+
+@mixin hide-txt($line-height: '999999999em', $font-size: '0') {
+  line-height: #{$line-height};
+  overflow: hidden;
+  font-size: #{$font-size};
+}
+
+@mixin fn-rotate($deg: 45deg) {
+  @include rotate($deg);
+  -ms-transform: rotate($deg);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865475, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865475, SizingMethod='auto expand')";
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11 = 0.7071067811865475, M12 = -0.7071067811865477, M21 = 0.7071067811865477, M22 = 0.7071067811865475, SizingMethod = 'auto expand');
+
+  :root &{
+    filter: none\9;
+  }
+}
+
+@mixin min-height($height) {
+  min-height: $height;
+  height: auto !important;
+  _height: $height;
+}
+
+@mixin min-width($width) {
+  min-width: $width;
+  width: auto !important;
+  _width: $width;
+}
+
+@mixin max-height($height) {
+  max-height: $height;
+  height: auto !important;
+  _height: $height;
+}
+
+@mixin max-width($width) {
+  max-width: $width;
+  width: auto !important;
+  _width: $width;
+}
+
+@mixin text-justify {
+  text-align: justify;
+  text-justify: distribute-all-lines; //ie6-8
+  text-align-last: justify; //ie9
+  -moz-text-align-last: justify; //ff
+  -webkit-text-align-last: justify; //chrome 20+
+}
+
+//Animate Mixin Plugin
+@mixin animate($name: fadeIn, $duration: 1s, $delay: 0.2s, $function: ease, $mode: both) {
+  @include experimental(animation, $name $duration $delay $function $mode);
+}

@@ -1,0 +1,32 @@
+/* preview */
+.preview .lnk_label,
+.preview .nav_container .unit i,
+.preview .nav_container .unit .ui-resizable-handle,
+.preview .mod_tip,
+.preview .toolbox_container { display: none !important; }
+
+.preview .nav_container { overflow-y: hidden }
+
+.preview .preview_skin { display: block !important; }
+
+.preview .nav_container .unit { height: 35px; }
+
+.preview .nav_container .unit span {
+  height: 12px;
+  line-height: 12px;
+  margin-top: 11px;
+  border: none;
+  border-left: 1px solid #fff;
+  background-color: transparent;
+  margin-left: -1px;
+}
+
+.preview .nav_container .last span {
+  border: none;
+}
+
+.preview .ui-state-disabled {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  cursor: pointer !important;
+}

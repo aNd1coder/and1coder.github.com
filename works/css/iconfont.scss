@@ -1,0 +1,29 @@
+@charset "UTF-8";
+// @Copyright (c) 2013,paipai Inc. All rights reserved.
+// @update $Id: iconfont.scss 15916 2014-01-15 02:41:35Z samgui $
+
+* { padding: 0; margin: 0; }
+h1, h2 { padding-left: 5px; }
+h1 { margin-bottom: 30px; font-size: 30px; }
+h2 { margin-bottom: 15px; font-size: 20px; }
+ul { list-style: none; }
+
+$font_name: 'iconfont';
+$font_url: 'http://d9.oa.com/samgui/public/fonts/#{$font_name}';
+
+@font-face {
+  font-family: $font_name;
+  src: url('#{$font_url}.eot');
+  src: url('#{$font_url}.eot?#iefix') format('embedded-opentype'), url('#{$font_url}.svg#fontawesomeregular') format('svg'), url('#{$font_url}.woff') format('woff'), url('#{$font_url}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { margin: 10px; }
+.iconfont {
+  font: normal 40px $font_name;
+  color: #666;
+
+  li { float: left; padding: 0 5px; }
+}

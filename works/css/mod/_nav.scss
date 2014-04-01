@@ -1,0 +1,36 @@
+/* nav */
+.nav_container,
+.nav_container .hotspot_container { height: 35px; }
+
+.nav_container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.nav_container .unit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98px;
+  text-align: center;
+  font-size: 12px;
+  font-family: simsun;
+}
+
+.nav_container .unit span {
+  display: block;
+  height: 33px;
+  line-height: 33px;
+  border: 1px dashed #747474;
+}
+
+.nav_container .current span {
+  height: 31px;
+  line-height: 31px;
+  border: 2px dashed transparent;
+  border-color: #e7376a !important;
+  color: #747474;
+}

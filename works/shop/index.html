@@ -1,0 +1,141 @@
+﻿﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <title>店铺装修模版工具</title>
+    <link rel="stylesheet" href="/works/vendor/bootstrap.min.css?v=1572"/>
+    <link rel="stylesheet" href="/works/vendor/ui-darkness/jquery-ui-1.10.3.custom.min.css?v=1572"/>
+    <link rel="stylesheet" href="/works/css/shop.css?v=1572"/>
+    <link rel="stylesheet" href="/works/skin/shop/1.css?v=1572"/>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="./shop.html"></a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN" target="_blank">Chrome下载</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid head_container" id="head_container">
+    <!--换肤-->
+    <a href="###" class="lnk_label change_skin">换肤</a>
+    <a href="###" class="lnk_label preview_skin">预览</a>
+
+    <!--店招-->
+    <div class="slogan_container">
+        <h1 class="headline" contenteditable="true">点此填写店铺名称</h1>
+
+        <h2 class="subtitle">
+            <span class="subtitle_zh" contenteditable="true">点此填写店铺描述</span>
+            <span class="subtitle_en" contenteditable="true">点此填写店铺描述</span>
+        </h2>
+        <a href="###" class="lnk_label slogan_edit">编辑</a>
+    </div>
+
+    <!--导航区域-->
+    <div class="nav_container">
+        <!--热区容器-->
+        <div class="hotspot_container">
+            <a href="#" class="unit last" style="left:852px;z-index:0;" id="unit_0" target="_blank">
+                <span>收藏本铺</span>
+                <i title="删除" class="mod_close"></i>
+            </a>
+            <a href="#" class="unit" style="left:0;z-index:1000" id="unit_1000" target="_blank">
+                <span>店铺首页</span>
+                <i title="删除" class="mod_close"></i>
+            </a>
+            <a href="#" class="unit" style="left:99px;z-index:999" id="unit_999" target="_blank">
+                <span>所有商品</span>
+                <i title="删除" class="mod_close"></i>
+            </a>
+            <a href="#" class="unit" style="left:198px;z-index:998" id="unit_998" target="_blank">
+                <span>新品上架</span>
+                <i title="删除" class="mod_close"></i>
+            </a>
+            <a href="#" class="unit" style="left:297px;z-index:997" id="unit_997" target="_blank">
+                <span>热卖专区</span>
+                <i title="删除" class="mod_close"></i>
+            </a>
+            <a href="#" class="unit" style="left:396px;z-index:996" id="unit_996" target="_blank">
+                <span>留言板</span>
+                <i title="删除" class="mod_close"></i>
+            </a>
+            <a href="#" class="unit" style="left:495px;z-index:995" id="unit_995" target="_blank">
+                <span>信用评价</span>
+                <i title="删除" class="mod_close"></i>
+            </a>
+        </div>
+
+        <a href="###" class="lnk_label new_hotspot">添加菜单</a>
+        <a href="###" class="lnk_label reset_hotspot">重置菜单</a>
+    </div>
+
+    <!--提示信息-->
+    <div class="mod_tip">
+        <ol>
+            <li><strong>小贴士</strong></li>
+            <li>店铺名称可直接点击进行编辑</li>
+            <li>右击菜单可修改当前菜单属性</li>
+            <li class="hl">拖放图片可以进行自定义装修</li>
+        </ol>
+        <span></span>
+        <a href="###" class="mod_close" title="关闭"></a>
+    </div>
+</div>
+
+<!--工具栏-->
+<div class="toolbox_container">
+    <a href="###" class="mod_close" title="关闭"></a>
+
+    <!--皮肤选择器-->
+    <div class="skin_selector">
+        <ul class="skin_list">
+            <li class="skin_item"><span data-skin="深蓝牛仔" class="skin_1"></span></li>
+            <li class="skin_item"><span data-skin="黑色牛仔" class="skin_2"></span></li>
+            <li class="skin_item"><span data-skin="浅蓝牛仔" class="skin_3"></span></li>
+            <li class="skin_item"><span data-skin="天空蓝色" class="skin_4"></span></li>
+            <li class="skin_item"><span data-skin="可爱绿色" class="skin_5"></span></li>
+            <li class="skin_item skin_custom_item"><span data-skin="自定义皮肤" class="skin_custom"></span></li>
+        </ul>
+    </div>
+
+    <!--属性编辑器面板-->
+    <div class="property_editor_board">
+        <i class="angle"></i>
+        <!--店招编辑-->
+        <div class="property_slogan">
+            <ul>
+                <li>大标题：<input type="text" id="headline" value=""/></li>
+                <li>小标题：<input type="text" id="subtitle_zh" placeholder="中文"/></li>
+                <li><input type="text" id="subtitle_en" placeholder="英文" style="margin-left: 48px;"/></li>
+            </ul>
+        </div>
+
+        <!--导航热区-->
+        <div class="property_hotspot">
+            <ul>
+                <li class="prop_text">设置文字：<input type="text" id="prop_text" tabindex="1"/></li>
+                <li class="prop_link">设置连接：<input type="text" id="prop_link" placeholder="http://" tabindex="2"/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    Copyright © 2013 Content Provider is proudly powered by <a href="#">ECD</a>
+</div>
+<script src="/public/js/jquery-1.8.3.min.js?v=1572"></script>
+<script src="/works/js/jquery-ui-1.10.3.custom.min.js?v=1572"></script>
+<script src="/works/js/bootstrap.min.js?v=1572"></script>
+<script src="/works/js/app.js?v=1572"></script>
+<script src="/works/js/shop.js?v=1572"></script>
+</body>
+</html>

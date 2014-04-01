@@ -1,0 +1,61 @@
+/* skin_selector */
+.skin_selector {
+  border: 1px solid #a1a1a1;
+  padding: 5px 0 0 5px;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 3px;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.skin_selector .skin_list {
+  zoom: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.skin_selector .skin_list:after {
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.skin_selector .skin_list li {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  list-style: none;
+  padding: 0;
+}
+
+.skin_selector .skin_list li span {
+  border: 1px solid #747474;
+  line-height: 18px;
+  text-indent: 3px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.skin_selector .skin_list li span.current { border-color: #e7376a; }
+
+.skin_selector .skin_list li .skin_1 { background: url(../skin/shop/bg/1.png); }
+
+.skin_selector .skin_list li .skin_2 { background: url(../skin/shop/bg/2.png); }
+
+.skin_selector .skin_list li .skin_3 { background: url(../skin/shop/bg/3.png); }
+
+.skin_selector .skin_list li .skin_4 { background: url(../skin/shop/bg/4.png); }
+
+.skin_selector .skin_list li .skin_5 { background: url(../skin/shop/bg/5.png); }
+
+.skin_selector .skin_custom_item { display: none; }
+
+.skin_selector .skin_list li .skin_custom { border: 1px dashed #747474; }
