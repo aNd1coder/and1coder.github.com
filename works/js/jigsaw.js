@@ -33,7 +33,7 @@ function init() {
     //hasChange = App.Storage.get('hasChange');
     isInit = true;
     //hasChange = (hasChange == '1');
-    loadTpls();
+    //loadTpls();
 
     body[(viewMode != '' || canvasJson == '' ? 'add' : 'remove') + 'Class']('design-mode');
     toggleViewMode();
@@ -192,10 +192,10 @@ function init() {
                     url: "/samgui/dl?m=jigsaw",
                     data: {name: name, data: canvasJson }
                 }).done(function (data) {
-                        showTip('打包成功!');
-                        //$('#preview').removeClass('hide').find('.modal-body').html(data);
-                        location.href = 'http://d9.oa.com/samgui/upload/' + data;
-                    });
+                    showTip('打包成功!');
+                    //$('#preview').removeClass('hide').find('.modal-body').html(data);
+                    location.href = 'http://d9.oa.com/samgui/upload/' + data;
+                });
 
                 break;
             case 'btn-clearcache':
@@ -253,16 +253,16 @@ function init() {
                     $name.blur();
                 }
 
-                $.ajax({
-                    type: "POST",
-                    url: "/samgui/p/jigsaw/save_tpl",
-                    data: { tpl: canvasJson }
-                }).done(function (tplid) {
-                        canvasId = tplid;
-                        showTip('模版保存成功!');
-                        App.Storage.set('hasChange', '0');
-                        loadTpls();
-                    });
+                /*$.ajax({
+                 type: "POST",
+                 url: "/samgui/p/jigsaw/save_tpl",
+                 data: { tpl: canvasJson }
+                 }).done(function (tplid) {
+                 canvasId = tplid;
+                 showTip('模版保存成功!');
+                 App.Storage.set('hasChange', '0');
+                 loadTpls();
+                 });*/
                 break;
         }
     });
@@ -528,19 +528,19 @@ function loadTpls() {
         type: "GET",
         url: App.Helper.url("p/jigsaw/load_tpls")
     }).done(function (data) {
-            $('#tpl-list').html(data);
-            $('#tpl-list a[data-id=' + canvasId + ']').addClass('current');
-            if (isInit) {
-                if (canvasJson != '' && canvasId != '') {
-                    loadTpl();
-                } else {
-                    canvasId = '';
-                    setCanvasProperty();
-                }
+        $('#tpl-list').html(data);
+        $('#tpl-list a[data-id=' + canvasId + ']').addClass('current');
+        if (isInit) {
+            if (canvasJson != '' && canvasId != '') {
+                loadTpl();
             } else {
-                updateCanvas();
+                canvasId = '';
+                setCanvasProperty();
             }
-        });
+        } else {
+            updateCanvas();
+        }
+    });
 }
 
 //载入模版
@@ -557,10 +557,10 @@ function loadTpl(me) {
             url: App.Helper.url('p/jigsaw/load_tpl'),
             data: {id: id }
         }).done(function (data) {
-                canvasJson = data;
-                tpl = JSON.parse(canvasJson);
-                parseHotspot(tpl);
-            });
+            canvasJson = data;
+            tpl = JSON.parse(canvasJson);
+            parseHotspot(tpl);
+        });
 
     } else {
         tpl = JSON.parse(canvasJson);
