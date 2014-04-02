@@ -1,0 +1,40 @@
+doctype html
+html.appview(lang="zh-CN")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        title=project.name
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="black")
+        meta(name="format-detection", content="telephone=no")
+        link(rel="stylesheet", href="../css/app.css")
+    body
+        .container
+            .project
+                .figure
+                    a.image(href=project.url)
+                        - var image = project.image ? project.image : 'holder.png'
+                        img(src="../file/#{image}")
+                    i.icon_star
+                - var remark = project.remark ? project.remark : '[无备注信息]'
+                a.remark(href=project.url)=remark
+            ul.comments
+            .loading
+                i.icon_loading
+                | 加载中
+        .toolbar
+            form.ui_form(action="../appview/reply/#{project._id}")
+                input(type="hidden", name="project_id", value="#{project._id}")
+                input.reply(type="text", name="content", placeholder="评论")
+                input.btn_reply(type="submit")
+        script#tpl_comments(type="text/tpl")
+            li(class="comment{myself}")
+                .avatar
+                    img(src="http://dayu.oa.com/avatars/{user_id}/avatar.jpg", width="45", height="45")
+                .meta
+                    span.user_id {user_id}在
+                    span.added_at {added_at}评论说：
+                .content {content}
+        script(src="../vendor/zepto.min.js")
+        script(src="../js/mte.js")
+        script $(function() { MTE.appview.init(); });

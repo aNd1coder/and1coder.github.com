@@ -1,0 +1,16 @@
+{
+    "name": "mte",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node-dev server"
+    },
+    "dependencies": {
+        "express": "3.4.8",
+        "grunt": "",
+        "jade": "*",
+        "connect-multiparty": "*",
+        "log4js": "*",
+        "mongoose": "3.8.8"
+    }
+}

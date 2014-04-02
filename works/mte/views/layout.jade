@@ -1,0 +1,46 @@
+doctype html
+html(lang="zh-CN")
+    head
+        meta(charset="utf-8")
+        title= title + ' - MTE移动触体验'
+        link(rel="stylesheet", href="css/platform.css")
+        script(src="vendor/jquery-1.8.3.min.js")
+        script(src="http://top.oa.com/js/tcc.js")
+    body
+        .header
+            a.logo(href="", title="MTE － 移动触体验，更方便快捷的Demo初体验")
+            ul.primary_nav
+
+            .userinfo
+                a(href="http://km.oa.com/user/#{username}", title="个人中心", target="_blank")
+                    img.avatar(src="http://dayu.oa.com/avatars/#{username}/avatar.jpg", width="30", height="30")
+                    span.username=username
+                a.logout(href="logout", title="退出") 退出
+        .container
+            block content
+            script#tpl_projects(type="text/tpl")
+                tr
+                    td.name
+                        a(href="{url}", target="_blank") {name}
+                    td.tag {tag}
+                    td.photo
+                        img(src="file/{image}", width="80", height="80")
+                    td.qrcode
+                        a.ui_qrcode_wrapper
+                            img.icon_qrcode(src="img/qrcode.png", width="30", height="30")
+                            img.qrcode(src="http://chart.googleapis.com/chart?cht=qr&chs=150x150&chld=L|0&choe=UTF-8&chl={url}")
+                            td.manager {manager}
+                            td.remark(title="{remark}") {breif_remark}
+                            td.updated_at {updated_at}
+                            td.action
+                                a.lnk_edit(href="###", data-id="{id}") 编辑
+                                a.lnk_destory(href="###", data-id="{id}") 删除
+        .ui_dialog
+            .hd 删除确认
+            .bd 删除后无法回复，确定要删除吗？
+            .ft
+                a.lnk_ok(href="###") 确定
+                a.lnk_cancel(href="###") 取消
+        script(src="js/mte.js")
+        script(src="js/paginator.js")
+        script $(function() { MTE.platform.init(); });
