@@ -9,7 +9,7 @@ title: IntelliJ Idea Zencoding插件之Wrap with Abbreviation快捷键
 
 ## 正文 ##
 
-今天突然想用"Wrap with Abbreviation"这个功能时发现找不到相应的菜单或者快捷键,搜索后找到jetbrains官方博客上一篇文章的评论有人在询问这个功能的快捷键：
+今天突然想用`"Wrap with Abbreviation"`这个功能时发现找不到相应的菜单或者快捷键,搜索后找到jetbrains官方博客上一篇文章的评论有人在询问这个功能的快捷键：
 
 > Ctrl+Alt+T and select “XML Zen Coding” and press “x”, then input something.
 

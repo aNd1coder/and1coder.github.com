@@ -16,15 +16,15 @@ title: 当head遇上runat=server之后发生的纠结之事
 
 也许你会说这也没什么啊,完全没啥影响,我喜欢紧凑的感觉...
 
-起初我也是这样认为,但是每次查看页面源代码的时候越看越觉得它不顺眼,觉得它丑陋不堪,违背了我的意愿,为什么好好的代码,格式不受我控制,加之领导说"你这个title换行是会影响SEO的啊,这个你注意下啊",这里暂时先不讨论它是否真会影响SEO,既然领导也提出来了,可想而知,越来越纠结,必须得解决它,[cnblogs提问](http://space.cnblogs.com/q/17105/),未解,google了n遍,未解,但是在园子里[玉开](http://www.cnblogs.com/yukaizhao/)的[这篇文章](http://www.cnblogs.com/yukaizhao/archive/2010/05/18/asp_net_40_seo_enhancement_new_feature.html#1868299)中找到了些线索,在这里非常感谢他的指引,虽然当时给了[建议](http://www.cnblogs.com/yukaizhao/archive/2010/05/18/asp_net_40_seo_enhancement_new_feature.html#1870316)，但是出于本人对asp.net也只是浅尝辄止的程度所以当时没能解决问题,于是搁浅了段时间.有天在优化网站的时候,查看网页的源代码又发现了它,真是冤家路窄的感觉,于是又开始google,带着[玉开](http://www.cnblogs.com/yukaizhao/)给我的ControlAdapter终于还是发现一个跟我同样纠结的哥们,当然问题也得到了解决...下面给出解决方案以及demo下载:
+起初我也是这样认为,但是每次查看页面源代码的时候越看越觉得它不顺眼,觉得它丑陋不堪,违背了我的意愿,为什么好好的代码,格式不受我控制,加之领导说"你这个title换行是会影响SEO的啊,这个你注意下啊",这里暂时先不讨论它是否真会影响SEO,既然领导也提出来了,可想而知,越来越纠结,必须得解决它,[cnblogs提问](http://space.cnblogs.com/q/17105/),未解,google了n遍,未解,但是在园子里[玉开](http://www.cnblogs.com/yukaizhao/)的[这篇文章](http://www.cnblogs.com/yukaizhao/archive/2010/05/18/asp_net_40_seo_enhancement_new_feature.html#1868299)中找到了些线索,在这里非常感谢他的指引,虽然当时给了[建议](http://www.cnblogs.com/yukaizhao/archive/2010/05/18/asp_net_40_seo_enhancement_new_feature.html#1870316)，但是出于本人对asp.net也只是浅尝辄止的程度所以当时没能解决问题,于是搁浅了段时间.有天在优化网站的时候,查看网页的源代码又发现了它,真是冤家路窄的感觉,于是又开始google,带着[玉开](http://www.cnblogs.com/yukaizhao/)给我的`ControlAdapter`终于还是发现一个跟我同样纠结的哥们,当然问题也得到了解决...下面给出解决方案以及demo下载:
 
 示例解决方案图如下:
 
 ![](/public/img/2011021011274241.jpg)
 
-WithoutRunatServer.aspx页面是正常页面只做对比用，详细代码请下载demo查看
+`WithoutRunatServer.aspx`页面是正常页面只做对比用，详细代码请下载demo查看
 
-WithRunatServer.aspx代码如下:
+`WithRunatServer.aspx`代码如下:
 
 	<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WithRunatServer.aspx.cs"
 	  Inherits="Web.WithRunatServer" %>
@@ -48,11 +48,11 @@ WithRunatServer.aspx代码如下:
 	</body>
 	</html>
 
-注意head标签是runat="server"的,不加处理运行页面得到源代码如下图效果:
+注意`head`标签是`runat="server"`的,不加处理运行页面得到源代码如下图效果:
 
 ![](/public/img/2011021011214693.jpg)
 
-格式非常混乱,看起来头皮非常发麻,有时调试页面的时候看到乱七八糟的代码会非常没心情,接下来讲关键部分,BaseControlAdapter.cs文件代码如下
+格式非常混乱,看起来头皮非常发麻,有时调试页面的时候看到乱七八糟的代码会非常没心情,接下来讲关键部分,`BaseControlAdapter.cs`文件代码如下
 
 	using System;
 	using System.Globalization;
@@ -151,11 +151,11 @@ WithRunatServer.aspx代码如下:
 	    }
 	}
 
-BaseControlAdapter文件包括了4个分别类是HtmlHeadAdapter,HtmlTitleAdapter,HtmlLinkAdapter,HtmlMetaAdapter用来处理`<head>`,`<title>`,`<link>`,`<meta>`标签(如果有其他标签要进行处理可以添加相应的类)
+`BaseControlAdapter`文件包括了4个分别类是`HtmlHeadAdapter`,`HtmlTitleAdapter`,`HtmlLinkAdapter`,`HtmlMetaAdapter用来处理`<head>`,`<title>`,`<link>`,`<meta>`标签(如果有其他标签要进行处理可以添加相应的类)
 
 可以看到基本上是处理了标签的换行的问题,代码中注释了缩进是因为得到的效果并没有想象中的好,之后再进行尝试
 
-Adapter类库准备好了当然得引入到Web项目中去,然后是如何指定上面的类去处理相应的标签呢,这时就要用上App_Browsers这个文件夹,新建一个Default.browser代码如下:
+`Adapter`类库准备好了当然得引入到Web项目中去,然后是如何指定上面的类去处理相应的标签呢,这时就要用上`App_Browsers`这个文件夹,新建一个`Default.browser`代码如下:
 
 	<browsers>
 	  <browser refID="Default">
@@ -176,7 +176,7 @@ Adapter类库准备好了当然得引入到Web项目中去,然后是如何指定
 	  </browser>
 	</browsers>
 
-关于App_Browsers特殊文件夹以及.browser文件的作用可以参考下面连接:
+关于`App_Browsers`特殊文件夹以及`.browser`文件的作用可以参考下面连接:
 
 ASP.NET Web Project Folder Structure
 
@@ -186,7 +186,7 @@ Browser Definition File Schema (browsers Element)
 
 [http://msdn.microsoft.com/en-us/library/ms228122.aspx](http://msdn.microsoft.com/en-us/library/ms228122.aspx)
 
-这样编译整个解决方案并运行WithRunatServer.aspx页面发现代码已经整洁很多了
+这样编译整个解决方案并运行`WithRunatServer.aspx`页面发现代码已经整洁很多了
 
 ![](/public/img/2011021011481766.jpg)
 

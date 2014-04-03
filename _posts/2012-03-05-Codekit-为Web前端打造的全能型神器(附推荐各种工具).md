@@ -6,7 +6,7 @@ title: Codekit-为Web前端打造的全能型神器(附推荐各种工具)
 
 Codekit - incident57又一华丽丽的工具,目前是beta，官网上介绍中罗列了这些功能特性：
 
-- 自动编译Less, Sass, Stylus, CoffeeScript, Jade & Haml等文件
+- 自动编译`Less, Sass, Stylus, CoffeeScript, Jade & Haml`等文件
 - 致力于js文件合并和压缩，以及js语法错误检查
 - 同时还支持Compass(Sass伴侣,官网地址:compass-style.org)
 - 令人发指的是甚至还能对jpeg&png图片优化

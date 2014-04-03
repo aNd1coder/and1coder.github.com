@@ -44,9 +44,9 @@ Autoprefixer的每个版本都包含一份最新的 Can I Use 数据：
 
 Autoprefixer默认将支持主流浏览器最近2个版本，这点[类似Google](http://support.google.com/a/bin/answer.py?answer=33864)。不过你可以在自己的项目中通过名称或者模式进行选择：
 
-- 主流浏览器最近2个版本用“last 2 versions”；
-- 全球统计有超过1%的使用率使用“>1%”;
-- 仅新版本用“ff>20”或"ff>=20".
+- 主流浏览器最近2个版本用`last 2 versions`；
+- 全球统计有超过1%的使用率使用`>1%`;
+- 仅新版本用`ff>20`或`ff>=20`.
 
 然后Autoprefixer计算哪些前缀是需要的，哪些是已经过期的。
 
@@ -138,7 +138,7 @@ Autoprefixer 同样会清理过期的前缀（来自遗留的代码或类似 Boo
 
 	./node_modules/.bin/grunt watch
 
-现在我们添加一个CSS3表达式到style.css并保存：
+现在我们添加一个CSS3表达式到`style.css`并保存：
 
 **style.css**
 
@@ -146,7 +146,7 @@ Autoprefixer 同样会清理过期的前缀（来自遗留的代码或类似 Boo
 	     width : calc(50% - 2em)
 	}
 
-接下来是见证奇迹的时刻，现在我有了build/style.css文件，Grunt监测到style.css文件发生变化并启用Autoprefixer任务。
+接下来是见证奇迹的时刻，现在我有了`build/style.css`文件，Grunt监测到`style.css`文件发生变化并启用Autoprefixer任务。
 
 Autoprefixer发现了 `calc()` 值单元需要Safari 6的浏览器前缀。
 
@@ -157,7 +157,7 @@ Autoprefixer发现了 `calc()` 值单元需要Safari 6的浏览器前缀。
 	     width : calc(50% - 2em)
 	}
 
-我们再添加多一点点复杂的CSS3到style.css并保存：
+我们再添加多一点点复杂的CSS3到`style.css`并保存：
 
 **style.css**
 

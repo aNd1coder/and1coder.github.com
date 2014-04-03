@@ -8,9 +8,9 @@ title: javasript之toString怪异的情况
 
     100['toString']['length']
 
-可以分解为：100['toString'].length ，由于toString是个方法，所以它length属性返回的是toString的形参个数，而toString方法可以接收一个radix(基数)作为形参（比如：toString(2)，返回该数值的二进制，16则代表16进制），所以最终返回结果是1。
+可以分解为：`100['toString'].length `，由于`toString`是个方法，所以它length属性返回的是`toString`的形参个数，而`toString`方法可以接收一个radix(基数)作为形参（比如：`toString(2)`，返回该数值的二进制，16则代表16进制），所以最终返回结果是1。
 
-刚才上面的100['toString']['length']为什么不分解成100.toString.length？
+刚才上面的`100['toString']['length']`为什么不分解成`100.toString.length`？
 
 这是是由于100后面的.是小数点之后是小数部分，从而导致语法错误。
 

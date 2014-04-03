@@ -32,17 +32,37 @@ blockquote {
     line-height: 25px;
 }
 
-pre {
-    font-family: Consolas, 'Liberation Mono', Courier, monospace;
-    font-size: 13px;
-    line-height: 19px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: #f8f8f8;
-    border: 1px solid #dddddd;
-    overflow: auto;
-    padding: 6px 10px;
+code {
+    padding: 0 0.2em;
+    border: 1px solid #dedede;
+    color: #444444;
+    background-color: #f8f8ff;
     border-radius: 3px;
+}
+
+pre {
+    position: relative;
+    line-height: 19px;
+    margin: 15px 0;
+    padding: 6px 10px;
+    border: 1px solid #dddddd;
+    font: 100 14px/1 courier, "courier new", monospace;
+    background-color: #f8f8f8;
+    white-space: pre-wrap;
+    overflow: auto;
+    border-radius: 3px;
+}
+
+pre code {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    word-wrap: normal;
+    max-width: initial;
+    display: inline;
+    overflow: initial;
+    line-height: inherit;
 }
 
 .toolbar {
@@ -69,36 +89,63 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 .date { padding-left: 5px; color: #999; }
 
 /* code syntax highlight */
-pre.prettyprint {
-    position: relative;
-    font: 100 14px/1 courier, "courier new", monospace;
-    border: 1px solid #ebebeb;
-    border-color: #eee #eee #ccc #eee;
-    background: #fff;
-    padding: 30px 5%;
-    width: 50%;
-    white-space: pre-wrap;
-    margin: 2em auto;
-}
 .pln { color: #000 }
+/* plain text */
+.str { color: #e67e22; }
+/* string content */
+.kwd { color: #3498db }
+/* a keyword */
+.com { color: #aaa }
+/* a comment */
+.typ { color: #1abc9c; font-weight: 900; }
+/* a type name */
+.lit { color: #066 }
+/* a literal value */
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun, .opn, .clo { color: #660 }
+.tag { color: #008 }
+/* a markup tag name */
+.atn { color: #1abc9c }
+/* a markup attribute name */
+.atv { color: #2ecc71 }
+/* a markup attribute value */
+.dec, .var { color: #1abc9c; }
+/* a declaration; a variable name */
+.fun { color: red; }
+/* a function name */
 
-@media screen {
-    .str { color: #e67e22; }
-    .kwd { color: #3498db }
-    .com { color: #aaa }
-    .typ { color: #1abc9c; font-weight: 900; }
-    .lit { color: #066 }
-    .pun, .opn, .clo { color: #660 }
-    .tag { color: #008 }
-    .atn { color: #1abc9c }
-    .atv { color: #2ecc71 }
-    .dec, .var { color: #1abc9c; }
-    .fun { color: red }
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+    .str { color: #060; }
+    .kwd { color: #006; font-weight: bold; }
+    .com { color: #600; font-style: italic; }
+    .typ { color: #404; font-weight: bold; }
+    .lit { color: #044; }
+    .pun, .opn, .clo { color: #440; }
+    .tag { color: #006; font-weight: bold; }
+    .atn { color: #404; }
+    .atv { color: #060; }
 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 }
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #f0f0f0 }
 
 @media only screen  and (max-width: 800px) {
-    pre.prettyprint { padding: 20px 10%; width: 80%; border-width: 1px 0; border-top-color: #ddd; }
-
     .title, .container {
         margin: 0 auto;
         min-width: 320px;

@@ -27,8 +27,8 @@ title: 当inline-block和text-indent遇到IE6&IE7
 
 给a标签前加上&nbsp;等等等方法...
 
-inline或inline-block元素设置text-indent在IE6/IE7中显示不正常的bug致使text-indent会传递到父及元素，也就出现了上文中的结果。
+`inline`或`inline-block`元素设置`text-indent`在IE6/IE7中显示不正常的bug致使`text-indent`会传递到父及元素，也就出现了上文中的结果。
 
-造成这种情况的原因应该是IE6/IE7并没有真正实现inline-block,而是通过设置display:inline-block触发了IE的layout,从而使内联元素拥有了inline-block属性的表症。
+造成这种情况的原因应该是IE6/IE7并没有真正实现`inline-block`,而是通过设置`display:inline-block`触发了IE的`layout`,从而使内联元素拥有了`inline-block`属性的表症。
 
-考察元素的默认样式，可知：input、select、button、textarea的默认display皆为inline-block,所以在布局时应加以注意...
+考察元素的默认样式，可知：`input、select、button、textarea`的默认`display`皆为`inline-block`,所以在布局时应加以注意...

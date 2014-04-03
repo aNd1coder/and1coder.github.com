@@ -2,7 +2,7 @@
 layout: post
 title: 在Dreamweaver中象css一样编辑scss文件
 ---
-在DW中默认是不支持.scss后缀名的文件代码高亮以及代码提示,不过还好DW提供了相关的扩展配置
+在DW中默认是不支持`.scss`后缀名的文件代码高亮以及代码提示,不过还好DW提供了相关的扩展配置
 
 需要调整几个文件(OS:WIN7,DW:5.0)：
 
@@ -26,10 +26,9 @@ title: 在Dreamweaver中象css一样编辑scss文件
 
 最后还有一步就是：
 
-打开Dreamweaver 》编辑 》首选参数 》 文件类型/编辑器 》在代码试图中打开,添加.scss后缀名 并重启，到这里就全部搞掂...
+打开Dreamweaver 》编辑 》首选参数 》 文件类型/编辑器 》在代码试图中打开,添加`.scss`后缀名并重启，到这里就全部搞掂...
 
-参考连接：
-
+##参考
 [http://tracehello.wordpress.com/2011/03/19/making-dreamweaver-cs5-read-scss-as-css/](http://tracehello.wordpress.com/2011/03/19/making-dreamweaver-cs5-read-scss-as-css/)
 
 [http://www.visual28.com/articles/less-scss-syntax-highlighting-in-dreamweaver](http://www.visual28.com/articles/less-scss-syntax-highlighting-in-dreamweaver)
