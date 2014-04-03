@@ -179,6 +179,11 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
         max-width: 640px;
     }
 
-    .sidebar { position: static; width: auto; }
+    .sidebar {
+        position: static;
+        width: auto;
+        text-align: center;
+    }
+
     .content { margin-left: 0; padding-left: 10px; }
 }
