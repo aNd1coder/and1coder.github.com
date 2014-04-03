@@ -33,16 +33,17 @@ blockquote {
 }
 
 code {
-    padding: 0 0.2em;
+    padding: 0 5px;
     border: 1px solid #dedede;
     color: #444444;
+    font-family: courier;
     background-color: #f8f8ff;
     border-radius: 3px;
 }
 
 pre {
     position: relative;
-    line-height: 19px;
+    line-height: 25px;
     margin: 15px 0;
     padding: 6px 10px;
     border: 1px solid #dddddd;
@@ -59,10 +60,7 @@ pre code {
     background-color: transparent;
     border: none;
     word-wrap: normal;
-    max-width: initial;
     display: inline;
-    overflow: initial;
-    line-height: inherit;
 }
 
 .toolbar {
@@ -89,61 +87,47 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 .date { padding-left: 5px; color: #999; }
 
 /* code syntax highlight */
-.pln { color: #000 }
+
 /* plain text */
-.str { color: #e67e22; }
+.pln { color: #000 }
+
 /* string content */
-.kwd { color: #3498db }
+.str { color: #e67e22; }
+
 /* a keyword */
-.com { color: #aaa }
+.kwd { color: #3498db; font-weight: 700; }
+
 /* a comment */
-.typ { color: #1abc9c; font-weight: 900; }
+.com { color: #aaa }
+
 /* a type name */
-.lit { color: #066 }
+.typ { color: #1abc9c; font-weight: 700; }
+
 /* a literal value */
+.lit { color: #066 }
+
 /* punctuation, lisp open bracket, lisp close bracket */
 .pun, .opn, .clo { color: #660 }
-.tag { color: #008 }
-/* a markup tag name */
-.atn { color: #1abc9c }
-/* a markup attribute name */
-.atv { color: #2ecc71 }
-/* a markup attribute value */
-.dec, .var { color: #1abc9c; }
-/* a declaration; a variable name */
-.fun { color: red; }
-/* a function name */
 
-/* Use higher contrast and text-weight for printable form. */
-@media print, projection {
-    .str { color: #060; }
-    .kwd { color: #006; font-weight: bold; }
-    .com { color: #600; font-style: italic; }
-    .typ { color: #404; font-weight: bold; }
-    .lit { color: #044; }
-    .pun, .opn, .clo { color: #440; }
-    .tag { color: #006; font-weight: bold; }
-    .atn { color: #404; }
-    .atv { color: #060; }
-}
+/* a markup tag name */
+.tag { color: #008 }
+
+/* a markup attribute name */
+.atn { color: #1abc9c }
+
+/* a markup attribute value */
+.atv { color: #2ecc71 }
+
+/* a declaration; a variable name */
+.dec, .var { color: #1abc9c; }
+
+/* a function name */
+.fun { color: red; }
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0 }
-/* IE indents via margin-left */
-li.L0,
-li.L1,
-li.L2,
-li.L3,
-li.L5,
-li.L6,
-li.L7,
-li.L8 { list-style-type: none }
-/* Alternate shading for lines */
-li.L1,
-li.L3,
-li.L5,
-li.L7,
-li.L9 { background: #f0f0f0 }
+
+.prettyprint li { line-height: 25px; }
 
 @media only screen  and (max-width: 800px) {
     .title, .container {
