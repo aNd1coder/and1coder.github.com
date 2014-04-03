@@ -79,7 +79,7 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 
 .sidebar h1,
 .sidebar h3,
-.posts .year { font-weight: 400; font-family: fantasy; }
+.posts .year { font-weight: 400; }
 
 .sidebar {
     position: absolute;
@@ -109,7 +109,7 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 
 .content {
     margin-left: 210px;
-    padding: 10px 10px 50px;
+    padding: 10px 10px 50px 50px;
     font-size: 1.2em;
     background-color: #fff;
 }
@@ -125,7 +125,6 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
     color: #ccc;
 }
 
-.posts a { color: #666;}
 .post { padding: 0.5em 0; }
 .post .category { padding-left: 5px; }
 .post .date { display: block; }
@@ -181,5 +180,5 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
     }
 
     .sidebar { position: static; width: auto; }
-    .content { margin-left: 0; }
+    .content { margin-left: 0; padding-left: 10px; }
 }
