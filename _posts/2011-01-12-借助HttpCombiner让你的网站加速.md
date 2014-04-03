@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 借助HttpCombiner让你的网站加速
+categories: [前端开发]
+tags: [性能优化, 资源合并, 自动化]
 ---
 上一篇 [利用Microsoft Ajax Minifier在服务器端对静态资源进行自动化压缩](http://samgui.com/blog/利用Microsoft-Ajax-Minifier在服务器端对静态资源进行自动化压缩/) 得到不少有意义的交流和建议,最近也在不停的尝试做一些网站优化的工作,我会陆续的写一些或者翻译一些优化方面的文章跟大家交流,一方面提供给有需要的朋友一些参考,另一方面也希望得到高手们的指点。
 

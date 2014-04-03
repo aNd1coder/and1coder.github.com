@@ -1,6 +1,8 @@
 ---
 layout: post
 title: The Iron Lady 经典台词
+categories: [随笔]
+tags: [英语]
 ---
 > Watch your thoughts for they become words.
 > 

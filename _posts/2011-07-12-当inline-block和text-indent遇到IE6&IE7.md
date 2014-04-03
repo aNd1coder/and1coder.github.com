@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 当inline-block和text-indent遇到IE6&IE7
+categories: [前端开发]
+tags: [CSS, 兼容, inline-block, text-indent]
 ---
 在做一个按钮时,由于按钮的文字的艺术感太强直接跟背景一起切片,但是处于SEO考虑还是在a标签内添加了相应的文字,
 

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: SASS实战之RemoteSass插件介绍
+categories: [前端开发]
+tags: [CSS, Sass, Compass, Remote]
 ---
 由于SASS语言本身的强大和灵活，使用SASS可以构建出非常丰富的组件。平时的项目中会封装很多组件，通过mixin的方式来调用，然后组件多了思考着如何能共享这些样式模块了。
 

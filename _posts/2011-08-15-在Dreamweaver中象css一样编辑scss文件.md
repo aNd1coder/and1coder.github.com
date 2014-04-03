@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 在Dreamweaver中象css一样编辑scss文件
+categories: [前端开发]
+tags: [Dreamweaver, CSS, SCSS, 语法高亮]
 ---
-在DW中默认是不支持`.scss`后缀名的文件代码高亮以及代码提示,不过还好DW提供了相关的扩展配置
+在DW中默认是不支持`.scss`后缀名的文件代码高亮以及代码提示,不过还好Dreamweaver提供了相关的扩展配置
 
 需要调整几个文件(OS:WIN7,DW:5.0)：
 
@@ -13,7 +15,7 @@ title: 在Dreamweaver中象css一样编辑scss文件
 
 找到 `D:\Program Files\Adobe\Adobe Dreamweaver CS5\configuration\DocumentTypes\MMDocumentTypes.xml`
 
-搜索CSS并修改css部分配置为：
+搜索CSS并修改CSS部分配置为：
 
 	<documenttype id="CSS" internaltype="Text" winfileextension="css,scss" macfileextension="css,scss" file="Default.css" writebyteordermark="false">
         <TITLE>

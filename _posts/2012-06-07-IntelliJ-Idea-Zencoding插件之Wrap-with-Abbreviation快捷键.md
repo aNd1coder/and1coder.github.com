@@ -1,6 +1,8 @@
 ---
 layout: post
 title: IntelliJ Idea Zencoding插件之Wrap with Abbreviation快捷键
+categories: [前端开发]
+tags: [Jetbrains, IntelliJ Idea, Phpstorm, ZenCoding, 插件]
 ---
 ## 前话 ##
 写页面的时候已经依赖zencoding这个东东,没有它完全不想写代码(开个玩笑,旨在说明这个工具已经成为前端标配)。
