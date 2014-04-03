@@ -28,8 +28,9 @@ MTE.platform = {
         MTE.platform.load(1);
 
         $('.ui_form_fake_file').html(MTE.locals.upload_tip);
-        $('#managerValue').attr('placeholder', MTE.locals.please_input_manager);
-        $('#receiverValue').attr('placeholder', MTE.locals.please_input_receiver);
+        $('#manager').attr('placeholder', MTE.locals.please_input_manager);
+        $('#receiver').attr('placeholder', MTE.locals.please_input_receiver);
+        $('#receiver').attr('placeholder', MTE.locals.please_input_receiver);
 
         // 搜索
         $('.search_form .ui_form_button').click(function () {
@@ -45,7 +46,7 @@ MTE.platform = {
             return MTE.platform.valid;
         });
 
-        $('.ui_form_row input').bind('keyup blur', function () {
+        $('.ui_form_row input').bind('keyup blur change', function () {
             return MTE.platform.validate(this);
         });
 
@@ -61,14 +62,14 @@ MTE.platform = {
         });
     },
     validate: function (o) {
-        var input = $(o),
-            id = o.id,
+        var id = o.id,
             pid = $('#project_id').val(),
-            val = $.trim(input.val()),
+            val = $.trim(o.value),
+            input = $(o),
             error = MTE.platform.error,
             success = MTE.platform.success;
 
-        if (val == "" || (id == 'image' && pid == '')) {
+        if (val == '' || (id == 'image' && pid == '' && val == '')) {
             return error(input);
         } else {
             if (id == 'url' && !MTE.validator.url(val)) {
@@ -396,7 +397,7 @@ MTE.helper = {
      * @returns {string}
      */
     url: function (url) {
-        return 'http://d9.oa.com/mte/' + url;
+        return 'http://localhost:3000/' + url;
     },
     /**
      * 粘贴图像并获取数据，仅 Chrome 支持

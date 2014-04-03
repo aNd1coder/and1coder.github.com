@@ -61,7 +61,7 @@ block content
                     span.step ⑤
                     | 接口人
                 .row_content
-                    script new Tcc.UserChooser({id: 'manager', name: 'manager', choosertype: 1, inputType: 2, user_chooser_class: 'ui_form_input'});
+                    input.ui_form_input(type="text", id="manager", name="manager")
             .ui_form_row.row_receiver
                 .row_title
                     span.step ⑥
@@ -70,7 +70,7 @@ block content
                         input.ui_form_checkbox(type="checkbox", id="send", name="send", value="1")
                         | 是否发送邮件
                 .row_content
-                    script new Tcc.UserChooser({id: 'receiver', name: 'receiver', choosertype: 1, inputType: 2, user_chooser_class: 'ui_form_input'});
+                    textarea.ui_form_input.input_textarea(type="text", id="receiver", name="receiver")
             .ui_form_row
                 .row_title
                     span.step ⑦

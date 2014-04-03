@@ -39,7 +39,7 @@ body { min-width: 1145px; color: #555555; background-color: #dadada; font: norma
 .logout { margin-left: 5px; }
 .avatar { margin-right: 10px; vertical-align: middle; border-radius: 3px; }
 .container { position: relative; padding: 30px; }
-.col_sub { position: absolute; top: 30px; right: 30px; width: 310px; }
+.col_sub { position: absolute; top: 30px; right: 30px; width: 310px; padding-bottom: 30px; }
 .col_main { margin-right: 360px; }
 
 .lnk_edit { margin-right: 10px; }

@@ -15,7 +15,7 @@ var express = require('express'),
     logger = require('./logger');
 
 // all environments
-app.set('port', process.env.PORT || 8880);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
@@ -46,7 +46,6 @@ logger.use(app);
 // route与server分离
 // http://www.cnblogs.com/pigtail/archive/2013/01/14/2859297.html
 // http://cnodejs.org/topic/503cf635f767cc9a5123dd8b
-app.get('/', routes.checklogin);
 app.get('/', routes.index);
 app.get('/platform', routes.index);
 app.get('/load', routes.load);
@@ -54,8 +53,6 @@ app.post('/create', routes.create);
 app.get('/destory/:id', routes.destory);
 app.get('/edit/:id', routes.edit);
 app.post('/update/:id', routes.update);
-app.get('/login', routes.login);
-app.get('/logout', routes.logout);
 app.get('/app', webapp.index);
 app.get('/appview/:id', webapp.appview);
 app.post('/appview/reply/:id', webapp.reply);

@@ -1,15 +1,11 @@
 var fs = require('fs'),
     mongoose = require('mongoose'),
     conf = require('../config'),
-    tof = require('../models/node-tof'),
     Project = mongoose.model('Project');
 
 //首页
 exports.index = function (req, res) {
-    res.render('platform', {
-        title: '首页',
-        username: req.session.user
-    });
+    res.render('platform', { title: '首页' });
 };
 
 //数据查询
@@ -68,7 +64,7 @@ exports.create = function (req, res, next) {
         tag: req.body.tag,
         image: image,
         url: req.body.url,
-        developer: req.session.user,
+        developer: 'samgui',
         manager: req.body.manager.replace(';', ''),
         receiver: req.body.receiver,
         remark: req.body.remark,
@@ -77,8 +73,6 @@ exports.create = function (req, res, next) {
 
     project.save(function (err) {
         if (err) return next(err);
-        //发送邮件
-        sendmail(req);
 
         res.redirect(conf.base_url);
     });
@@ -132,7 +126,7 @@ exports.update = function (req, res, next) {
             project.image = image;
         }
         project.url = req.body.url;
-        project.developer = req.session.user;
+        project.developer = 'samgui';
         project.manager = req.body.manager.replace(';', '');
         project.receiver = req.body.receiver;
         project.remark = req.body.remark;
@@ -141,62 +135,7 @@ exports.update = function (req, res, next) {
         project.save(function (err, row, count) {
             if (err) return next(err);
 
-            //发送邮件
-            sendmail(req);
-
             res.redirect(conf.base_url);
         });
     });
-};
-
-//登录信息
-exports.login = function (req, res) {
-    var ticket = req.query.ticket;
-
-    if (ticket) {
-        tof.passport(ticket, function (loginInfo) {
-            if (loginInfo && loginInfo.LoginName) {
-                req.session.user = loginInfo.LoginName;
-                res.redirect(conf.base_url);
-            }
-        });
-    } else {
-        var url = conf.passport_url + '/signin.ashx?url=' + encodeURIComponent(conf.base_url + 'login') +
-            '&title=' + encodeURIComponent(conf.app_name);
-        res.redirect(url);
-    }
-
-};
-
-//退出
-exports.logout = function (req, res, next) {
-    var url = conf.passport_url + '/signout.ashx?url=' + encodeURIComponent(conf.base_url) +
-        '&title=' + encodeURIComponent(conf.app_name);
-    res.redirect(url);
-};
-
-//登录检查
-exports.checklogin = function (req, res, next) {
-    if (!req.session.user) {
-        res.redirect(conf.base_url + 'login');
-    } else {
-        next();
-    }
-};
-
-//发送邮件
-function sendmail(req) {
-    var receiver = req.body.receiver;
-
-    if (req.body.send == '1' && receiver.length > 0) {
-        //发送邮件
-        tof.mail(
-            receiver,
-            conf.mail_title_template.replace(/{name}/gmi, req.body.name),
-            conf.mail_body_template.replace(/{url}/gmi, req.body.url),
-            {from: conf.mail_sender},
-            function (res) {
-            }
-        );
-    }
 };
