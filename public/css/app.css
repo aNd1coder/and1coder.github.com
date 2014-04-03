@@ -38,6 +38,7 @@ code {
     font-family: courier;
     background-color: #f8f8ff;
     border-radius: 3px;
+    white-space: nowrap;
 }
 
 pre {
