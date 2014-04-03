@@ -6,13 +6,12 @@
           content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
     <title>{{page.title}}</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-    <!--link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
     <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" /
-    <link rel="apple-touch-startup-image" href="startup.png"/>-->
+    <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png"/>
+    <!--link rel="apple-touch-startup-image" href="startup.png"/-->
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link rel="stylesheet" href="/public/css/app.css"/>
+    <link rel="stylesheet" href="public/css/app.css"/>
 </head>
 <body>
 <div class="toolbar"><h1 class="title">{{page.title}}</h1></div>
@@ -21,20 +20,25 @@
         {{content}}
     </div>
     <div class="sidebar">
-        <h4>Category</h4>
-        <ul>
+        <header>
+            <h1>
+                <img class="avatar" width="100" height="100"
+                     src="https://2.gravatar.com/avatar/e0c987d94d37f5d19f5b6c4fedff65e0" alt=""/>
+                <span>三桂，崇尚简单和高效</span>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="http://samgui.com/">Home</a></li>
+                    <li><a href="http://samgui.com/archive">Archive</a></li>
+                    <li><a href="http://samgui.com/about">About me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h3>Categories</h3>
+        <ul class="categories">
             {% for category in site.categories %}
-            <li>
-                <a href="/category/{{ category | first }}/">{{ category | first }} {{ category | last | size }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-        <h4>Tags</h4>
-        <ul>
-            {% for tag in site.tags %}
-            <li>
-                <a href="/tag/{{ category | first }}/">{{ category | first }} {{ category | last | size }}</a>
-            </li>
+            <li><a href="{{site.baseurl}}/categories.html#{{ category | first }}-ref">{{ category | first }}<span
+                    class="num">({{ category | last | size }})</span></li>
             {% endfor %}
         </ul>
     </div>

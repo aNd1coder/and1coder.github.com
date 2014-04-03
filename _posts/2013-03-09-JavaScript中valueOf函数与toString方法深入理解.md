@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript中valueOf函数与toString方法深入理解
-categories: [前端开发]
+categories: 前端开发
 tags: [Javascript, valueOf, toString]
 ---
 基本上，所有JS数据类型都拥有这两个方法，`null`和`undefined`除外。它们俩解决javascript值运算与显示的问题。

@@ -1,9 +1,3 @@
-baseurl: http://and1coder.github.io
+baseurl: http://samgui.com
 permalink: blog/:title/
 markdown: rdiscount
-paginate: 8
-author:
-  name: and1coder
-  email: and1coder@gmail.com
-  github: and1coder
-  twitter: and1coder

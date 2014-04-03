@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 利用Microsoft Ajax Minifier在服务器端对静态资源进行自动化压缩
-categories: [前端开发]
+categories: 前端开发
 tags: [性能优化, 自动化, 资源压缩]
 ---
 由于前端展示效果(用户体验)的需要,项目中编写了大量的javascript脚本,一支支庞大的文件对于页面加载性能造成了一定程度的损伤,于是我们会采取文件合并、压缩等方式来减少http请求次数以及压缩文件大小来达到更好的性能优化的效果，目前关于静态资源（主要针对js，css文件）压缩以及相应的第三方辅助工具也不少，象YUI Compressor以及淘宝团队改造后的TBCompressor，Dojo Compressor，JSMin ,圆友自己整合开发的在线压缩：JavaScript(JS) 压缩 / 混淆 / 格式化(美化) 工具算是完美了。等等等， 境界高点的就用Google Closure Compiler，可以达到语法级别的优化，不过对于前端开发的编码规范就更上了一个层次，关于资源压缩一直是前端开发者们对于性能无限追求的一种最佳实践。
