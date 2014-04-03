@@ -43,7 +43,7 @@ code {
 
 pre {
     position: relative;
-    line-height: 25px;
+    line-height: 20px;
     margin: 15px 0;
     padding: 6px 10px;
     border: 1px solid #dddddd;
@@ -127,7 +127,7 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0 }
 
-.prettyprint li { line-height: 25px; }
+.prettyprint li { line-height: 20px; }
 
 @media only screen  and (max-width: 800px) {
     .title, .container {
