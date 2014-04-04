@@ -80,7 +80,7 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 
 .sidebar h1,
 .sidebar h3,
-.posts .year { font-weight: 400; }
+.posts .archive { font-weight: 400; }
 
 .sidebar {
     position: absolute;
@@ -117,7 +117,7 @@ h2 { margin: 1em 0 0.2em; font-size: 1.2em; }
 
 .content a { color: #4183c4; }
 
-.posts .year {
+.posts .archive {
     margin: .3em 0 .2em 0;
     font-size: 3em;
     color: #4183c4;
