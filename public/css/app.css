@@ -175,6 +175,7 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
 @media only screen  and (max-width: 800px) {
     .title, .container { margin: 0 auto; min-width: 320px; max-width: 640px; }
     .sidebar { position: static; width: auto; text-align: center; }
+    .sidebar h3 { padding-left: 0; }
     .sidebar ul { margin-left: 0; }
     .sidebar li { display: inline-block; margin: 0 10px; }
     .content { margin-left: 0; padding-left: 10px; }
