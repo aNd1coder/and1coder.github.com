@@ -15,7 +15,7 @@ $.event.props.push('dataTransfer');
 App.Helper = {
     //构造URI
     url: function (url) {
-        return 'http://d9.oa.com/samgui/' + url;
+        return 'http://samgui.com/' + url;
     },
     //构造post请求
     post: function (url, obj) {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Qier - 切哥</title>
-    <link rel="stylesheet" href="http://d9.oa.com/samgui/public/vendor/bootstrap.min.css?v=1572" />
+    <link rel="stylesheet" href="/public/vendor/bootstrap.min.css?v=1572"/>
     <style>
         .canvas { width: 150px; margin: 100px auto 0; text-align: center; color: #999; list-style: none; zoom: 1; font-family: "Microsoft YaHei"; }
         .canvas:after { content: ""; height: 0; line-height: 0; visibility: hidden; clear: both; }
@@ -18,10 +18,10 @@
     <li class="tip">拖放图片到此处</li>
 </ul>
 <a class="btn btn-success" id="btn-download" href="javascript:;">下载图片</a>
-<script src="http://d9.oa.com/samgui/public/vendor/jquery-1.8.3.min.js?v=1572"></script>
-<script src="http://d9.oa.com/samgui/public/vendor/bootstrap.min.js?v=1572"></script>
-<script src="http://d9.oa.com/samgui/public/vendor/html2canvas.js?v=1572"></script>
-<script src="http://d9.oa.com/samgui/public/js/app.js?v=1572"></script>
+<script src="/public/vendor/jquery-1.8.3.min.js?v=1572"></script>
+<script src="/public/vendor/bootstrap.min.js?v=1572"></script>
+<script src="/public/vendor/html2canvas.js?v=1572"></script>
+<script src="/public/js/app.js?v=1572"></script>
 <script>
     var canvas = $('.canvas'), GRID_GAP = 11, H_NUM = 3, V_NUM = 3;
 
@@ -29,51 +29,51 @@
         e.stopPropagation();
         e.preventDefault();
     }).bind('drop', function (e) {
-                var files, type, reader;
+        var files, type, reader;
 
-                e.stopPropagation();
-                e.preventDefault();
+        e.stopPropagation();
+        e.preventDefault();
 
-                files = e.dataTransfer.files
-                if (files.length > 0) {
-                    type = files[0].type
-                    reader = new FileReader();
+        files = e.dataTransfer.files
+        if (files.length > 0) {
+            type = files[0].type
+            reader = new FileReader();
 
-                    if (type.indexOf('image') == -1) {
-                        alert('请拖曳图片!');
-                        return;
+            if (type.indexOf('image') == -1) {
+                alert('请拖曳图片!');
+                return;
+            }
+
+            reader.onload = function () {
+                var src = this.result, img = new Image(), html = '', w, h, x, y;
+
+                img.src = src;
+
+                img.onload = function () {
+                    w = Math.ceil((this.width / H_NUM) - GRID_GAP);
+                    h = Math.ceil((this.height / V_NUM) - GRID_GAP);
+
+                    canvas.width((w + GRID_GAP) * H_NUM).height((h + GRID_GAP) * V_NUM);
+
+                    $('#css').html('.canvas li{width: ' + w + 'px;height:' + h + 'px;margin: ' + GRID_GAP + 'px 0 0 ' + GRID_GAP + 'px;background:url(' + src + ') no-repeat;}');
+
+                    for (var i = 0; i < H_NUM; i++) {
+                        y = (h + GRID_GAP) * i;
+
+                        for (var j = 0; j < V_NUM; j++) {
+                            x = (w + GRID_GAP) * j;
+
+                            html += '<li style="background-position:-' + x + 'px -' + y + 'px;"></li>';
+                        }
                     }
 
-                    reader.onload = function () {
-                        var src = this.result, img = new Image(), html = '', w, h, x, y;
-
-                        img.src = src;
-
-                        img.onload = function () {
-                            w = Math.ceil((this.width / H_NUM) - GRID_GAP);
-                            h = Math.ceil((this.height / V_NUM) - GRID_GAP);
-
-                            canvas.width((w + GRID_GAP) * H_NUM).height((h + GRID_GAP) * V_NUM);
-
-                            $('#css').html('.canvas li{width: ' + w + 'px;height:' + h + 'px;margin: ' + GRID_GAP + 'px 0 0 ' + GRID_GAP + 'px;background:url(' + src + ') no-repeat;}');
-
-                            for (var i = 0; i < H_NUM; i++) {
-                                y = (h + GRID_GAP) * i;
-
-                                for (var j = 0; j < V_NUM; j++) {
-                                    x = (w + GRID_GAP) * j;
-
-                                    html += '<li style="background-position:-' + x + 'px -' + y + 'px;"></li>';
-                                }
-                            }
-
-                            canvas.css('padding', '0 ' + GRID_GAP + 'px ' + GRID_GAP + 'px 0').html(html);
-                        }
-                    };
-
-                    reader.readAsDataURL(files[0]);
+                    canvas.css('padding', '0 ' + GRID_GAP + 'px ' + GRID_GAP + 'px 0').html(html);
                 }
-            });
+            };
+
+            reader.readAsDataURL(files[0]);
+        }
+    });
 
     $('#btn-download').click(function () {
         var me = this;

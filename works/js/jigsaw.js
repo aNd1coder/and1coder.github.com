@@ -194,7 +194,7 @@ function init() {
                 }).done(function (data) {
                     showTip('打包成功!');
                     //$('#preview').removeClass('hide').find('.modal-body').html(data);
-                    location.href = 'http://d9.oa.com/samgui/upload/' + data;
+                    location.href = 'http://samgui.com/public/file/' + data;
                 });
 
                 break;
