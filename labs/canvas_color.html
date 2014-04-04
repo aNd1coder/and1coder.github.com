@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>图标跟肤</title>
+    <link rel="stylesheet" href="../public/vendor/bootstrap.min.css?v=1572"/>
+    <style>
+        .wrapper { width: 200px; padding: 100px 0; margin: 0 auto; text-align: center; }
+        .input-append { margin: 0 5px; }
+        .input-append .add-on, .input-prepend .add-on { height: 45px; line-height: 45px; }
+        .canvas { margin-top: 3px; }
+        .btn, input { vertical-align: middle; margin-top: 8px; margin-right: 10px !important; border-radius: 4px !important; }
+        .color { width: 129px; margin-left: 8px; }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="input-prepend input-append">
+        <label class="add-on" for="original">前</label>
+        <span class="add-on"><img id="original" src="http://d9.oa.com/samgui/public/img/icon_skin.png" alt=""/></span>
+    </div>
+    <div class="input-prepend input-append">
+        <label class="add-on" for="canvas">后</label>
+        <span class="add-on"><canvas id="canvas" class="canvas"></canvas></span>
+    </div>
+    <div class="input-prepend input-append">
+        <label class="add-on" for="canvas">色</label>
+        <span class="add-on">
+            <input type="color" id="color" class="color"/>
+            <a href="###" class="btn btn-success" id="btn-download">保存</a>
+        </span>
+    </div>
+</div>
+<script src="http://d9.oa.com/samgui/public/vendor/jquery-1.8.3.min.js"></script>
+<script src="../public/js/app.js"></script>
+<script>
+    var canvas = $('canvas'), img = $('original');
+
+    window.onload = function () {
+        replace_rgb(img, '#FF653F');
+
+        $('color').onchange = function () {
+            var hex = this.value;
+            replace_rgb(img, hex);
+        };
+
+        $('btn-download').onclick = function () {
+            var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"),
+                    filename = (new Date()).getTime() + '.png';
+            App.Helper.saveFile(image, filename);
+        };
+    };
+
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    //替换rgb
+    function replace_rgb(img, hex) {
+        var ctx = canvas.getContext('2d'), imgdata, data , w, h, r, g, b;
+
+        document.getElementsByTagName('body')[0].style.backgroundColor = hex;
+
+        w = img.width;
+        h = img.height;
+
+        canvas.width = w;
+        canvas.height = h;
+
+        ctx.drawImage(img, 0, 0);
+
+        imgdata = ctx.getImageData(0, 0, w, h);
+
+        data = imgdata.data;
+
+        hex = hex.substring(1, 7);
+        r = parseInt(hex.substring(0, 2), 16);
+        g = parseInt(hex.substring(2, 4), 16);
+        b = parseInt(hex.substring(4, 6), 16);
+
+        //data里面每4个数据项代表一个像素
+        for (var i = 0, length = data.length; i < length; i = i + 4) {
+            data[i] = r;
+            data[i + 1] = g;
+            data[i + 2] = b;
+        }
+
+        //把imageData再放回canvas
+        ctx.putImageData(imgdata, 0, 0);
+    }
+</script>
+</body>
+</html>
