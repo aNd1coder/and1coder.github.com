@@ -26,8 +26,12 @@
         <h3>Categories</h3>
         <ul class="categories">
             {% for category in site.categories %}
-            <li><a href="{{site.baseurl}}/categories#{{ category | first }}-ref">{{ category | first }}<span
-                    class="num">({{ category | last | size }})</span></li>
+            <li>
+                <a href="{{site.baseurl}}/categories#{{ category | first }}-ref">
+                    {{ category | first }}
+                    <span class="num">({{ category | last | size }})</span>
+                </a>
+            </li>
             {% endfor %}
         </ul>
     </div>
