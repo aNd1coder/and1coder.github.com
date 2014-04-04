@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Samgui(三桂)</title>
-    {{ include meta }}
+    {% include meta.html %}
     <!--link rel="apple-touch-startup-image" href="startup.png"/-->
     <style>
         html, body { overflow: hidden; margin: 0; }
