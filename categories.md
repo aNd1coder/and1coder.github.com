@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 分类存档
 published: true
 ---
