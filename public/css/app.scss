@@ -38,9 +38,8 @@
 
 .sidebar h1 {
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-left: 20px;
-  font-size: 1.2em;
+  padding: 10px 0 0 20px;
+  font-size: 1.5em;
 }
 
 .sidebar h3 { padding: 0 0 10px 20px; font-size: 1.4em; color: #ccc; }
@@ -120,7 +119,7 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
   .title { padding: 5px 10px; }
   .title, .container { margin: 0 auto; min-width: 320px; max-width: 640px; }
   .sidebar { width: 100%; background-color: #323a45; }
-  .sidebar h1 { margin-bottom: 0; padding-top: 0; padding-left: 10px; font-size: 1.5em; color: #fff; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+  .sidebar h1 { margin-bottom: 0; padding-top: 0; padding-left: 10px; color: #fff; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
   .sidebar h3 { padding-left: 0; }
   .sidebar ul { margin: 0; }
   .sidebar li { display: inline-block; margin: 0 10px; }
