@@ -1,0 +1,32 @@
+@charset "UTF-8";
+// @update $Id$
+
+@mixin clear {
+  *zoom: 1;
+
+  &:after {
+    content: '\20';
+    display: block;
+    clear: both;
+    height: 0;
+  }
+}
+
+@mixin bg($color: null, $url: '', $repeat: no-repeat, $position: null) {
+  $url: image-url($url, true);
+  background: $color url($url) $repeat $position;
+}
+
+@mixin bg_url($url: '') {
+  $url: image-url($url, true);
+  background-image: url($url);
+}
+
+@mixin filter_blur($radius: 1) {
+  filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+  -webkit-filter: blur(#{$radius}px); /* Chrome, Opera */
+  -moz-filter: blur(#{$radius}px);
+  -ms-filter: blur(#{$radius}px);
+  filter: blur(#{$radius}px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=#{$radius}, MakeShadow=false); /* IE6~IE9 */
+}

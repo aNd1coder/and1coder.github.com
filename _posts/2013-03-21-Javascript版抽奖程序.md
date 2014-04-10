@@ -4,7 +4,7 @@ title: JavaScript版抽奖程序
 categories: 前端开发
 tags: [Javascript, 抽奖]
 ---
-<link rel="stylesheet" href="/public/css/demo.css"/>
+<link rel="stylesheet" href="/public/css/docs.s.css"/>
 <div id="lottery" class="lottery">
     <table class="lottery-box" id="lottery-box">
         <tbody>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+// @update $Id$
+@import "core";
+@import "reset";
+
+.toolbar {
+  padding: 6px 10px;
+  font-size: 1.6em;
+  color: #fff;
+  background-color: #323a45;
+  overflow: hidden;
+}
+
+.sidebar h1,
+.sidebar .num,
+.post .category,
+.post .date { color: rgba(0, 0, 0, 0.3) }
+
+.sidebar h1,
+.sidebar h3,
+.posts .archive { font-weight: 400; }
+
+.sidebar {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 210px;
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 100px;
+  border: 5px solid rgba(0, 0, 0, .1);
+}
+
+.sidebar h1 {
+  margin-bottom: 2em;
+  padding-top: 28px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.sidebar h3 { padding: 0 0 10px 10px; font-size: 2em; color: #ccc; }
+.sidebar ul { margin: 0 0 20px 20px; }
+.sidebar li { height: 25px; line-height: 25px; }
+.sidebar a:hover .num { color: #4183c4; }
+
+.content {
+  margin-left: 210px;
+  padding: 10px 10px 50px 50px;
+  font-size: 1.2em;
+  background-color: #fff;
+}
+
+.content a { color: #4183c4; }
+
+.posts .archive {
+  margin: .3em 0 .2em 0;
+  font-size: 3em;
+  color: #4183c4;
+  height: 45px;
+  line-height: 45px;
+  color: #ccc;
+}
+
+.post { padding: 0.5em 0; }
+.post .category { padding-left: 5px; }
+.post .date { display: block; }
+
+/* code syntax highlight */
+
+/* plain text */
+.pln { color: #000 }
+
+/* string content */
+.str { color: #e67e22; }
+
+/* a keyword */
+.kwd { color: #3498db; font-weight: 700; }
+
+/* a comment */
+.com { color: #aaa }
+
+/* a type name */
+.typ { color: #1abc9c; font-weight: 700; }
+
+/* a literal value */
+.lit { color: #066 }
+
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun, .opn, .clo { color: #660 }
+
+/* a markup tag name */
+.tag { color: #008 }
+
+/* a markup attribute name */
+.atn { color: #1abc9c }
+
+/* a markup attribute value */
+.atv { color: #2ecc71 }
+
+/* a declaration; a variable name */
+.dec, .var { color: #1abc9c; }
+
+/* a function name */
+.fun { color: red; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 }
+.prettyprint li { line-height: 20px; }
+
+@media only screen and (max-width: 800px) {
+  .title, .container { margin: 0 auto; min-width: 320px; max-width: 640px; }
+  .sidebar { position: static; width: auto; text-align: center; }
+  .sidebar h3 { padding-left: 0; }
+  .sidebar ul { margin-left: 0; }
+  .sidebar li { display: inline-block; margin: 0 10px; }
+  .content { margin-left: 0; padding-left: 10px; }
+}
