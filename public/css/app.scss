@@ -8,8 +8,7 @@
 .toolbar {
   padding: 5px 10px 5px 50px;
   font-size: 1.6em;
-  color: #fff;
-  background-color: #323a45;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -113,7 +112,7 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
 .prettyprint li { line-height: 20px; }
 
 @media only screen and (max-width: 800px) {
-  .toolbar { margin-top: 66px; padding: 0; font-size: 1.4em; color: #444333; background-color: #f8f8f8; }
+  .toolbar { margin-top: 66px; padding: 0; font-size: 1.4em; background-color: #f8f8f8; }
   header { padding: 5px 0; }
   header a { color: #4183c4; font-size: 1.2em; }
   .title { padding: 5px 10px; }
