@@ -24,7 +24,7 @@
 
 .sidebar {
   position: absolute;
-  top: 45px;
+  top: 0;
   left: 0;
   width: 250px;
 }
@@ -120,7 +120,7 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
   header a { color: #4183c4; font-size: 1.2em; }
   .title { padding: 5px 10px; }
   .title, .container { margin: 0 auto; min-width: 320px; max-width: 640px; }
-  .sidebar { top: 0; width: 100%; background-color: #323a45; }
+  .sidebar { width: 100%; background-color: #323a45; }
   .sidebar h1 { margin-bottom: 0; padding-top: 0; padding-left: 10px; font-size: 1.5em; color: #fff; text-align: left; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
   .sidebar h3 { padding-left: 0; }
   .sidebar ul { margin: 0; }
