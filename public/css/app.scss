@@ -122,5 +122,5 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
   .sidebar ul { margin: 0; }
   .sidebar li { display: inline-block; margin: 0 10px; }
   .categories { display: none; position: absolute; top: 0; left: 0; width: 100%; }
-  .content { margin-left: 0; padding-left: 10px; }
+  .content { min-height: 400px; margin-left: 0; padding-left: 10px; }
 }
