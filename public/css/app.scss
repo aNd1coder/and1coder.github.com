@@ -115,6 +115,7 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
   .toolbar { margin-top: 66px; padding: 0; font-size: 1.4em; background-color: #f8f8f8; }
   header { padding: 5px 0; }
   header a { color: #4183c4; font-size: 1.2em; }
+  .toolbar, .content { margin-left: 0; }
   .title { padding: 5px 10px; }
   .title, .container { margin: 0 auto; min-width: 320px; max-width: 640px; }
   .sidebar { width: 100%; background-color: #323a45; }
@@ -123,5 +124,5 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
   .sidebar ul { margin: 0; }
   .sidebar li { display: inline-block; margin: 0 10px; }
   .categories { display: none; position: absolute; top: 0; left: 0; width: 100%; }
-  .content { margin-left: 0; padding-left: 10px; }
+  .content { padding-left: 10px; }
 }
