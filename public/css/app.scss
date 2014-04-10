@@ -111,12 +111,12 @@ ol.linenums { margin-top: 0; margin-bottom: 0 }
 .prettyprint li { line-height: 20px; }
 
 @media only screen and (max-width: 800px) {
-  .toolbar { margin-top: 60px; color: #444333; background-color: #f8f8f8; }
+  .toolbar { margin-top: 66px; font-size: 1.4em; color: #444333; background-color: #f8f8f8; }
   header { padding: 5px 0; }
-  header a { color: #4183c4; }
+  header a { color: #4183c4; font-size: 1.2em; }
   .title, .container { margin: 0 auto; min-width: 320px; max-width: 640px; }
   .sidebar { top: 0; width: 100%; background-color: #323a45; }
-  .sidebar h1 { margin-bottom: 0; padding-top: 0; padding-left: 10px; color: #fff; text-align: left; }
+  .sidebar h1 { margin-bottom: 0; padding-top: 0; padding-left: 10px; font-size: 1.5em; color: #fff; text-align: left; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
   .sidebar h3 { padding-left: 0; }
   .sidebar ul { margin: 0; }
   .sidebar li { display: inline-block; margin: 0 10px; }
