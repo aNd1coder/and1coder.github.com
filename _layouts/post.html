@@ -24,17 +24,19 @@
                 </ul>
             </nav>
         </header>
-        <h3>Categories</h3>
-        <ul class="categories">
-            {% for category in site.categories %}
-            <li>
-                <a href="{{site.baseurl}}/categories#{{ category | first }}-ref">
-                    {{ category | first }}
-                    <span class="num">({{ category | last | size }})</span>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+        <section class="categories">
+            <h3>Categories</h3>
+            <ul>
+                {% for category in site.categories %}
+                <li>
+                    <a href="{{site.baseurl}}/categories#{{ category | first }}-ref">
+                        {{ category | first }}
+                        <span class="num">({{ category | last | size }})</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
     </div>
 </div>
 <script src="/public/vendor/jquery-1.8.3.min.js"></script>
