@@ -78,7 +78,8 @@
 .profile .timeline { @include clearfix; }
 
 .profile .container { width: 950px; margin: 0 auto; }
-.profile .content { margin: 0; }
+.profile .title { font-size: 2.5em; }
+.profile .content { margin: 0; padding: 0; }
 
 .profile dt,
 .profile dd,
