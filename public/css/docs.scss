@@ -10,6 +10,7 @@ $font: '/public/font/webfont.';
   font-style: normal;
   -webkit-font-smoothing: antialiased;
 }
+
 .raphael-wrapper { position: relative; width: 320px; height: 325px; }
 .avatar { position: absolute; top: 255px; left: 280px; width: 90px; height: 90px; border-radius: 50px; box-shadow: 0 0 10px rgba(0, 0, 0, .3); }
 

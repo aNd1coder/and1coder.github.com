@@ -2,7 +2,8 @@
 @import "core";
 @import "reset";
 
-.toolbar, .content { margin-left: 250px; }
+$sidebar-width: 250px;
+.toolbar, .content { margin-left: $sidebar-width; }
 
 .toolbar {
   padding: 20px 10px 10px 20px;
@@ -24,7 +25,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 250px;
+  width: $sidebar-width;
 }
 
 .avatar {
