@@ -6,7 +6,7 @@
 .toolbar, .content { margin-left: 250px; }
 
 .toolbar {
-  padding: 10px 10px 10px 20px;
+  padding: 20px 10px 10px 20px;
   font-size: 1.6em;
   background-color: #fff;
   overflow: hidden;
@@ -37,7 +37,7 @@
 
 .sidebar h1 {
   margin-bottom: 20px;
-  padding: 10px 0 0 20px;
+  padding: 20px 0 0 20px;
   font-size: 1.5em;
 }
 
@@ -69,6 +69,22 @@
 .post .category { padding-left: 5px; }
 .post .date { display: block; }
 
+/* about me */
+.aboutme { }
+
+/* profile */
+.profile .container { width: 950px; margin: 0 auto; }
+.profile .content { margin: 0; }
+
+.profile dt,
+.profile dd,
+.profile li {
+  float: left;
+  height: 2em;
+  line-height: 2em;
+}
+
+.profile dt { clear: left; }
 /* code syntax highlight */
 
 /* plain text */
@@ -108,7 +124,7 @@
 .fun { color: red; }
 
 /* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0 }
+ol.linenums { margin-top: 0; margin-bottom: 0; }
 .prettyprint li { line-height: 20px; }
 
 @media only screen and (max-width: 800px) {
