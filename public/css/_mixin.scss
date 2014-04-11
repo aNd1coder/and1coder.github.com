@@ -1,7 +1,6 @@
 @charset "UTF-8";
-// @update $Id$
 
-@mixin clear {
+@mixin clearfix {
   *zoom: 1;
 
   &:after {
