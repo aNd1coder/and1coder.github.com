@@ -73,13 +73,16 @@ $sidebar-width: 280px;
 .aboutme { }
 
 /* profile */
+.profile { color: #666; }
+.profile h3 { margin-top: 1em; }
+
 .profile .basic,
 .profile .skills,
 .profile .keywords,
 .profile .timeline { @include clearfix; }
 
 .profile .container { width: 950px; margin: 0 auto; }
-.profile .title { margin-bottom: .5em; font-size: 2.5em; }
+.profile .title { margin: .5em 0; font-size: 2.4em; }
 .profile .content { margin: 0; padding: 0; }
 
 .profile dt,
@@ -92,6 +95,8 @@ $sidebar-width: 280px;
 }
 
 .profile dt { clear: left; }
+.profile .basic dt { width: 55px; }
+
 /* code syntax highlight */
 
 /* plain text */
