@@ -10,13 +10,13 @@ published: true
   <dt>现居：</dt>
   <dd>深圳市 南山区</dd>
   <dt>主页：</dt>
-  <dd><a href="http://samgui.com/">http://samgui.com/</a></dd>
+  <dd><a href="http://samgui.com/" target="_blank">http://samgui.com/</a></dd>
   <dt>邮箱：</dt>
   <dd>and1coder@gmail.com</dd>
   <dt>Github：</dt>
-  <dd><a href="https://github.com/and1coder">@and1coder</a></dd>
+  <dd><a href="https://github.com/and1coder" target="_blank">@and1coder</a></dd>
   <dt>Twitter：</dt>
-  <dd><a href="https://twitter.com/and1coder">@and1coder</a></dd>
+  <dd><a href="https://twitter.com/and1coder" target="_blank">@and1coder</a></dd>
   <dt>电话：</dt>
   <dd>13302961259</dd>
 </dl>
