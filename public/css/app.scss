@@ -96,6 +96,8 @@ $sidebar-width: 280px;
 
 .profile dt { clear: left; }
 .profile .basic dt { width: 55px; }
+.profile .timeline dt { position: absolute; }
+.profile .timeline dd { float: none; height: auto; margin-left: 200px; }
 
 /* code syntax highlight */
 

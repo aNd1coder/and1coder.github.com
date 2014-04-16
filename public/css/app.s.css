@@ -219,6 +219,14 @@ pre code {
 .profile .basic dt {
   width: 55px; }
 
+.profile .timeline dt {
+  position: absolute; }
+
+.profile .timeline dd {
+  float: none;
+  height: auto;
+  margin-left: 200px; }
+
 /* code syntax highlight */
 /* plain text */
 .pln {
