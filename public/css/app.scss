@@ -73,7 +73,7 @@ $sidebar-width: 280px;
 .aboutme { }
 
 /* profile */
-.profile body { color: #666; }
+.profile body { color: #666; background-color: #fff; }
 .profile h3 { margin: 1em 0 .2em; }
 
 .profile .basic,
@@ -83,7 +83,7 @@ $sidebar-width: 280px;
 
 .profile .container { width: 950px; margin: 0 auto; }
 .profile .title { margin: .5em 0; font-size: 2.4em; }
-.profile .content { margin: 0; padding: 0; background-color: #f8f8f8; }
+.profile .content { margin: 0; padding: 0; }
 
 .profile dt,
 .profile dd,

@@ -173,7 +173,8 @@ pre code {
 /* about me */
 /* profile */
 .profile body {
-  color: #666; }
+  color: #666;
+  background-color: #fff; }
 
 .profile h3 {
   margin: 1em 0 .2em; }
@@ -202,8 +203,7 @@ pre code {
 
 .profile .content {
   margin: 0;
-  padding: 0;
-  background-color: #f8f8f8; }
+  padding: 0; }
 
 .profile dt,
 .profile dd,
