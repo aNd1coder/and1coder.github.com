@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "utf-8";
 @import "core";
 @import "reset";
 
@@ -70,9 +70,8 @@ $sidebar-width: 280px;
 .post .date { display: block; }
 
 .table {
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   border-collapse: separate;
-  border-left: 0;
   border-radius: 4px;
 
   th, td {
@@ -80,7 +79,7 @@ $sidebar-width: 280px;
     line-height: 20px;
     text-align: left;
     vertical-align: top;
-    border-top: 1px solid #DDD;
+    border-top: 1px solid #ddd;
   }
 }
 
@@ -152,7 +151,7 @@ $sidebar-width: 280px;
 /* a function name */
 .fun { color: red; }
 
-/* Specify class=linenums on a pre to get line numbering */
+/* specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0; }
 .prettyprint li { line-height: 20px; }
 
