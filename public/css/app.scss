@@ -69,6 +69,21 @@ $sidebar-width: 280px;
 .post .category { padding-left: 5px; }
 .post .date { display: block; }
 
+.table {
+  border: 1px solid #DDD;
+  border-collapse: separate;
+  border-left: 0;
+  border-radius: 4px;
+
+  th, td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #DDD;
+  }
+}
+
 /* about me */
 .aboutme { }
 
