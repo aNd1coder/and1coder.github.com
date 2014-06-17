@@ -11,7 +11,7 @@ tags: [Json, Sass, Javascript, 共享数据]
 我应该注意到这不是一个尚未解决的问题, 实际上已经有[许多](http://css-tricks.com/making-sass-talk-to-javascript-with-json/)[有趣](https://github.com/HugoGiraudel/SassyJSON)的例子应用了该技术。
 但是我想要一个简单的解决方案,并一直想写一个Sass插件。
 
-好奇心的结果就催生出了`[sass-json-vars](https://github.com/vigetlabs/sass-json-vars)`。
+好奇心的结果就催生出了[`sass-json-vars`](https://github.com/vigetlabs/sass-json-vars)。
 引入项目中后，该gem允许 `@import` 有效路径的 `JSON` 文件，并将顶层的值转换成Sass数据类型（strings, maps, lists）。
 
 ##使用
