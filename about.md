@@ -3,4 +3,7 @@ layout: post
 title: 关于我
 published: true
 ---
-没想好，占坑...
+<div id="github">
+    <div data-height="150" data-width="400" data-github="and1coder" class="github-card"></div>
+    <script src="http://lab.lepture.com/github-cards/widget.js"></script>
+</div>
