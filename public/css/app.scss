@@ -163,7 +163,7 @@ $sidebar-width: 280px;
 
 /* specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0; }
-.prettyprint li { line-height: 20px; }
+.prettyprint li { line-height: 1.8em; }
 
 @media only screen and (max-width: 800px) {
   .toolbar { margin-top: 66px; padding: 0; font-size: 1.4em; background-color: #f8f8f8; }
