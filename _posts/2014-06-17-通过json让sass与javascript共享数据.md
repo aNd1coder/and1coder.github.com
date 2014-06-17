@@ -31,7 +31,7 @@ tags: [Json, Sass, Javascript, 共享数据]
     }
 
 
-任何时候当一个 `JSON` 文件被 `@import` 引入 `[sass-json-vars](https://github.com/vigetlabs/sass-json-vars)` 会把顶层键作为值公开出来。
+任何时候当一个 `JSON` 文件被 `@import` 引入 [`sass-json-vars`](https://github.com/vigetlabs/sass-json-vars) 会把顶层键作为值公开出来。
 
     @import "variables.json";
 
@@ -58,7 +58,7 @@ tags: [Json, Sass, Javascript, 共享数据]
 
 ##集成
 
-跟[sass-globbing](https://github.com/chriseppstein/sass-globbing)或者其他插件一样 `[sass-json-vars](https://github.com/vigetlabs/sass-json-vars)` 引入并给 `@import` 添加功能。可作为Gemfile的一个依赖引入：
+跟[sass-globbing](https://github.com/chriseppstein/sass-globbing)或者其他插件一样 [`sass-json-vars`](https://github.com/vigetlabs/sass-json-vars) 引入并给 `@import` 添加功能。可作为Gemfile的一个依赖引入：
 
     gem sass-json-vars
 
@@ -68,11 +68,11 @@ tags: [Json, Sass, Javascript, 共享数据]
         gem sass-json-vars
     end
 
-当 `[sass-json-vars](https://github.com/vigetlabs/sass-json-vars)` 与Ruby on Rails的asset pipeline一起使用时，将被自动处理。
+当 [`sass-json-vars`](https://github.com/vigetlabs/sass-json-vars) 与Ruby on Rails的asset pipeline一起使用时，将被自动处理。
 
 ##最终畅想
 
-`[sass-json-vars](https://github.com/vigetlabs/sass-json-vars)` 支持Sass提供的所有数据类型。可以用于为断点Sass插件描述媒体查询，或存储[IcoMoon](http://icomoon.io/)生成的图标特殊字符。
+[`sass-json-vars`](https://github.com/vigetlabs/sass-json-vars) 支持Sass提供的所有数据类型。可以用于为断点Sass插件描述媒体查询，或存储[IcoMoon](http://icomoon.io/)生成的图标特殊字符。
 从Github上[签出该库](https://github.com/vigetlabs/sass-json-vars),随意评论你是如何使用它的！
 
 ## 原文 ##

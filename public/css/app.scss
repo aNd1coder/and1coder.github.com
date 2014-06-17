@@ -52,9 +52,19 @@ $sidebar-width: 280px;
   padding: 10px 10px 50px 20px;
   font-size: 1.2em;
   background-color: #fff;
-}
+  color: #666;
 
-.content a { color: #4183c4; }
+  h2 {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: .2em;
+    font-weight: 400;
+    color: #333;
+  }
+
+  a {
+    &, &:hover { color: #4183c4; }
+  }
+}
 
 .posts .archive {
   margin: .3em 0 .2em 0;
