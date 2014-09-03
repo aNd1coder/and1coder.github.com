@@ -50,10 +50,10 @@ body, input, button, select, textarea {
 .btn-success i,
 .btn-info i,
 .btn-primary i {
-    background-image: url(../vendor/glyphicons-halflings-white.png); }
+    background-image: url(/public/vendor/glyphicons-halflings-white.png); }
 
 .sidebar .icon-plus-sign {
-    background-image: url(../vendor/glyphicons-halflings-white.png); }
+    background-image: url(/public/vendor/glyphicons-halflings-white.png); }
 
 [class^="icon-"], [class*=" icon-"] {
     vertical-align: -2px; }

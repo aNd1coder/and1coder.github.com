@@ -29,10 +29,10 @@ body, input, button, select, textarea { font-size: 12px; font-family: '\5fae\8f6
 .btn-success,
 .btn-info,
 .btn-primary {
-  i { background-image: url(../vendor/glyphicons-halflings-white.png); }
+  i { background-image: url(/public/vendor/glyphicons-halflings-white.png); }
 }
 
-.sidebar .icon-plus-sign { background-image: url(../vendor/glyphicons-halflings-white.png); }
+.sidebar .icon-plus-sign { background-image: url(/public/vendor/glyphicons-halflings-white.png); }
 [class^="icon-"], [class*=" icon-"] { vertical-align: -2px; }
 
 .icon-resize-horizontal { background-position: -456px -120px; }
