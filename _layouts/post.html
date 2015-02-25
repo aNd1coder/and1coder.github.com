@@ -39,6 +39,20 @@
         </section>
     </div>
 </div>
+
+<div class="ds-thread" data-thread-key="{{ post.id }}" data-title="{{page.title}}" data-url="{{ post.url }}"></div>
+<script>
+	var duoshuoQuery = {short_name:"samgui"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+
 <script src="/public/vendor/jquery-1.8.3.min.js"></script>
 <script src="http://cdn.staticfile.org/prettify/r298/prettify.min.js"></script>
 <script src="/public/js/app.js"></script>
