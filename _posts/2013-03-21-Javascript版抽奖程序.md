@@ -9,32 +9,32 @@ tags: [Javascript, 抽奖]
     <table class="lottery-box" id="lottery-box">
         <tbody>
         <tr>
-            <td id="prize1"></td>
-            <td id="prize2"></td>
-            <td id="prize3"></td>
-            <td id="prize4"></td>
-            <td id="prize5"></td>
+            <td id="prize1">&nbsp;</td>
+            <td id="prize2">&nbsp;</td>
+            <td id="prize3">&nbsp;</td>
+            <td id="prize4">&nbsp;</td>
+            <td id="prize5">&nbsp;</td>
         </tr>
         <tr>
-            <td id="prize6"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td id="prize7"></td>
+            <td id="prize6">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td id="prize7">&nbsp;</td>
         </tr>
         <tr>
             <td id="prize8"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td id="prize9"></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td id="prize9">&nbsp;</td>
         </tr>
         <tr>
-            <td id="prize10"></td>
-            <td id="prize11"></td>
-            <td id="prize12"></td>
-            <td id="prize13"></td>
-            <td id="prize14"></td>
+            <td id="prize10">&nbsp;</td>
+            <td id="prize11">&nbsp;</td>
+            <td id="prize12">&nbsp;</td>
+            <td id="prize13">&nbsp;</td>
+            <td id="prize14">&nbsp;</td>
         </tr>
         </tbody>
     </table>
