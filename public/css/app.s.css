@@ -110,12 +110,7 @@ pre code {
     left:0;
     width:280px
 }
-.avatar {
-    display:block;
-    margin:0 auto 10px;
-    border-radius:100px;
-    border:5px solid rgba(0, 0, 0, 0.1)
-}
+.avatar {display:none;}
 .sidebar h1 {
     margin-bottom:20px;
     padding:20px 0 0 20px;
@@ -299,10 +294,12 @@ ol.linenums {
         text-shadow: 0 0 0 rgba(0,0,0,0);
     }
     .avatar {
+      display:block;
       position: absolute;
       right: 20px;
       top: 65px;
       border: 2px solid #fff;
+      z-index:2;
     }
     .toolbar, .content {
         margin-left:0
