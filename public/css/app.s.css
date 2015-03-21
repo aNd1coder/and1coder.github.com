@@ -118,6 +118,9 @@ pre code {
     padding:20px 0 0 20px;
     font-size:1.4em
 }
+.sidebar .logo li{
+    text-indent:1em;
+}
 .sidebar h3 {
     padding:0 0 10px 20px;
     font-size:1.4em;
