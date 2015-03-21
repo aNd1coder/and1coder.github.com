@@ -280,7 +280,7 @@ ol.linenums {
 @media only screen and (max-width: 800px) {
     .toolbar {
         margin-top:100px;
-        padding:0;
+        padding:10px 0 0 0;
         font-size:1.4em;
         background-color:#f8f8f8
     }
