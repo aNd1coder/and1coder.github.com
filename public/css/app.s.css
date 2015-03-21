@@ -98,10 +98,10 @@ pre code {
     background-color:#fff;
     overflow:hidden
 }
-.sidebar h1, .sidebar .num, .post .category, .post .date {
+.sidebar .logo, .sidebar .num, .post .category, .post .date {
     color:rgba(0, 0, 0, 0.3)
 }
-.sidebar h1, .sidebar h3, .posts .archive {
+.sidebar .logo, .sidebar h3, .posts .archive {
     font-weight:400
 }
 .sidebar {
@@ -110,25 +110,27 @@ pre code {
     left:0;
     width:280px
 }
+
 .avatar {display:none;}
-.sidebar h1 {
+
+.sidebar .logo {
     margin-bottom:20px;
     padding:20px 0 0 20px;
-    font-size:1.5em
+    font-size:1.4em
 }
 .sidebar h3 {
     padding:0 0 10px 20px;
     font-size:1.4em;
     color:#ccc
 }
-.sidebar ul {
+.sidebar .nav {
     margin:0 0 20px 20px
 }
-.sidebar li {
+.sidebar .nav li {
     height:25px;
     line-height:25px
 }
-.sidebar a:hover .num {
+.sidebar .nav a:hover .num {
     color:#4183c4
 }
 .title {
@@ -316,22 +318,20 @@ ol.linenums {
         width:100%;
         background-color:#323a45
     }
-    .sidebar h1 {
+    .sidebar .logo {
         margin-bottom: 0;
-        padding-top: 75px;
         color: #fff;
         text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-        text-align: right;
-        padding-right: 100px;
+        padding-left: 10px;
         font-size: 1em;
     }
     .sidebar h3 {
         padding-left:0
     }
-    .sidebar ul {
+    .sidebar .nav {
         margin:0
     }
-    .sidebar li {
+    .sidebar .nav {
         margin:0 10px;
         border-bottom:1px solid #333;
         padding:10px 0;
