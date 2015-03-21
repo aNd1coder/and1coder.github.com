@@ -127,10 +127,10 @@ pre code {
     font-size:1.4em;
     color:#ccc
 }
-.sidebar .nav {
+.sidebar .nav,.sidebar .categories {
     margin:0 0 20px 10px
 }
-.sidebar .nav li {
+.sidebar .nav li,.sidebar .categories li {
     height:25px;
     line-height:25px
 }
@@ -347,7 +347,6 @@ ol.linenums {
         left:0;
         width:100%
     }
-    .categories li {margin-left:10px;}
     .content {
         padding-left:10px
     }
