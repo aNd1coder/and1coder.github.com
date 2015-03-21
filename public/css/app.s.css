@@ -118,6 +118,7 @@ pre code {
     padding:10px 0 0 10px;
     font-size:1.3em
 }
+.sidebar .logo p {margin:0;}
 .sidebar .logo li{
     text-indent:1em;
 }
@@ -346,7 +347,7 @@ ol.linenums {
         left:0;
         width:100%
     }
-    .categories ul {margin-left:10px;}
+    .categories li {margin-left:10px;}
     .content {
         padding-left:10px
     }
