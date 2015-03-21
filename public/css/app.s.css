@@ -122,12 +122,12 @@ pre code {
     text-indent:1em;
 }
 .sidebar h3 {
-    padding:0 0 10px 20px;
+    padding:0 0 10px 10px;
     font-size:1.4em;
     color:#ccc
 }
 .sidebar .nav {
-    margin:0 0 20px 20px
+    margin:0 0 20px 10px
 }
 .sidebar .nav li {
     height:25px;
@@ -346,6 +346,7 @@ ol.linenums {
         left:0;
         width:100%
     }
+    .categories ul {margin-left:10px;}
     .content {
         padding-left:10px
     }
