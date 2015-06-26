@@ -4,7 +4,7 @@ title: Python之PIL库安装
 categories: 随笔
 tags: [Python, PIL]
 ---
-python在处理jpg时提示“decoder jpeg not available”，搜之原来是PIL安装没有提供对jpeg的支持。
+python在处理jpg时提示“decoder jpeg not available”，找了些资料，原来是PIL安装没有提供对jpeg的支持，解决问题过程中花费不少时间，记录下。
 
 ##移除已安装的PIL库
 找到```/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages```或者```/Library/Python/2.7/site-packages```目录，删除掉```PIL```目录及```PIL.pth```文件
