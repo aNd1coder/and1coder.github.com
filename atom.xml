@@ -4,27 +4,25 @@ layout: nil
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>三桂的个人博客</title>
-    <link href="http://and1coder.github.io/"/>
-    <link type="application/atom+xml" rel="self" href="http://and1coder.github.io/atom.xml"/>
+    <link href="http://samgui.com/"/>
+    <link type="application/atom+xml" rel="self" href="http://samgui.com/atom.xml"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>http://and1coder.github.io/</id>
+    <id>http://samgui.com/</id>
     <author>
         <name>三桂</name>
         <email>and1coder@gmail.com</email>
     </author>
-
     {% for post in site.posts %}
     <entry>
-        <id>http://and1coder.github.io{{ post.id }}</id>
-        <link type="text/html" rel="alternate" href="http://and1coder.github.io{{ post.url }}"/>
+        <id>http://samgui.com{{ post.id }}</id>
+        <link type="text/html" rel="alternate" href="http://samgui.com{{ post.url }}"/>
         <title>{{ post.title }}</title>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <author>
             <name>三桂</name>
-            <uri>http://and1coder.github.io/</uri>
+            <uri>http://samgui.com/</uri>
         </author>
         <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
     {% endfor %}
-
 </feed>
