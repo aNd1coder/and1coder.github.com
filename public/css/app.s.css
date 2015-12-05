@@ -103,7 +103,8 @@ pre code {
     background-color: transparent;
     border: none;
     word-wrap: normal;
-    display: inline
+    display: inline;
+    font-family: monaco;
 }
 
 .toolbar, .content {
