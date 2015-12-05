@@ -3,7 +3,7 @@ layout: nil
 ---
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>蜗居族</title>
+    <title>三桂的个人博客</title>
     <link href="http://and1coder.github.io/"/>
     <link type="application/atom+xml" rel="self" href="http://and1coder.github.io/atom.xml"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
