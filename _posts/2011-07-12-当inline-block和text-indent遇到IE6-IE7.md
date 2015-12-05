@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 当inline-block和text-indent遇到IE6&IE7
+title: 当inline-block和text-indent遇到IE6-IE7
 categories: 前端开发
 tags: [CSS, 兼容, inline-block, text-indent]
 ---
