@@ -1,1 +1,445 @@
-* { -webkit-tap-highlight-color: transparent; outline: 0 } body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline } img { max-width: 100%; border: 0 none } i, em { font-style: normal } ol, ul { list-style: none } input, select, h1, h2, h3, h4, h5, h6 { font-size: 100% } table { border-collapse: collapse; border-spacing: 0 } p { margin: .5em 0 } a { color: #666; text-decoration: none } a:hover { color: #4183c4; text-decoration: underline } a, img { -webkit-touch-callout: none } body { color: #444333; background: #fff; font-size: 14px; font-family: Monaco, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei"; line-height: 1.5; background-color: #f8f8f8; -webkit-text-size-adjust: 100% } h2 { margin: 1em 0 0.2em; font-size: 1.2em } blockquote { line-height: 25px; margin: 15px 0px; padding: 0px 15px; border-left: 4px solid #ddd; color: #777777; font: normal 15px Helvetica, arial, freesans, clean, sans-serif; background-color: #f8f8f8 } code { padding: 0 5px; border: 1px solid #dedede; color: #444444; font-family: courier; background-color: #f8f8ff; border-radius: 3px; white-space: nowrap } pre { position: relative; line-height: 20px; margin: 15px 0; padding: 6px 10px; border: 1px solid #dddddd; font: 100 14px/1 courier, "courier new", monospace; background-color: #f8f8f8; white-space: pre-wrap; overflow: auto; border-radius: 3px } pre code { margin: 0; padding: 0; background-color: transparent; border: none; word-wrap: normal; display: inline } .toolbar, .content { margin-left: 280px } .toolbar { padding: 20px 10px 10px 20px; font-size: 1.6em; background-color: #fff; overflow: hidden } .sidebar .logo, .sidebar .num, .post .category, .post .date { color: rgba(0, 0, 0, 0.3) } .sidebar .logo, .sidebar h3, .posts .archive { font-weight: 400 } .sidebar { position: absolute; top: 0; left: 0; width: 280px } .avatar { display: none; } .sidebar .logo { margin-bottom: 20px; padding: 10px 0 0 10px; font-size: 1.3em } .sidebar .logo p { margin: 0; } .sidebar .logo li { text-indent: 1em; } .sidebar h3 { font-size: 1.4em; color: #ccc } .sidebar .nav, .sidebar .categories { margin: 0 0 20px 10px } .sidebar .nav li, .sidebar .categories li { height: 25px; line-height: 25px } .sidebar .nav a:hover .num { color: #4183c4 } .title { font-weight: 400 } .content { min-height: 400px; padding: 10px 10px 50px 20px; font-size: 1.2em; background-color: #fff; color: #666 } .content h2 { border-bottom: 1px solid #EEE; padding-bottom: .2em; font-weight: 400; color: #333 } .content a, .content a:hover, .content a:hover code { color: #4183c4 } .posts .archive { margin: .3em 0 .2em 0; font-size: 3em; color: #4183c4; height: 45px; line-height: 45px; color: #ccc } .post { padding: 0.5em 0 } .post .category { padding-left: 5px } .post .date { display: block } .table { border: 1px solid #ddd; border-collapse: separate; border-radius: 4px } .table th, .table td { padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border-top: 1px solid #ddd } .profile body { color: #666; background-color: #fff } .profile h3 { margin: 1em 0 .2em } .profile .basic, .profile .skills, .profile .keywords, .profile .timeline { *zoom: 1 } .profile .basic:after, .profile .skills:after, .profile .keywords:after, .profile .timeline:after { content: '\20'; display: block; clear: both; height: 0 } .profile .container { width: 950px; margin: 0 auto } .profile .title { margin: .5em 0; font-size: 2.4em } .profile .content { margin: 0; padding: 0 } .profile dt, .profile dd, .profile li { float: left; height: 2em; line-height: 2em; margin-right: 20px } .profile dt { clear: left } .profile .basic dt { width: 55px } .profile .timeline dt { position: absolute } .profile .timeline dd { float: none; height: auto; margin-left: 200px } .pln { color: #000 } .str { color: #e67e22 } .kwd { color: #3498db; font-weight: 700 } .com { color: #aaa } .typ { color: #1abc9c; font-weight: 700 } .lit { color: #066 } .pun, .opn, .clo { color: #660 } .tag { color: #008 } .atn { color: #1abc9c } .atv { color: #2ecc71 } .dec, .var { color: #1abc9c } .fun { color: red } ol.linenums { margin-top: 0; margin-bottom: 0 } .prettyprint li { line-height: 1.8em } @media only screen and (max-width: 800px) { .toolbar { margin-top: 100px; padding: 10px 0 0 0; font-size: 1.4em; background-color: #f8f8f8 } header { height: 100px; } header .nav { display: none; position: absolute; width: 100%; background-color: #323a45; } header a { color: #fff; font-size: 1.2em; text-shadow: 0 0 0 rgba(0, 0, 0, 0); } .avatar { display: block; position: absolute; right: 20px; top: 65px; border: 2px solid #fff; z-index: 2; } .toolbar, .content { margin-left: 0 } .title { padding: 5px 10px } .title, .container { margin: 0 auto; min-width: 320px; max-width: 640px } .sidebar { width: 100%; background-color: #323a45 } .sidebar .logo { margin-bottom: 0; color: #fff; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); padding: 5px; font-size: 1em; } .sidebar h3 { padding-left: 0 } .sidebar .nav { margin: 0 } .sidebar .nav { margin: 0 10px; border-bottom: 1px solid #333; padding: 10px 0; } .categories { display: none; position: absolute; top: 0; left: 0; width: 100% } .content { padding-left: 10px } } .sidebar,code{text-shadow: 0 1px white;}pre{box-shadow:0 0 5px rgba(0,0,0,0.1) inset;}code{margin:0 3px;font-size:12px}blockquote{padding:3px 10px;}
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: 0
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline
+}
+
+img {
+    max-width: 100%;
+    border: 0 none
+}
+
+i, em {
+    font-style: normal
+}
+
+ol, ul {
+    list-style: none
+}
+
+input, select, h1, h2, h3, h4, h5, h6 {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    margin: .5em 0
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #4183c4;
+    text-decoration: underline
+}
+
+a, img {
+    -webkit-touch-callout: none
+}
+
+body {
+    color: #444333;
+    background: #fff;
+    font-size: 14px;
+    font-family: Monaco, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei";
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    -webkit-text-size-adjust: 100%
+}
+
+h2 {
+    margin: 1em 0 0.2em;
+    font-size: 1.2em
+}
+
+blockquote {
+    line-height: 25px;
+    margin: 15px 0px;
+    padding: 0px 15px;
+    border-left: 4px solid #ddd;
+    color: #777777;
+    font: normal 15px Helvetica, arial, freesans, clean, sans-serif;
+    background-color: #f8f8f8
+}
+
+code {
+    white-space: nowrap;
+    vertical-align: 2px;
+    margin: 0 3px;
+    padding: 2px 5px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+pre {
+    position: relative;
+    line-height: 20px;
+    margin: 15px 0;
+    padding: 6px 10px;
+    border: 1px solid #dddddd;
+    background-color: #f8f8f8;
+    white-space: pre-wrap;
+    overflow: auto;
+    border-radius: 3px
+}
+
+pre code {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    word-wrap: normal;
+    display: inline
+}
+
+.toolbar, .content {
+    margin-left: 280px
+}
+
+.toolbar {
+    padding: 20px 10px 10px 20px;
+    font-size: 1.6em;
+    background-color: #fff;
+    overflow: hidden
+}
+
+.sidebar .logo, .sidebar .num, .post .category, .post .date {
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.sidebar .logo, .sidebar h3, .posts .archive {
+    font-weight: 400
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px
+}
+
+.avatar {
+    display: none;
+}
+
+.sidebar .logo {
+    margin-bottom: 20px;
+    padding: 10px 0 0 10px;
+    font-size: 1.3em
+}
+
+.sidebar .logo p {
+    margin: 0;
+}
+
+.sidebar .logo li {
+    text-indent: 1em;
+}
+
+.sidebar h3 {
+    font-size: 1.4em;
+    color: #ccc
+}
+
+.sidebar .nav, .sidebar .categories {
+    margin: 0 0 20px 10px
+}
+
+.sidebar .nav li, .sidebar .categories li {
+    height: 25px;
+    line-height: 25px
+}
+
+.sidebar .nav a:hover .num {
+    color: #4183c4
+}
+
+.title {
+    font-weight: 400
+}
+
+.content {
+    min-height: 400px;
+    padding: 10px 10px 50px 20px;
+    background-color: #fff;
+    color: #666
+}
+
+.content h2 {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: .2em;
+    font-weight: 400;
+    color: #333
+}
+
+.content a, .content a:hover, .content a:hover code {
+    color: #4183c4
+}
+
+.posts .archive {
+    margin: .3em 0 .2em 0;
+    font-size: 3em;
+    color: #4183c4;
+    height: 45px;
+    line-height: 45px;
+    color: #ccc
+}
+
+.post {
+    padding: 0.5em 0
+}
+
+.post .category {
+    padding-left: 5px
+}
+
+.post .date {
+    display: block
+}
+
+.table {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    border-radius: 4px
+}
+
+.table th, .table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #ddd
+}
+
+.profile body {
+    color: #666;
+    background-color: #fff
+}
+
+.profile h3 {
+    margin: 1em 0 .2em
+}
+
+.profile .basic, .profile .skills, .profile .keywords, .profile .timeline {
+    *zoom: 1
+}
+
+.profile .basic:after, .profile .skills:after, .profile .keywords:after, .profile .timeline:after {
+    content: '\20';
+    display: block;
+    clear: both;
+    height: 0
+}
+
+.profile .container {
+    width: 950px;
+    margin: 0 auto
+}
+
+.profile .title {
+    margin: .5em 0;
+    font-size: 2.4em
+}
+
+.profile .content {
+    margin: 0;
+    padding: 0
+}
+
+.profile dt, .profile dd, .profile li {
+    float: left;
+    height: 2em;
+    line-height: 2em;
+    margin-right: 20px
+}
+
+.profile dt {
+    clear: left
+}
+
+.profile .basic dt {
+    width: 55px
+}
+
+.profile .timeline dt {
+    position: absolute
+}
+
+.profile .timeline dd {
+    float: none;
+    height: auto;
+    margin-left: 200px
+}
+
+.pln {
+    color: #000
+}
+
+.str {
+    color: #e67e22
+}
+
+.kwd {
+    color: #3498db;
+    font-weight: 700
+}
+
+.com {
+    color: #aaa
+}
+
+.typ {
+    color: #1abc9c;
+    font-weight: 700
+}
+
+.lit {
+    color: #066
+}
+
+.pun, .opn, .clo {
+    color: #660
+}
+
+.tag {
+    color: #008
+}
+
+.atn {
+    color: #1abc9c
+}
+
+.atv {
+    color: #2ecc71
+}
+
+.dec, .var {
+    color: #1abc9c
+}
+
+.fun {
+    color: red
+}
+
+ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.prettyprint li {
+    line-height: 1.4em
+}
+
+@media only screen and (max-width: 800px) {
+    .toolbar {
+        margin-top: 100px;
+        padding: 10px 0 0 0;
+        font-size: 1.4em;
+        background-color: #f8f8f8
+    }
+
+    header {
+        height: 100px;
+    }
+
+    header .nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: #323a45;
+    }
+
+    header a {
+        color: #fff;
+        font-size: 1.2em;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .avatar {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 65px;
+        border: 2px solid #fff;
+        z-index: 2;
+    }
+
+    .toolbar, .content {
+        margin-left: 0
+    }
+
+    .title {
+        padding: 5px 10px
+    }
+
+    .title, .container {
+        margin: 0 auto;
+        min-width: 320px;
+        max-width: 640px
+    }
+
+    .sidebar {
+        width: 100%;
+        background-color: #323a45
+    }
+
+    .sidebar .logo {
+        margin-bottom: 0;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    .sidebar h3 {
+        padding-left: 0
+    }
+
+    .sidebar .nav {
+        margin: 0
+    }
+
+    .sidebar .nav {
+        margin: 0 10px;
+        border-bottom: 1px solid #333;
+        padding: 10px 0;
+    }
+
+    .categories {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%
+    }
+
+    .content {
+        padding-left: 10px
+    }
+}
+
+.sidebar, code {
+    text-shadow: 0 1px white;
+}
+
+pre {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+}
+
+blockquote {
+    padding: 3px 10px;
+}
