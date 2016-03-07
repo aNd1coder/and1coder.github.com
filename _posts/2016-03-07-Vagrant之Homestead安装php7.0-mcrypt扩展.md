@@ -3,7 +3,7 @@ layout: post
 title: Vagrant之Homestead安装php7.0-mcrypt扩展
 categories: 随笔
 tags: [Vagrant, Php, Homestead, Mcrypt]
----------------------------------------
+---
 在开发机用 Vagrant 搭建 Homestead 虚拟环境，虚拟机中的 Linux 系统安装的 PHP 版本是 7.0，而且默认是没有安装 php7.0-mcrypt 扩展。经过一番关键词搜索找到一些参考，不过安装过程挺不愉悦的。
 
 ```
