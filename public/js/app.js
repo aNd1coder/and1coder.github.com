@@ -1,8 +1,13 @@
-$(function () {
-    $("pre").not('.prettyprint.linenums').each(function () {
+$(function() {
+    $("pre").not('.prettyprint.linenums').each(function() {
         $(this).addClass("prettyprint linenums");
         prettyPrint();
     });
+
+    var gitmentCommentsInitBtn = $('.gitment-comments-init-btn')
+    if (gitmentCommentsInitBtn.length > 0) {
+        gitmentCommentsInitBtn.trigger('click');
+    }
 });
 
 var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
